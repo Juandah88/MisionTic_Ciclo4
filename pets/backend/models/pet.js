@@ -1,16 +1,14 @@
-import {Schema, model} from 'mongoose';
+const mongoose = require('mongoose');
 
-const petSchema = new Schema({
-    nombre: {type: String, required:true},
-    raza: {tpe:String, required:true},   
-    genero: {type: String, required:true},
+const petSchema = new mongoose.Schema({
+    nombre: {type: String, required:true, index: true},
+    raza: {type:String, required:true, index: true},   
+    genero: {type: String, required:true, index: true},
     edad:   {type:Number, required:true, min: 0, max: 99}, 
     foto:
     {
         data: Buffer,
-        contentType: String,
-        required: true
-
+        contentType: String
     },
     perfil: String,
     Adoptado: {
@@ -19,3 +17,5 @@ const petSchema = new Schema({
         required: true
     }
 }); 
+const Pets = mongoose.model('Pet', petSchema);
+module.exports = Pets;

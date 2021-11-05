@@ -3,7 +3,7 @@ import Foter from './Footer';
 const Inicio = () => {
     return (
         <div>
-            <h1>Página de inico</h1>
+            <h1>Página de Inicio</h1>
             <Foter />
 
 

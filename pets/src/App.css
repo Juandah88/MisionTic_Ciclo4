@@ -1,17 +1,14 @@
-.App {
-  text-align: center;
+body{
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainconteiner{
+  min-height: calc(100vh - 100px);
+  background: rgb(201, 201, 201);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -37,7 +34,9 @@
   }
 }
 
-
+input{
+  width: 3000px;
+}
 form{
   display: flex;
   flex-direction: column;
@@ -46,8 +45,12 @@ form{
   align-items: center;
   width: 100%;
   color: #fff;
+
   
 
+}
+.img_size{
+  width: 50px;
 }
 th{
   color: #fff;
@@ -57,4 +60,14 @@ form button{
 }
 .h1__color{
   color: #fff;
+}
+footer{
+ 
+  height: 100px;
+  color: #fff;
+  background: rgb(19, 113, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }

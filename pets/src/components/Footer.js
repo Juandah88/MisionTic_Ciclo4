@@ -1,10 +1,12 @@
+
 import React from 'react';
-const Foter = () => {
+import '../css/footer.css';
+const Footer = () => {
     return ( 
         <footer className="bg-primmary">
-        <h4>Todolos derechos reservados &copy;</h4>
+        <h6>Todos los derechos reservados &copy;</h6>
         </footer>
      );
 }
  
-export default Foter;
+export default Footer;

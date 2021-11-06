@@ -8,10 +8,8 @@ body{
   background: rgb(201, 201, 201);
 }
 
-
-
 .App-header {
-  background-color: #282c34;
+  background-color: #61d315;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,54 +18,7 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-input{
-  width: 3000px;
-}
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 100%;
-  color: #fff;
-
-  
-
-}
 .img_size{
   width: 50px;
 }
-th{
-  color: #fff;
-}
-form button{
-  width: 100%!important;
-}
-.h1__color{
-  color: #fff;
-}
-footer{
- 
-  height: 100px;
-  color: #fff;
-  background: rgb(19, 113, 236);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}

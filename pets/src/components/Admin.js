@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Foter from './Footer';
+import Footer from './Footer';
+import '../css/formPets.css';
 const URL = process.env.REACT_APP_URI
 const Admin = () => {
     const [listaMascota, setlistaMascota] = useState([])
@@ -18,15 +19,10 @@ const Admin = () => {
         const res = await axios.get(URL + 'mascotas')
         setlistaMascota(res.data)
     }
-
-
-
     return (
         <div className="mainconteiner">
             <div className="container bg-dark">
                 <h1 className="h1__color">Agregar mascotas</h1>
-
-
                 <div>
                     <form className="m-0 p-0" action="/" method="POST">
                         <div className="col-md-6">
@@ -54,9 +50,6 @@ const Admin = () => {
                     </form>
 
                 </div>
-
-
-
                 <div className="row g-3 mb-3 col-md-12">
                     <h3>Todas las mascotas</h3>
                     <table className="table table-bordered table-hover p-2 align-middle">
@@ -73,9 +66,6 @@ const Admin = () => {
                             </tr>
                         </thead>
                         <tbody>
-
-
-
                             <tr>
                                 <td></td>
                                 <td></td>
@@ -106,7 +96,7 @@ const Admin = () => {
                 </div>
             </div>
 
-            <Foter />
+            <Footer />
 
         </div>
 

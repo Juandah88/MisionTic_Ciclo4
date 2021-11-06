@@ -3,22 +3,22 @@ body{
   flex-direction: column;
 }
 
-.mainconteiner{
-  min-height: calc(100vh - 100px);
-  background: rgb(201, 201, 201);
+.navbar > .container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #61d315;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-.img_size{
-  width: 50px;
+.navbar {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

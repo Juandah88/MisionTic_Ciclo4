@@ -22,31 +22,31 @@ const Admin = () => {
 
 
     return (
-        <div className="mainconteiner">
-            <div className="container bg-dark">
+        <div className="fondo">
+            <div className="container container__color">
                 <h1 className="h1__color">Agregar mascotas</h1>
 
 
-                <div>
-                    <form className="m-0 p-0" action="/" method="POST">
-                        <div className="col-md-6">
-                            <input type="text" name="nombre" placeholder="Nombre mascota" className="form-control my-1"></input>
-                        </div>
-                        <div className="col-md-6">
-                            <input type="text" name="raza" placeholder="Raza" className="form-control my-1"></input>
-                        </div>
-                        <div className="col-md-6">
-                            <input type="text" name="genero" placeholder="Genero" className="form-control my-1"></input>
-                        </div>
-                        <div className="col-md-6">
-                            <input type="text" name="edad" placeholder="Edad" className="form-control my-1"></input>
-                        </div>
-                        <div className="col-md-6">
-                            <input type="file" name="foto" placeholder="Imagen" className="form-control my-1"></input>
-                        </div>
-                        <div className="col-md-6">
-                            <textarea name="perfil" cols="80" placeholder="Perfil" className="form-control my-1"></textarea>
-                        </div>
+                <div class="formulario">
+                    <form className=" form m-0 p-0" action="/" method="POST">
+
+                        <input type="text" name="nombre" placeholder="Nombre mascota" ></input>
+
+
+                        <input type="text" name="raza" placeholder="Raza" ></input>
+
+
+                        <input type="text" name="genero" placeholder="Genero" ></input>
+
+
+                        <input type="text" name="edad" placeholder="Edad" ></input>
+
+
+                        <input type="file" name="foto" placeholder="Imagen" ></input>
+
+
+                        <textarea name="perfil" cols="80" placeholder="Perfil" ></textarea>
+
                         <button type="submit" className="btn btn-primary my-2">
                             Agregar registro
                         </button>

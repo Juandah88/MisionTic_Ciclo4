@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Foter from './Footer';
+import '../css/GuardarRegistro.css'
 const URL = process.env.REACT_APP_URI
 const Admin = () => {
     const [listaMascota, setlistaMascota] = useState([])
@@ -57,53 +58,7 @@ const Admin = () => {
 
 
 
-                <div className="row g-3 mb-3 col-md-12">
-                    <h3>Todas las mascotas</h3>
-                    <table className="table table-bordered table-hover p-2 align-middle">
-                        <thead>
-                            <tr>
-                                <th className="text-center">Id</th>
-                                <th className="text-center">Nombre</th>
-                                <th className="text-center">Raza</th>
-                                <th className="text-center">Genero</th>
-                                <th className="text-center">Edad</th>
-                                <th className="text-center">Imagen</th>
-                                <th className="text-center">Perfil</th>
-                                <th className="text-center">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-
-
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td className="text-center"></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <div className="d-grid gap-2">
-                                        <a className="btn <%= tasks[i].status ? 'btn-info' : 'btn-success' %>"
-                                            href="/turn/<%= tasks[i]._id %>">
-
-                                        </a>
-                                    </div>
-                                    <div className="d-grid gap-2">
-                                        <button>Editar</button>
-                                    </div>
-                                    <div className="d-grid gap-2">
-                                        <button>Borrar</button>
-                                    </div>
-
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
+               
             </div>
 
             <Foter />

@@ -1,9 +1,10 @@
 import React from 'react'
 import Foter from './Footer';
+import '../css/Inicio.css'
 import { Link } from 'react-router-dom';
 const Inicio = () => {
     return (
-        <div class="mainconteiner">
+        <div >
             <section>
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -22,7 +23,7 @@ const Inicio = () => {
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="text-shadow">Decide compartir tu vida con una mascota</h2>
                                 <h3 class="text-shadow">No te sentirás solo jamás y nunca terminarás de sorprenderte!
-                                    <a href="adoptar" class="text-shadow">¡Te están esperando!</a></h3>
+                                    <Link class="link-index btn BotonColor" to="/Adoptar">¡Te están esperando!</Link></h3>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -30,7 +31,7 @@ const Inicio = () => {
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="text-shadow">Van a donde tu vayas</h2>
                                 <h3 class="text-shadow">Si estás listo para esta desición
-                                    <a href="adoptar" class="text-shadow">¡Aqui esta tu proximo amigo!</a></h3>
+                                    <Link class="link-index btn BotonColor my-2" to="/Adoptar">¡Aqui esta tu proximo amigo!</Link></h3>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -38,7 +39,9 @@ const Inicio = () => {
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="text-shadow">Están a la espera de una familia</h2>
                                 <h3 class="text-shadow">Tu casa podria ser su hogar
-                                    <a href="adoptar" class="text-shadow">¡Saludalos aquí!</a></h3>
+
+                                    <Link class="link-index btn BotonColor" to="/Adoptar">¡Saludalos aquí!</Link>
+                                </h3>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -46,7 +49,7 @@ const Inicio = () => {
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="text-shadow">Pueden ser tiernos, divertidos y leales</h2>
                                 <h3 class="text-shadow">Se acomodan facil a tu espacio disponible
-                                    <a href="adoptar" class="text-shadow">¡Conócelos!</a></h3>
+                                    <Link class="link-index btn BotonColor" to="/Adoptar">¡Conócelos!</Link></h3>
                             </div>
                         </div>
                     </div>
@@ -159,7 +162,7 @@ const Inicio = () => {
 
                             <p class="text-center fs-3 p-4 listo">
                                 <strong>¿Estás listo?</strong>
-                                <Link class="link-index" to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+                                <Link class="link-index btn BotonColor" to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                             </p>
                         </div>
                     </div>

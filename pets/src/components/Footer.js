@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Footer.css';
 const Foter = () => {
     return (
         // <footer className="bg-primmary">
@@ -21,11 +22,11 @@ const Foter = () => {
 
                         <div>
                             <a href="https://es-la.facebook.com/" target="blank" class="me-4 btn-facebook">
-                            <img class="img_redes_size" src="assets/img/iconos/facebook.png" alt="instagram"/>
+                                <img class="img_redes_size" src="assets/img/iconos/facebook.png" alt="instagram" />
                             </a>
                             {/*  Twitter */}
                             <a href="https://twitter.com/?lang=es" target="blank" class="me-4 btn-twitter">
-                              <img class="img_redes_size" src="assets/img/iconos/twitter.png" alt="twitter"/>
+                                <img class="img_redes_size" src="assets/img/iconos/twitter.png" alt="twitter" />
                             </a>
                             {/*  Instagram */}
                             <a href="https://www.instagram.com/" target="blank" class="me-4 btn-instagram">

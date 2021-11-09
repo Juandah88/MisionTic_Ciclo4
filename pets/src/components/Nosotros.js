@@ -4,7 +4,7 @@ import Foter from './Footer';
 
 const Nosotros = () => {
     return (
-        <div class="mainconteiner">
+        <div >
             <section id="nosotros" class="margin-id">
                 <div class="container-xxl border-radius-x green-bg my-4">
 

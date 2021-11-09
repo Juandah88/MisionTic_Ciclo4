@@ -3,7 +3,7 @@ import Foter from './Footer';
 
 const Adoptar = () => {
     return ( 
-        <div class="fondo">
+        <div className="fondo">
             <h1>Página adoptar</h1>
 
 

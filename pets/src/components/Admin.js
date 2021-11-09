@@ -28,7 +28,7 @@ const Admin = () => {
                 <h1 className="h1__color">Agregar mascotas</h1>
 
 
-                <div class="formulario">
+                <div className="formulario">
                     <form className=" form m-0 p-0" action="/" method="POST">
 
                         <input type="text" name="nombre" placeholder="Nombre mascota" ></input>

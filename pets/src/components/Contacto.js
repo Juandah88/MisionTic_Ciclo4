@@ -4,11 +4,11 @@ const Contacto = () => {
     return (
         <div className="mainconteiner">
            <section>
-      <div class="container-xxl border-radius-x green-bg ">
-        <div class="row align-items-start ">
-          <div class="col">
-            <h3 class="text-center py-2">Contactate con nosotros</h3>
-            <p class="fs-6 p-3">
+      <div className="container-xxl border-radius-x green-bg ">
+        <div className="row align-items-start ">
+          <div className="col">
+            <h3 className="text-center py-2">Contactate con nosotros</h3>
+            <p className="fs-6 p-3">
               Es nuestra misión contribuir al bienestar de las mascotas, buscar un hogar digno a cada uno de los
               animales y ayudar al bienestar tanto de ellos, como de las personas que los llevan y adoptan en su hogar,
               garantizando el confort y la comodidad. <br/><br/>
@@ -21,21 +21,21 @@ const Contacto = () => {
         </div>
         <form action="/add2" name="Formulario" method="post" onsubmit="return validar(event)">
           <div id="ContactenosSectionForm" style={{padding:'2em'}}>
-            <div class="mb-3">
+            <div className="mb-3">
               <label for="FirstName">Nombres</label>
-              <input type="text" class="form-control" id="FirstName" name="nombre" required/>
+              <input type="text" className="form-control" id="FirstName" name="nombre" required/>
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
               <label for="LastName">Apellidos</label>
-              <input type="text" class="form-control" id="LastName" name="apellido" required/>
+              <input type="text" className="form-control" id="LastName" name="apellido" required/>
             </div>
-            <div class="mb-3">
-              <label for="InputEmail" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="InputEmail" name="email" required/>
+            <div className="mb-3">
+              <label for="InputEmail" className="form-label">Correo electrónico</label>
+              <input type="email" className="form-control" id="InputEmail" name="email" required/>
             </div>
-            <div class="mb-3">
-              <label for="SelectAsunto" class="form-label">Selecciona un asunto</label>
-              <select class="form-select" aria-label="Default select example" name="asunto" required>
+            <div className="mb-3">
+              <label for="SelectAsunto" className="form-label">Selecciona un asunto</label>
+              <select className="form-select" aria-label="Default select example" name="asunto" required>
                 <option value="(PQR) - Peticiones, quejas y reclamos">(PQR) - Peticiones, quejas y reclamos</option>
                 <option value="Donaciones">Donaciones</option>
                 <option value="Recomendaciones">Recomendaciones</option>
@@ -43,12 +43,12 @@ const Contacto = () => {
                 <option value="Otro">Otro</option>
               </select>
             </div>
-            <div class="mb-3">
-              <label for="Comentarios" class="form-label">Comentarios</label>
-              <textarea class="form-control" id="Comentarios" rows="3" name="comentarios" required></textarea>
+            <div className="mb-3">
+              <label for="Comentarios" className="form-label">Comentarios</label>
+              <textarea className="form-control" id="Comentarios" rows="3" name="comentarios" required></textarea>
             </div>
-            <div class="d-grid gap-5">
-              <button type="submit" class="btn btn-success">Enviar</button>
+            <div className="d-grid gap-5">
+              <button type="submit" className="btn btn-success">Enviar</button>
               {/* <script>
                 function validar(e) {
                   swal({

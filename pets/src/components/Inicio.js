@@ -6,9 +6,9 @@ const Inicio = () => {
     return (
         <div >
             <section>
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active"
                             aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                             aria-label="Slide 2"></button>
@@ -17,75 +17,75 @@ const Inicio = () => {
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
                             aria-label="Slide 4"></button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/img/slider/mascotas0.jpg" class="d-block w-100" alt="..." />
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2 class="text-shadow">Decide compartir tu vida con una mascota</h2>
-                                <h3 class="text-shadow">No te sentirás solo jamás y nunca terminarás de sorprenderte!
-                                    <Link class="link-index btn BotonColor" to="/Adoptar">¡Te están esperando!</Link></h3>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img src="assets/img/slider/mascotas0.jpg" className="d-block w-100" alt="..." />
+                            <div className="carousel-caption d-none d-md-block">
+                                <h2 className="text-shadow">Decide compartir tu vida con una mascota</h2>
+                                <h3 className="text-shadow">No te sentirás solo jamás y nunca terminarás de sorprenderte!
+                                    <Link className="link-index btn BotonColor" to="/Adoptar">¡Te están esperando!</Link></h3>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/slider/mascotas1.jpg" class="d-block w-100" alt="..." />
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2 class="text-shadow">Van a donde tu vayas</h2>
-                                <h3 class="text-shadow">Si estás listo para esta desición
-                                    <Link class="link-index btn BotonColor my-2" to="/Adoptar">¡Aqui esta tu proximo amigo!</Link></h3>
+                        <div className="carousel-item">
+                            <img src="assets/img/slider/mascotas1.jpg" className="d-block w-100" alt="..." />
+                            <div className="carousel-caption d-none d-md-block">
+                                <h2 className="text-shadow">Van a donde tu vayas</h2>
+                                <h3 className="text-shadow">Si estás listo para esta desición
+                                    <Link className="link-index btn BotonColor my-2" to="/Adoptar">¡Aqui esta tu proximo amigo!</Link></h3>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/slider/mascotas2.jpg" class="d-block w-100" alt="..." />
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2 class="text-shadow">Están a la espera de una familia</h2>
-                                <h3 class="text-shadow">Tu casa podria ser su hogar
+                        <div className="carousel-item">
+                            <img src="assets/img/slider/mascotas2.jpg" className="d-block w-100" alt="..." />
+                            <div className="carousel-caption d-none d-md-block">
+                                <h2 className="text-shadow">Están a la espera de una familia</h2>
+                                <h3 className="text-shadow">Tu casa podria ser su hogar
 
-                                    <Link class="link-index btn BotonColor" to="/Adoptar">¡Saludalos aquí!</Link>
+                                    <Link className="link-index btn BotonColor" to="/Adoptar">¡Saludalos aquí!</Link>
                                 </h3>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="assets/img/slider/mascotas3.jpg" class="d-block w-100" alt="..." />
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2 class="text-shadow">Pueden ser tiernos, divertidos y leales</h2>
-                                <h3 class="text-shadow">Se acomodan facil a tu espacio disponible
-                                    <Link class="link-index btn BotonColor" to="/Adoptar">¡Conócelos!</Link></h3>
+                        <div className="carousel-item">
+                            <img src="assets/img/slider/mascotas3.jpg" className="d-block w-100" alt="..." />
+                            <div className="carousel-caption d-none d-md-block">
+                                <h2 className="text-shadow">Pueden ser tiernos, divertidos y leales</h2>
+                                <h3 className="text-shadow">Se acomodan facil a tu espacio disponible
+                                    <Link className="link-index btn BotonColor" to="/Adoptar">¡Conócelos!</Link></h3>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
                     </button>
                 </div>
 
             </section>
 
-            <section id="adoptar" class="margin-id">
-                <div class="container-xxl my-4">
-                    <div class="row" id="tabla">
-                        <div class="text col-xl-6">
-                            <h2><strong class="listo">¿Estás list@?</strong></h2>
+            <section id="adoptar" className="margin-id">
+                <div className="container-xxl my-4">
+                    <div className="row" id="tabla">
+                        <div className="text col-xl-6">
+                            <h2><strong className="listo">¿Estás list@?</strong></h2>
                             <h2><strong>Antes de aplicar</strong></h2>
-                            <p class="fs-5 ">Si estas interesado en adoptar a alguno de nuestros peluditos, debes leer con detenimiento cada
+                            <p className="fs-5 ">Si estas interesado en adoptar a alguno de nuestros peluditos, debes leer con detenimiento cada
                                 una de las siguientes preguntas</p>
                         </div>
-                        <div class="preguntas col-xs-6">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        <div className="preguntas col-xs-6">
+                            <div className="accordion" id="accordionExample">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                             aria-expanded="true" aria-controls="collapseOne">
-                                            <strong class="title">¿Por qué adoptar y no comprar?</strong>
+                                            <strong className="title">¿Por qué adoptar y no comprar?</strong>
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne"
                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
+                                        <div className="accordion-body">
                                             <ul>
                                                 <li>El 40% de los perros en Bogotá, son callejeros. Pasan sus días a la intemperie, expuestos a todo
                                                     tipo de riesgos y maltrato humano. Solos y con hambre deambulan esperando que alguien les recuerde
@@ -103,16 +103,16 @@ const Inicio = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingTwo">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <strong class="title">¿Cuáles son los beneficios de adoptar?</strong>
+                                            <strong className="title">¿Cuáles son los beneficios de adoptar?</strong>
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
+                                        <div className="accordion-body">
                                             <ul>
                                                 <li>Enseña a niños valores como respeto a la vida, amistad y amor. Crea sentido de responsabilidad y
                                                     promueve la comunicación entre padres e hijos</li>
@@ -128,16 +128,16 @@ const Inicio = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingThree">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <strong class="title">¿Cuáles son las responsabilidades de un adoptante?</strong>
+                                            <strong className="title">¿Cuáles son las responsabilidades de un adoptante?</strong>
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
                                         data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
+                                        <div className="accordion-body">
                                             <ul>
                                                 <li>No abandonar al animal adoptado por ninguna razón o motivo. Ni por problemas de comportamiento,
                                                     vejez o enfermedad.</li>
@@ -157,12 +157,12 @@ const Inicio = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="clearfix"></div>
-                        <div class="container-xxl border-radius-x green-bg my-4">
+                        <div className="clearfix"></div>
+                        <div className="container-xxl border-radius-x green-bg my-4">
 
-                            <p class="text-center fs-3 p-4 listo">
+                            <p className="text-center fs-3 p-4 listo">
                                 <strong>¿Estás listo?</strong>
-                                <Link class="link-index btn BotonColor" to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+                                <Link className="link-index btn BotonColor" to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                             </p>
                         </div>
                     </div>

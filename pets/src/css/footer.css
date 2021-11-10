@@ -1,10 +1,149 @@
+/* Footer */
 
-footer{
-    position:absolute;
-    left:0;
-    bottom:0;
-    right:0;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.footer-title {
+  color: var(--blue-c);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-a {
+  color: var(--blue-c);
+  font-weight: bold;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer-li {
+  list-style-type: none;
+}
+
+/*Fondos*/
+.green-bg {
+  background-color: var(--fondo-v);
+}
+
+.bg-nav {
+  background-color: var(--fondo-nav);
+  opacity: 0.9;
+}
+
+.bg-widget-footer {
+  background-color: var(--terciario);
+}
+
+/*Borde redondeado*/
+.border-radius-x {
+  border-radius: 5px;
+}
+
+.link-index {
+  text-decoration: none;
+  color: var(--terciario);
+  font-weight: none;
+}
+
+.link-index:hover {
+  text-decoration: none;
+  color: var(--quarter);
+  font-weight: none;
+}
+
+.text {
+  width: 28%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
+}
+.preguntas {
+  width: 55%;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clearfix {
+  clear: both;
+}
+
+body {
+  background-color: var(--blue-c) !important;
+}
+
+.formadm {
+  margin-top: 150px;
+}
+
+/*Margen para id*/
+.margin-id {
+  margin-top: 150px;
+}
+
+/*Boton whastapp*/
+.btn-whatsapp {
+  display: block;
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  z-index: 999;
+  opacity: 0.8;
+  font-size: 3em;
+}
+
+.btn-whatsapp:hover {
+  opacity: 1;
+}
+
+.btn-up {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 80px;
+  bottom: 20px;
+  line-height: 80px;
+  text-align: center;
+  z-index: 999;
+  opacity: 1;
+  font-size: 3em;
+}
+
+.btn-up a {
+  color: rgb(221, 156, 14);
+}
+
+.btn-whatsapp a {
+  color: #2b940b;
+}
+
+/*Botones redes sociales*/
+
+.img_redes_size {
+  color: #3f729b;
+  width: 30px;
+}
+
+.bsignup {
+  background: var(--fondo-v);
+  background: linear-gradient(to right, var(--terciario), var(--fondo-v));
+}
+.bsignin {
+  background: var(--fondo-v);
+  background: linear-gradient(to right, var(--terciario), var(--fondo-v));
+}
+.btn {
+  margin-bottom: 30px;
+}
+.img_porque_adoptar{
+  flex-wrap: wrap-reverse; width: 100%;
+}
+footer {
+  clear: both;
+  position: relative;
+  
+}

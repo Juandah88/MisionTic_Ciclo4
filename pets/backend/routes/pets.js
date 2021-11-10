@@ -3,14 +3,14 @@ const router = express.Router();
 const Pet = require('../models/pet');
 
 //Obtener todos
-router.get('/mascotas', async (request, response) => {
+router.get('/mascota', async (request, response) => {
     await Pet.find()
-    .then(users => response.json(users))
+    .then(pet => response.json(pet))
     .catch(err => response.status(400).json('Error: ' + err));
 });
 
 //Obtener por ID
-router.get('/mascotas/:id', async(request, response)=>
+router.get('/mascota/:id', async(request, response)=>
 {
      await Pet.findById(request.params.id)
     .then(pet => response.json(pet))
@@ -18,14 +18,14 @@ router.get('/mascotas/:id', async(request, response)=>
 });
 
 //Eliminar
-router.delete('/mascotas/:id', async(req, res) => {
+router.delete('/mascota/:id', async(req, res) => {
     await Pet.findByIdAndDelete(req.params.id)
-      .then(() => res.json('Mascota eliminada con exito'))
+      .then(() => res.json('Mascota eliminada con éxito'))
       .catch(err => res.status(400).json('Error: ' + err));
   });
 
   //Agregar
-router.post('/mascotas/agregar',async (request, response) => {
+router.post('/mascota/agregar',async (request, response) => {
   const newPet = new Pet({
       nombre: request.body.nombre,
       raza: request.body.raza,
@@ -37,15 +37,15 @@ router.post('/mascotas/agregar',async (request, response) => {
   });  
 
      newPet.save()
-    .then(() => response.json('Mascota agregada con exito'))
+    .then(() => response.json('Mascota agregada con éxito'))
     .catch(err => response.status(400).json('Error: ' + err));
 });
 
-router.post("/mascotas/:id/editar", async (request, response) => {
+router.post("/mascota/:id/editar", async (request, response) => {
     
     const {nombre, raza, genero, edad, foto, perfil, adoptado} =request.body;    
       await Pet.findByIdAndUpdate(request.params.id, { nombre, raza, genero, edad, foto, perfil, adoptado})
-      .then(()=> response.json('Mascota actualizada con exito'))
+      .then(()=> response.json('Mascota actualizada con éxito'))
       .catch(error => response.status(400).json('Error: ', error));
       
 

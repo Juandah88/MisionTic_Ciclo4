@@ -1,0 +1,49 @@
+
+/* Inicio */
+:root {
+  --sombra-texto: #000;
+  --primario: #54e072;
+  --secundario: #015012;
+  --terciario: #2b723a;
+  --quarter: #58c06f;
+  --fondo-v: #e9f7ec;
+  --fondo-nav: #135321;
+  --blue-c: #fcf9f9;
+}
+/* Botones */
+
+.BotonColor{
+  background: #015012;
+  padding: 10px 10px;
+  color: #fff !important;
+  font-weight: bold;
+  margin: 30px;
+
+}
+.BotonColor:hover{
+  background: #0ee6ee;
+  
+}
+/* Fin */
+
+/*Textos*/
+.listo,
+.title {
+  color: var(--primario);
+}
+
+.text-shadow {
+  color: #fff;
+  text-shadow: var(--sombra-texto) 0.1em 0.1em 0.2em;
+  font-weight: bold;
+}
+
+.text-shadow a {
+  text-decoration: none;
+  color: var(--primario);
+  font-weight: none;
+}
+
+.title-index {
+  color: var(--secundario);
+}

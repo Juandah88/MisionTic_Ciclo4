@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Foter from './Footer';
+import Footer from './Footer';
+import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import '../css/GuardarRegistro.css'
 const URL = process.env.REACT_APP_URI
 const Admin = () => {
@@ -23,50 +24,61 @@ const Admin = () => {
 
 
     return (
-        <div className="fondo">
-            <div className="container container__color">
-                <h1 className="h1__color">Agregar mascotas</h1>
+        <div>
+        <div className="content">
+            <Container className="my-auto" >
+                <Form>
+                    <Form.Group className="mb-3" controlId="formNombre">
+                        <Form.Label>Nombre</Form.Label>
+                        <Form.Control placeholder="Ingrese el nombre de la mascota" />
+                    </Form.Group>
 
+                    <Row className="mb-3">
+                        <Form.Group as={Col} controlId="formEdad">
+                            <Form.Label>Edad</Form.Label>
+                            <Form.Control />
+                        </Form.Group>
 
-                <div className="formulario">
-                    <form className=" form m-0 p-0" action="/" method="POST">
+                        <Form.Group as={Col} controlId="formGenero">
+                            <Form.Label>Genero</Form.Label>
+                            <Form.Select defaultValue="Genero...">
+                                <option>Genero...</option>
+                                <option>Macho</option>
+                                <option>Hembra</option>
+                            </Form.Select>
+                        </Form.Group>
 
-                        <input type="text" name="nombre" placeholder="Nombre mascota" ></input>
+                        <Form.Group as={Col} controlId="formTipo">
+                            <Form.Label>Tipo</Form.Label>
+                            <Form.Select defaultValue="Tipo...">
+                                <option>Tipo..</option>
+                                <option>Canino</option>
+                                <option>Felino</option>
+                            </Form.Select>
+                        </Form.Group>
+                    </Row>
 
+                    <Form.Group className="mb-3" id="formTipo">
+                        <Form.Label>Foto de la mascota</Form.Label>
+                        <Form.Control type="file" />
+                    </Form.Group>
 
-                        <input type="text" name="raza" placeholder="Raza" ></input>
+                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Perfil de la mascota</Form.Label>
+                        <Form.Control as="textarea" rows={3} />
+                    </Form.Group>
 
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
 
-                        <input type="text" name="genero" placeholder="Genero" ></input>
-
-
-                        <input type="text" name="edad" placeholder="Edad" ></input>
-
-
-                        <input type="file" name="foto" placeholder="Imagen" ></input>
-
-
-                        <textarea name="perfil" cols="80" placeholder="Perfil" ></textarea>
-
-                        <button type="submit" className="btn btn-primary my-2">
-                            Agregar registro
-                        </button>
-
-                    </form>
-
-                </div>
-
-
-
-               
-            </div>
-
-            <Foter />
-
+            </Container>
         </div>
 
+        <Footer />
 
-
+    </div>
     );
 }
 

@@ -6,6 +6,7 @@ import Admin from './components/Admin';
 import Contacto from './components/Contacto';
 import Nosotros from './components/Nosotros';
 import Adoptar from './components/Adoptar';
+import Login from './components/Login';
 
 
 
@@ -53,6 +54,7 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </Router>
 

@@ -18,7 +18,7 @@ connection.once('open', () => {
 
 //Router
 app.use(require('./routes/pets'));
-
+app.use(require('./routes/users.js'))
 
 
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));

@@ -1,0 +1,19 @@
+/* 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;s
+    width: 100%;
+    color: #fff;
+  }
+  th{
+    color: #fff;
+  }
+  form button{
+    width: 100%!important;
+  }
+  .h1__color{
+    color: #fff;
+  }  */

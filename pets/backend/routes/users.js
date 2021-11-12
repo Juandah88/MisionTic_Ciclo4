@@ -20,7 +20,7 @@ router.get('/usuario/:id', async(request, response)=>
 
 
 //Eliminar
-router.delete('/usuario/:id', async(req, res) => {
+router.delete('api/usuario/:id', async(req, res) => {
     await user.findByIdAndDelete(req.params.id)
       .then(() => res.json('usuario eliminado con éxito'))
       .catch(err => res.status(400).json('Error: ' + err));
@@ -28,7 +28,7 @@ router.delete('/usuario/:id', async(req, res) => {
 
 
 //Creación de usuarios
-router.post('/usuario/crear', async(request, response) => {
+router.post('api/usuario/crear', async(request, response) => {
     const {email, password, password_confirm} = request.body;
     //Se valida que el usuario haya ingresado las contraseñas iguales
     if(password != password_confirm){

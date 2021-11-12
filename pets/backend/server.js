@@ -1,24 +1,32 @@
+//Se inicializan variables de entorno
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
+
+
+//Settings
 const port  = process.env.port || 5000;
 
 //MiddleWare
 app.use(express.json());
+app.use(cors());
 
-const uri = 'mongodb+srv://admin:Admin123@clusterlibreria.1lv3v.mongodb.net/DBPets?authSource=admin&replicaSet=atlas-lhwkid-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true';
+//Se obtiene la URL de Atlas si no ejecuta en  local
+const uri = process.env.ATLAS_URI ?  process.env.ATLAS_URI : 'mongodb://localhost/LocalPets'
+//Se conecta a la base de datos
 mongoose.connect(uri, { useNewUrlParser: true }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("Base de datos conectada satisfactoriamente");
 })
-
-
 //Router
 app.use(require('./routes/pets'));
 app.use(require('./routes/users.js'))
 
-
+//Se inicializa el servidor
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));

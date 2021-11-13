@@ -1,13 +1,13 @@
 const petsController = {};
-const Pet = require('../models/pet');
+const pet = require('../models/pet');
 
-petsController.obtener = async (request, response) =>{ await Pet.find()
+petsController.obtener = async (request, response) =>{ await pet.find()
     .then(pet => response.json(pet))
     .catch(err => response.status(400).json('Error: ' + err));
 };
 
 petsController.insertar = async (request, response) => {
-    const newPet = new Pet({
+    const newPet = new pet({
         nombre: request.body.nombre,
         raza: request.body.raza,
         genero: request.body.genero,
@@ -23,7 +23,7 @@ petsController.insertar = async (request, response) => {
 };
 
 petsController.eliminar = async(req, res) => {
-    await Pet.findByIdAndDelete(req.params.id)
+    await pet.findByIdAndDelete(req.params.id)
       .then(() => res.json('Mascota eliminada con éxito'))
       .catch(err => res.status(400).json('Error: ' + err));
 };
@@ -31,14 +31,14 @@ petsController.eliminar = async(req, res) => {
 petsController.editar = async (request, response) => {
     
     const {nombre, raza, genero, edad, foto, perfil, adoptado} =request.body;    
-      await Pet.findByIdAndUpdate(request.params.id, { nombre, raza, genero, edad, foto, perfil, adoptado})
+      await pet.findByIdAndUpdate(request.params.id, { nombre, raza, genero, edad, foto, perfil, adoptado})
       .then(()=> response.json('Mascota actualizada con éxito'))
       .catch(error => response.status(400).json('Error: ', error));
 
-  }
+}
 
 petsController.obtenerPorID = async(request, response)=> {
-     await Pet.findById(request.params.id)
+     await pet.findById(request.params.id)
     .then(pet => response.json(pet))
     .catch(err => response.status(400).json('Error: ' + err));;
 };

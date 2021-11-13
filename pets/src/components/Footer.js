@@ -2,12 +2,7 @@ import React from 'react';
 import '../css/Footer.css';
 const Foter = () => {
     return (
-        // <footer className="bg-primmary">
-        // <h4>Todolos derechos reservados &copy;</h4>
-        // </footer>
-
         <div>
-
             <footer className="text-center text-lg-start bg-nav text-muted">
                 {/*  Section: Social media */}
                 <section>

@@ -15,6 +15,9 @@ const port  = process.env.port || 5000;
 app.use(express.json());
 app.use(cors());
 
+
+
+
 //Se obtiene la URL de Atlas si no ejecuta en  local
 const uri = process.env.ATLAS_URI ?  process.env.ATLAS_URI : 'mongodb://localhost/LocalPets'
 //Se conecta a la base de datos
@@ -25,8 +28,8 @@ connection.once('open', () => {
   console.log("Base de datos conectada satisfactoriamente");
 })
 //Router
-app.use(require('./routes/pets'));
-app.use(require('./routes/users.js'))
+app.use('/api/mascotas', require('./routes/pets'));
+app.use('/api/usuarios', require('./routes/users.js'))
 
 //Se inicializa el servidor
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));

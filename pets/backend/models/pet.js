@@ -4,7 +4,7 @@ const petSchema = new mongoose.Schema(
     {
         nombre: {type: String, required:true, index: true},
         raza: {type:String, required:true, index: true , },   
-        genero: {type: String, required:true, index: true},
+        genero: {type: Number, min:0, max:1, index:true},
         edad:   {type:Number, required:true, min: 0, max: 99}, 
         foto:
         {

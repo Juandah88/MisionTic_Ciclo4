@@ -2,16 +2,17 @@ const express = require('express');
 const router = express.Router();
 const user = require('../models/user');
 
-//Obtener todos
 
-router.get('/usuario', async (request, response) => {
+//router.route().post().get()
+//Obtener todos
+router.get('/', async (request, response) => {
   await user.find()
   .then(users => response.json(users))
   .catch(err => response.status(400).json('Error: ' + err));
 });
 
 //Obtener por ID
-router.get('/usuario/:id', async(request, response)=>
+router.get('/:id', async(request, response)=>
 {
      await user.findById(request.params.id)
     .then(user => response.json(user))
@@ -20,7 +21,7 @@ router.get('/usuario/:id', async(request, response)=>
 
 
 //Eliminar
-router.delete('api/usuario/:id', async(req, res) => {
+router.delete('/:id', async(req, res) => {
     await user.findByIdAndDelete(req.params.id)
       .then(() => res.json('usuario eliminado con éxito'))
       .catch(err => res.status(400).json('Error: ' + err));
@@ -28,7 +29,7 @@ router.delete('api/usuario/:id', async(req, res) => {
 
 
 //Creación de usuarios
-router.post('api/usuario/crear', async(request, response) => {
+router.post('/crear', async(request, response) => {
     const {email, password, password_confirm} = request.body;
     //Se valida que el usuario haya ingresado las contraseñas iguales
     if(password != password_confirm){

@@ -1,7 +1,7 @@
 /* Tamaño del logo */
 
 .img_size {
-    width: 50px;
+    width: 90px;
   }
 
   .size_logo {
@@ -14,4 +14,40 @@
 .nav__color {
     background: #135321;
   }
+
   /* Fin */
+.menu-nav{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70%;
+  justify-self: end;
+  margin-right: 2rem;
+}
+.navbar-brand{
+  color: azure;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand:hover {
+  background-color:  #000;
+  border-radius: 27px ;
+  transition: all 0.2s ease-out;
+}
+.nav-links-btn{
+  background-color: #000;
+  padding: 6px 16px;
+  border-radius: 21px;
+}
+.nav-links-btn:hover{
+  background-color: transparent;
+  color: aqua;
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: solid 1px #a76262;
+  transition: all 0.3s ease-out;
+
+}

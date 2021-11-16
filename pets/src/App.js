@@ -42,7 +42,9 @@ function App() {
                   <li className="nav-item">
                     <Link className="navbar-brand" to="/Contacto">Contacto</Link>
                   </li>
-                 
+                  <li>
+                    <Link to="Página no encontrada"></Link>
+                  </li>
                 </ul>
               </div>
             </div>

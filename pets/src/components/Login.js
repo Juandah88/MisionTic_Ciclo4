@@ -3,24 +3,23 @@ import Foter from './Footer';
 
 import { FacebookLoginButton } from 'react-social-login-buttons'
 const Login = () => {
-
     return(
-    <div class="row">
-        <div class="col-md-4 offset-md-4">
-            <div class="card mt-4 text-center mb-4">
-                <div class="card-header">
+    <div className="row">
+        <div className="col-md-4 offset-md-4">
+            <div className="card mt-4 text-center mb-4">
+                <div className="card-header">
                     <h3>Inicio de Sesión</h3>
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                     <form action="/signin" method="POST">
-                        <div class="form-group mb-4">
-                        <input class="form-control" type="email" name="email" placeholder="Insert Email" autofocus required></input>
+                        <div className="form-group mb-4">
+                        <input className="form-control" type="email" name="email" placeholder="Insert Email" autofocus required></input>
                         </div>
-                        <div class="form-group mb-4">
-                            <input class="form-control" type="password" name="password" placeholder="Insert Password" required></input>
+                        <div className="form-group mb-4">
+                            <input className="form-control" type="password" name="password" placeholder="Insert Password" required></input>
                         </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary btn-block" type="submit">SignIn</button>
+                        <div className="form-group">
+                            <button className="btn btn-primary btn-block" type="submit">SignIn</button>
                         </div>
                     </form>
                 </div>

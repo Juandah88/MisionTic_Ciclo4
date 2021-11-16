@@ -168,16 +168,7 @@ const Inicio = () => {
                     </div>
                 </div>
             </section>
-
-
-
-
-
-
-
-
-
-
+            
             <Foter />
         </div>
     );

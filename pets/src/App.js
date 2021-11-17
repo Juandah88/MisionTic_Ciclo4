@@ -21,18 +21,19 @@ function App() {
     <Router>
       <div>
         <header>
+       
           <nav className="navbar navbar-expand-lg navbar-dark nav__color">
             <div className="container-fluid">
               <div className="size_logo">
-                <Link className="navbar-brand" to="/">
-                  <img className="navbar-brand  img_size ml-5" src="assets/img/logo.png" alt="logo" />
+                <Link className="navbar-brandv" to="/">
+                  <img className="navbar-brandv  img_size ml-5" src="assets/img/logo.png" alt="logo" />
                 </Link>
               </div>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul className="menu-nav">
                   <li className="nav-item">
                     <Link className="navbar-brand" to="/Nosotros">Nosotros</Link>
                   </li>
@@ -41,14 +42,18 @@ function App() {
                   </li>
                   <li className="nav-item">
                     <Link className="navbar-brand" to="/Contacto">Contacto</Link>
+                  </li>    
+                  <li className="nav-item">
+                    <Link className="navbar-brand" to="/Adoptar">Adoptar</Link>
                   </li>
-                  <li>
-                    <Link to="Página no encontrada"></Link>
-                  </li>
+                  <li className="nav-item">
+                    <Link className="navbar-brand nav-links-btn" to="/Login">Registrate</Link>
+    </li>
                 </ul>
               </div>
             </div>
-          </nav>
+          </nav> 
+          
 
         </header>
       </div>

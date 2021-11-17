@@ -4,14 +4,16 @@
     width: 90px;
   }
 
-  .size_logo {
-    width: 78%;
-  }
+
+.size_logo {
+  width: 78%;
+}
 /* Fin */
 
 /* Color de Navbar */
 
 .nav__color {
+
     background: #135321;
   }
 

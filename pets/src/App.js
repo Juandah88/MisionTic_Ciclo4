@@ -7,6 +7,7 @@ import Contacto from './components/Contacto';
 import Nosotros from './components/Nosotros';
 import Adoptar from './components/Adoptar';
 import Login from './components/Login';
+import { PageNotFound } from './components/PageNotFound';
 
 
 
@@ -41,13 +42,13 @@ function App() {
                   </li>
                   <li className="nav-item">
                     <Link className="navbar-brand" to="/Contacto">Contacto</Link>
-                  </li>
+                  </li>    
                   <li className="nav-item">
                     <Link className="navbar-brand" to="/Adoptar">Adoptar</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="navbar-brand nav-links-btn" to="/Login">Registrate</Link>
-                  </li>
+    </li>
                 </ul>
               </div>
             </div>
@@ -63,6 +64,7 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="*" element={<PageNotFound/>} />
       </Routes>
     </Router>
 

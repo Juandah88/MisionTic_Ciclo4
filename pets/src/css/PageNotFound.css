@@ -1,0 +1,22 @@
+.PageH1,.PageH2{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #04b95f;
+    font-size: 4em;
+    font-size: 5vv;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+}
+
+.PageH2{
+    position: absolute;
+    margin-top: 10rem;
+
+}
+
+.PageImg{
+    width: 100%;
+    height: 40%;
+}

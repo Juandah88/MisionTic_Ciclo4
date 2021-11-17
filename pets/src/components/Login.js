@@ -15,7 +15,7 @@ const Login = () => {
                     <form action="/signin" method="POST">
                         <div class="form-group mb-4">
                         <input class="form-control" type="email" name="email" placeholder="Insert Email" autofocus required></input>
-                        </div>
+                        </div> 
                         <div class="form-group mb-4">
                             <input class="form-control" type="password" name="password" placeholder="Insert Password" required></input>
                         </div>

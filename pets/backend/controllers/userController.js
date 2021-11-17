@@ -41,3 +41,4 @@ userController.insertar = async(request, response) => {
       .catch(err => response.status(400).json('Error: ' + err));
       
 }};
+module.exports = userController;

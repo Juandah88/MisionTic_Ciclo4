@@ -5,8 +5,6 @@ import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import '../css/GuardarRegistro.css'
 const API = process.env.API_URI
 
-
-
 export default class Admin extends Component {
     state = {
         pets: []
@@ -67,31 +65,35 @@ export default class Admin extends Component {
                                 Submit
                             </Button>
                         </Form>
-                    <hr/>
+                        <hr />
 
-                    <table className="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Edad (años)</th>
-                                <th scope="col">Genero</th>
-                                <th scope="col">Perfil</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                this.state.pets.map(pet => 
-                                    <tr>                                     
-                                     <td>{pet.nombre}</td>
-                                     <td>{pet.edad}</td>
-                                     <td>{pet.genero}</td>
-                                     <td>{pet.perfil}</td>
-                                 </tr>
-                                )
-                                
-                            }
-                        </tbody>
-                    </table>
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col">Raza</th>
+                                    <th scope="col">Edad (en años)</th>
+                                    <th scope="col">Genero</th>
+                                    <th scope="col">Perfil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    this.state.pets.map(pet =>
+                                        <tr>
+                                            <td>{pet.nombre}</td>
+                                           <td> {pet.tipo != 0  ? 'Canino':'felino'}</td>
+                                            <td>{pet.raza}</td>
+                                            <td>{pet.edad}</td>
+                                            <td>{pet.genero  != 0 ? 'Macho': 'Hembra' }</td>
+                                            <td>{pet.perfil}</td>
+                                        </tr>
+                                    )
+
+                                }
+                            </tbody>
+                        </table>
                     </Container>
                 </div>
                 <Footer />

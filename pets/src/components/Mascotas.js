@@ -24,6 +24,7 @@ export default class Admin extends Component {
       modalIsertar: false,
       OcultarMostrar: false,
       OcultarMostrarBtAGregar: true,
+      OcultarMostrarBtCancelar:false,
       elementId: "",
       _id: "",
       nombre: "",
@@ -34,6 +35,7 @@ export default class Admin extends Component {
       perfil: "",
       tipo: "",
       tipoModal: "",
+      
     };
   }
 
@@ -90,6 +92,7 @@ export default class Admin extends Component {
       this.setState({
         OcultarMostrarBtAGregar: true,
         OcultarMostrar: false,
+        OcultarMostrarBtCancelar:false,
       });
       this.limpiarCampos();
   }; 
@@ -99,6 +102,7 @@ export default class Admin extends Component {
   delete = (mascota) => {
       this.setState({
         _id: mascota._id,
+        OcultarMostrarBtCancelar:false,
       });
   
     swal({
@@ -114,15 +118,18 @@ export default class Admin extends Component {
             .then(() => { })
             .catch((err) => {
               console.log(err);
+              
             });
-          this.get();
+            
           swal("Registro eliminado exitosamente!", {
             icon: "success",
-          });
+            
+          });this.get()
         } else {
           swal("Acción cancelada");
         }
       });
+      
       this.limpiarCampos();
   };
     //Fin Función Elimanar Mascotas
@@ -142,9 +149,18 @@ export default class Admin extends Component {
       foto: "",
       perfil: "",
       tipo: "",
+      OcultarMostrar:false,
     });
-
+   
   };
+  BotonCancelar=(e)=>{
+    this.limpiarCampos();
+    this.setState({
+      OcultarMostrarBtCancelar:false,
+      OcultarMostrarBtAGregar: true,
+    })
+  
+  }
   // Fin limpiar campos
 
   // se crea el objeto para pasarlo al método
@@ -175,6 +191,8 @@ export default class Admin extends Component {
       tipo: mascota.tipo,
       OcultarMostrar: true,
       OcultarMostrarBtAGregar: false,
+      OcultarMostrarBtCancelar:true,
+      
     });
   };
   //Fin Función para mostrar los campos de editar mascotas
@@ -287,6 +305,12 @@ export default class Admin extends Component {
                   Agragar Mascotas
                 </Button>
               ) : null}
+                {this.state.OcultarMostrarBtCancelar?
+                <Button variant="success"
+                type="button"
+                onClick={this.BotonCancelar}>
+                Cancelar</Button>
+               :null}
               {this.state.OcultarMostrar ? (
                 <Button cvariant="primary" onClick={this.put}>
                   Actualizar

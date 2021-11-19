@@ -2,22 +2,21 @@ import React, { Component } from "react";
 import axios from "axios";
 import Footer from "./Footer";
 import { Form, Row, Col, Button, Container } from "react-bootstrap";
-import Api from "../Conector.js";
+import Api from "../helpers/Conector.js";
 import "../css/GuardarRegistro.css";
 import swal from "sweetalert";
-import { Link } from "react-router-dom";
 
 export default class Admin extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeNombre = this.onChangeNombre.bind(this);
-    this.onChangeRaza = this.onChangeRaza.bind(this);
-    this.onChangeGenero = this.onChangeGenero.bind(this);
-    this.onChangeEdad = this.onChangeEdad.bind(this);
-    this.onChangeFoto = this.onChangeFoto.bind(this);
-    this.onChangePerfil = this.onChangePerfil.bind(this);
-    this.onChangeTipo = this.onChangeTipo.bind(this);
+    // this.onChangeNombre = this.onChangeNombre.bind(this);
+    // this.onChangeRaza = this.onChangeRaza.bind(this);
+    // this.onChangeGenero = this.onChangeGenero.bind(this);
+    // this.onChangeEdad = this.onChangeEdad.bind(this);
+    // this.onChangeFoto = this.onChangeFoto.bind(this);
+    // this.onChangePerfil = this.onChangePerfil.bind(this);
+    // this.onChangeTipo = this.onChangeTipo.bind(this);
 
     this.onSubmit = this.onSubmit.bind(this);
 
@@ -27,7 +26,6 @@ export default class Admin extends Component {
       OcultarMostrar: false,
       OcultarMostrarBtAGregar: true,
       elementId: "",
-
       _id: "",
       nombre: "",
       raza: "",
@@ -39,8 +37,9 @@ export default class Admin extends Component {
       tipoModal: "",
     };
   }
+
   // Para obtner los datos de la api
-  peticionGet = () => {
+  get = () => {
     axios
       .get(Api + "/mascotas")
       .then((response) => {
@@ -49,40 +48,93 @@ export default class Admin extends Component {
       .catch((error) => {
         console.log(error.message);
       });
-  }; //Fin obtener datos de la api
+  };
+  //Fin obtener datos de la api
 
-  //funciones para cada input
-  onChangeNombre(e) {
-    this.setState({ nombre: e.target.value });
-  }
-  onChangeRaza(e) {
-    this.setState({ raza: e.target.value });
-  }
-  onChangeGenero(e) {
-    this.setState({ genero: e.target.value });
-  }
-  onChangeEdad(e) {
-    this.setState({ edad: e.target.value });
-  }
-  onChangeFoto(e) {
-    this.setState({ foto: e.target.value });
-  }
-  onChangePerfil(e) {
-    this.setState({ perfil: e.target.value });
-  }
-  onChangeTipo(e) {
-    this.setState({ tipo: e.target.value });
-  }
+  // Función para agregar nuevas mascotas
+  post = () => {
+      axios
+        .post(Api + "/mascotas/crear", this.crearMascota())
+        .then(() => {
+          //Cuando termina de hacer la insercción se carga nuevamente el listado de mascotas
+          this.get();
+          swal({
+            title: "Nuevo mascota agregada a la familia!",
+            icon: "success",
+            button: "Aceptar!",
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      this.limpiarCampos();
+  }; 
+  //Fin funcón agregar mascotas
+  
+  // Función para Editar mascotas
+  put = () => {
+      let API = `${Api}/mascotas/${this.state._id}/editar`;
+      axios
+        .put(API, this.crearMascota())
+        .then(() => {
+          this.get();
+          swal({
+            title: "registro editado!",
+            icon: "success",
+            button: "Aceptar!",
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+  
+      this.setState({
+        OcultarMostrarBtAGregar: true,
+        OcultarMostrar: false,
+      });
+      this.limpiarCampos();
+  }; 
+  // Fin Función para Editar mascotas
 
-  // Fin de las funciones para cada input
+  //Función Elimanar Mascotas
+  delete = (mascota) => {
+      this.setState({
+        _id: mascota._id,
+      });
+  
+    swal({
+        title: "¿Estás seguro?",
+        text: "Una vez eliminado, ¡no podrás recuperar este registro",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    }).then((willDelete) => {
+        if (willDelete) {
+          axios
+            .delete(Api + "/mascotas/" + this.state._id)
+            .then(() => { })
+            .catch((err) => {
+              console.log(err);
+            });
+          this.get();
+          swal("Registro eliminado exitosamente!", {
+            icon: "success",
+          });
+        } else {
+          swal("Acción cancelada");
+        }
+      });
+      this.limpiarCampos();
+  };
+    //Fin Función Elimanar Mascotas
 
   // Para prevenir que se vuelva a cargar la página
   onSubmit(e) {
     e.preventDefault();
   } // Fin para prevenir la carga de la página
 
-  // se limpian los campos
-  LimpiarCampos = () => {
+  // se limpian los campos del estado
+  limpiarCampos = () => {
     this.setState({
       nombre: "",
       raza: "",
@@ -91,12 +143,14 @@ export default class Admin extends Component {
       foto: "",
       perfil: "",
       tipo: "",
-    }); // Fin limpiar campos
-  };
+    });
 
-  ObjetoPets = (PetsObject) => {
-    // se crea el objeto para pasarlo al metodo
-    PetsObject = {
+  };
+  // Fin limpiar campos
+
+  // se crea el objeto para pasarlo al método
+  crearMascota = () => {
+     return {
       nombre: this.state.nombre,
       raza: this.state.raza,
       genero: this.state.genero,
@@ -104,84 +158,10 @@ export default class Admin extends Component {
       foto: this.state.foto,
       perfil: this.state.perfil,
       tipo: this.state.tipo,
-    }; // Fin
-
-    return PetsObject;
+    };
   };
+   // Fin
 
-  // Función para agregar nuevas mascotas
-  peticipnPost = () => {
-    axios
-      .post(Api + "/mascotas/crear", this.ObjetoPets())
-      .then(() => {
-        this.peticionGet();
-        swal({
-          title: "Nuevo registro insertado!",
-          icon: "success",
-          button: "Aceptar!",
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    this.LimpiarCampos();
-  }; //Fin funcón agregar mascotas
-
-  // Función para Editar mascotas
-  peticionPut = () => {
-    let API = `${Api}/mascotas/${this.state._id}/editar`;
-    axios
-      .put(API, this.ObjetoPets())
-
-      .then(() => {
-        this.peticionGet();
-        swal({
-          title: "registro editado!",
-          icon: "success",
-          button: "Aceptar!",
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-    this.setState({
-      OcultarMostrarBtAGregar: true,
-      OcultarMostrar: false,
-    });
-    this.LimpiarCampos();
-  }; // Fin Función para Editar mascotas
-
-  //Función Elimanar Mascotas
-  peticionDelete = (mascota) => {
-    this.setState({
-      _id: mascota._id,
-    });
-
-    swal({
-      title: "¿Estás seguro?",
-      text: "Una vez eliminado, ¡no podrás recuperar este registro",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    }).then((willDelete) => {
-      if (willDelete) {
-        axios
-          .delete(Api + "/mascotas/" + this.state._id)
-          .then(() => {})
-          .catch((err) => {
-            console.log(err);
-          });
-        this.peticionGet();
-        swal("Registro eliminado exitosamente!", {
-          icon: "success",
-        });
-      } else {
-        swal("Acción cancelada");
-      }
-    });
-    this.LimpiarCampos();
-  }; //Fin Función Elimanar Mascotas
 
   //Función para mostrar los campos de editar mascotas
   seleccionarMascota = (mascota) => {
@@ -197,10 +177,17 @@ export default class Admin extends Component {
       OcultarMostrar: true,
       OcultarMostrarBtAGregar: false,
     });
-  }; //Fin Función para mostrar los campos de editar mascotas
+  };
+  //Fin Función para mostrar los campos de editar mascotas
 
   componentDidMount() {
-    this.peticionGet();
+    this.get();
+  }
+
+  onInputChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   render() {
@@ -214,8 +201,9 @@ export default class Admin extends Component {
                 <Form.Control
                   required
                   placeholder="Ingrese el nombre de la mascota"
+                  name="nombre"
                   value={this.state.nombre}
-                  onChange={this.onChangeNombre}
+                  onChange={this.onInputChange}
                 />
               </Form.Group>
 
@@ -224,16 +212,18 @@ export default class Admin extends Component {
                   <Form.Label>Edad</Form.Label>
                   <Form.Control
                     required
+                    name="edad"
                     value={this.state.edad}
-                    onChange={this.onChangeEdad}
+                    onChange={this.onInputChange}
                   />
                 </Form.Group>
                 <Form.Group as={Col} controlId="formRaza">
                   <Form.Label>Raza</Form.Label>
                   <Form.Control
                     required
+                    name="raza"
                     value={this.state.raza}
-                    onChange={this.onChangeRaza}
+                    onChange={this.onInputChange}
                   />
                 </Form.Group>
 
@@ -241,8 +231,9 @@ export default class Admin extends Component {
                   <Form.Label>Genero</Form.Label>
                   <Form.Select
                     required
+                    name="genero"
                     value={this.state.genero}
-                    onChange={this.onChangeGenero}
+                    onChange={this.onInputChange}
                   >
                     <option>Genero...</option>
                     <option value={0}>Macho</option>
@@ -254,8 +245,9 @@ export default class Admin extends Component {
                   <Form.Label>Tipo</Form.Label>
                   <Form.Select
                     required
+                    name="tipo"
                     value={this.state.tipo}
-                    onChange={this.onChangeTipo}
+                    onChange={this.onInputChange}
                   >
                     <option>Tipo</option>
                     <option value={0}>Canino</option>
@@ -268,8 +260,9 @@ export default class Admin extends Component {
                 <Form.Label>Foto de la mascota</Form.Label>
                 <Form.Control
                   type="file"
+                  name="foto"
                   value={this.state.foto}
-                  onChange={this.onChangeFoto}
+                  onChange={this.onInputChange}
                 />
               </Form.Group>
 
@@ -282,21 +275,21 @@ export default class Admin extends Component {
                   required
                   as="textarea"
                   rows={3}
+                  name="perfil"
                   value={this.state.perfil}
-                  onChange={this.onChangePerfil}
+                  onChange={this.onInputChange}
                 />
               </Form.Group>
               {this.state.OcultarMostrarBtAGregar ? (
                 <Button
                   variant="primary"
                   type="submit"
-                  onClick={this.peticipnPost}
-                >
+                  onClick={this.post}>
                   Agragar Mascotas
                 </Button>
               ) : null}
               {this.state.OcultarMostrar ? (
-                <Button cvariant="primary" onClick={this.peticionPut}>
+                <Button cvariant="primary" onClick={this.put}>
                   Actualizar
                 </Button>
               ) : null}
@@ -319,9 +312,9 @@ export default class Admin extends Component {
                     <td className="HideiTdId">{pet._id}</td>
                     <td>{pet.nombre}</td>
                     <td>{pet.edad}</td>
-                    <td>{pet.genero}</td>
+                    <td>{pet.genero != 0 ? 'Macho' : 'Hembra'}</td>
                     <td>{pet.perfil}</td>
-                    <td>{pet.tipo}</td>
+                    <td>{pet.tipo != 0 ? 'Canino' : 'felino'}</td>
                     <td>
                       <button
                         type="button"
@@ -337,7 +330,7 @@ export default class Admin extends Component {
                         type="button"
                         className="btn btn-danger m-1"
                         onClick={() => {
-                          this.peticionDelete(pet);
+                          this.delete(pet);
                         }}
                       >
                         Eliminar

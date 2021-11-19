@@ -2,7 +2,7 @@ import './css/App.css';
 import './css/Navbar.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Inicio from './components/Inicio';
-import Admin from './components/CreatePets';
+import Mascotas from './components/Mascotas';
 import Contacto from './components/Contacto';
 import Nosotros from './components/Nosotros';
 import Adoptar from './components/Adoptar';
@@ -53,7 +53,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/Nosotros" element={<Nosotros />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<Mascotas />} />
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />

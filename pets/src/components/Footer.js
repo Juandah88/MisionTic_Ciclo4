@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/footer.css';
+import '../css/Footer.css';
 const Foter = () => {
     return (
         <div>
@@ -12,9 +12,7 @@ const Foter = () => {
                         <div className="me-5 d-none d-lg-block text-light">
                             <span className="fs-3">Síguenos y apoyanos en nuestras redes sociales</span>
                         </div>
-
-
-
+                        
                         <div>
                             <a href="https://es-la.facebook.com/" target="blank" className="me-4 btn-facebook">
                                 <img className="img_redes_size" src="assets/img/iconos/facebook.png" alt="instagram" />

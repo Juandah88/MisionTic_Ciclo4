@@ -1,10 +1,9 @@
 import React from 'react'
-import Foter from './Footer';
 import '../css/Inicio.css'
 import { Link } from 'react-router-dom';
 const Inicio = () => {
     return (
-        <div >
+        <div className="ContainerMain">
             <section>
                 <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
@@ -169,7 +168,6 @@ const Inicio = () => {
                 </div>
             </section>
             
-            <Foter />
         </div>
     );
 }

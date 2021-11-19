@@ -142,8 +142,3 @@ body {
 .img_porque_adoptar{
   flex-wrap: wrap-reverse; width: 100%;
 }
-footer {
-  clear: both;
-  position: relative;
-  
-}

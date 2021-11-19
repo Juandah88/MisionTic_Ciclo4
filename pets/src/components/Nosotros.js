@@ -1,10 +1,9 @@
 import React from 'react';
-import Foter from './Footer';
 
 
 const Nosotros = () => {
     return (
-        <div >
+        <div className="ContainerMain" >
             <section id="nosotros" className="margin-id">
                 <div className="container-xxl border-radius-x green-bg my-4">
 
@@ -36,7 +35,6 @@ const Nosotros = () => {
                     </div>
                 </div>
             </section>
-            <Foter />
         </div>
     );
 }

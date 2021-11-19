@@ -1,5 +1,11 @@
 
 /* Inicio */
+.ContainerInicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 :root {
   --sombra-texto: #000;
   --primario: #54e072;
@@ -9,6 +15,7 @@
   --fondo-v: #e9f7ec;
   --fondo-nav: #135321;
   --blue-c: #fcf9f9;
+
 }
 /* Botones */
 

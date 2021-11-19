@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Footer from "./Footer";
 import { Form, Row, Col, Button, Container } from "react-bootstrap";
 import Api from "../helpers/Conector.js";
 import "../css/GuardarRegistro.css";
@@ -192,7 +191,7 @@ export default class Admin extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ContainerMain">
         <div className="content">
           <Container className="my-auto">
             <Form onSubmit={this.onSubmit}>
@@ -342,7 +341,6 @@ export default class Admin extends Component {
             </table>
           </Container>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -1,8 +1,7 @@
 import React from "react";
-import Foter from "./Footer";
 const Contacto = () => {
   return (
-    <div className="mainconteiner">
+    <div className="ContainerMain" >
       <section>
         <div className="container-xxl border-radius-x green-bg ">
           <div className="row align-items-start ">
@@ -20,7 +19,11 @@ const Contacto = () => {
                 cambiar e innovar pensando siempre en el bienestar de todos los
                 perritos.
               </p>
-              <img className="w-100" src="assets/img/porque-adoptar.jpg" alt="porque adoptar" />
+              <img
+                className="w-100"
+                src="assets/img/porque-adoptar.jpg"
+                alt="porque adoptar"
+              />
             </div>
           </div>
           <form
@@ -114,8 +117,6 @@ const Contacto = () => {
           </form>
         </div>
       </section>
-
-      <Foter />
     </div>
   );
 };

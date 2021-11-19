@@ -59,7 +59,7 @@ export default class Admin extends Component {
           //Cuando termina de hacer la insercción se carga nuevamente el listado de mascotas
           this.get();
           swal({
-            title: "Nuevo mascota agregada a la familia!",
+            title: "Nueva mascota agregada a la familia!",
             icon: "success",
             button: "Aceptar!",
           });
@@ -250,8 +250,8 @@ export default class Admin extends Component {
                     onChange={this.onInputChange}
                   >
                     <option>Tipo</option>
-                    <option value={0}>Canino</option>
-                    <option value={1}>Felino</option>
+                    <option value={1}>Canino</option>
+                    <option value={0}>Felino</option>
                   </Form.Select>
                 </Form.Group>
               </Row>
@@ -312,9 +312,9 @@ export default class Admin extends Component {
                     <td className="HideiTdId">{pet._id}</td>
                     <td>{pet.nombre}</td>
                     <td>{pet.edad}</td>
-                    <td>{pet.genero != 0 ? 'Macho' : 'Hembra'}</td>
+                    <td>{pet.genero !== 1 ? 'Macho' : 'Hembra'}</td>
                     <td>{pet.perfil}</td>
-                    <td>{pet.tipo != 0 ? 'Canino' : 'felino'}</td>
+                    <td>{pet.tipo !== 0 ? 'Canino' : 'Felino'}</td>
                     <td>
                       <button
                         type="button"

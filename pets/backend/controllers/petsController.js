@@ -14,6 +14,7 @@ petsController.insertar = async (request, response) => {
         edad: request.body.edad,
         foto: request.body.foto,
         perfil: request.body.perfil,
+        tipo: request.body.tipo,
         adoptado: request.body.adoptado    
     });  
   
@@ -30,8 +31,8 @@ petsController.eliminar = async(req, res) => {
 
 petsController.editar = async (request, response) => {
     
-    const {nombre, raza, genero, edad, foto, perfil, adoptado} =request.body;    
-      await pet.findByIdAndUpdate(request.params.id, { nombre, raza, genero, edad, foto, perfil, adoptado})
+    const {nombre, raza, genero, edad, foto, perfil, tipo, adoptado} =request.body;    
+      await pet.findByIdAndUpdate(request.params.id, { nombre, raza, genero, edad, foto, perfil, tipo, adoptado})
       .then(()=> response.json('Mascota actualizada con éxito'))
       .catch(error => response.status(400).json('Error: ', error));
 

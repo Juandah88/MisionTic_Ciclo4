@@ -1,12 +1,15 @@
 import React from 'react';
 import Foter from './Footer';
-
+import '../css/Nosotros.css'
 
 const Nosotros = () => {
     return (
-        <div >
+        <div className="nosot">
             <section id="nosotros" className="margin-id">
                 <div className="container-xxl border-radius-x green-bg my-4">
+                    <br/>
+                    <br/>
+
 
                     <h2 className="text-center title-index py-4 display-4">¿Quiénes sómos?</h2>
                     <p className="fs-4 p-4">

@@ -1,5 +1,6 @@
 import React from "react";
 import Foter from "./Footer";
+import '../css/Contacto.css';
 const Contacto = () => {
   return (
     <div className="mainconteiner">

@@ -1,7 +1,7 @@
 import React from "react";
 import Foter from './Footer';
 
-import { FacebookLoginButton } from 'react-social-login-buttons'
+
 const Login = () => {
 
     return(

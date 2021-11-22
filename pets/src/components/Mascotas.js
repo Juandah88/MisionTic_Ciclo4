@@ -130,6 +130,7 @@ export default class Admin extends Component {
     e.preventDefault();
     const formData = new FormData();
     this.state.foto !== "" && formData.append("img", this.state.foto);
+    
 
     this.state._id ? this.put(formData) : this.post(formData);
   }

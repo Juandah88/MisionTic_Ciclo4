@@ -21,11 +21,13 @@ petsController.insertar = async (request, response) => {
     if (request.file) {
         //Se obtiene el nombre de la imagen
         const { filename } = request.file;
-        newPet.setImgUrl(filename);
+        newPet.foto = newPet.setImgUrl(filename);
+        console.log(newPet)
+
     }
   
         newPet.save()
-    .then(() => response.json('Mascota agregada con éxito'))
+    .then(() => response.json(newPet))
     .catch(err => response.status(400).json('Error: ' + err));
 };
 

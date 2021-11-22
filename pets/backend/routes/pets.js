@@ -15,11 +15,9 @@ const {obtener
 router.route('/:id')
   .get(obtenerPorID)
   .delete(eliminar);
+  
+router.post("/crear", upload.single("img"), insertar);
 
-
-  router.post("/crear", upload.single("img"), insertar);
-// router.route('/crear')
-//   .post(insertar);
 
 router.route('/:id/editar')
   .put(editar);

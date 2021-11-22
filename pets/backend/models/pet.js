@@ -25,9 +25,9 @@ const petSchema = new mongoose.Schema(
 
 
 petSchema.methods.setImgUrl = function setImgUrl(filename) {
-    const url = "http://localhost:3000/";
-    this.img = url + "public/" + filename;
-    this.nameImg = filename;
+    const url = "http://localhost:5000/";
+    this.foto = url + "public/" + filename;
+    return this.foto
   };
 
 

@@ -6,11 +6,7 @@ const petSchema = new mongoose.Schema(
         raza: {type:String, required:true, index: true , },   
         genero: {type: Number, min:0, max:1, index:true},
         edad:   {type:Number, required:true, min: 0, max: 99}, 
-        foto:
-        {
-            data: Buffer,
-            contentType: String
-        },
+        foto:   {   type: String  },
         perfil: String,
         //Se guarda un nmero para  saber si es:
         // 1 = Canino
@@ -26,5 +22,14 @@ const petSchema = new mongoose.Schema(
         timestamps: true,
     }
 ); 
+
+
+petSchema.methods.setImgUrl = function setImgUrl(filename) {
+    const url = "http://localhost:3000/";
+    this.img = url + "public/" + filename;
+    this.nameImg = filename;
+  };
+
+
 const Pets = mongoose.model('Pet', petSchema);
 module.exports = Pets;

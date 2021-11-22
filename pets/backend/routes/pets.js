@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const upload = require("../middlewares/ImgUpload");
 
 const {obtener
   , obtenerPorID
@@ -15,8 +16,10 @@ router.route('/:id')
   .get(obtenerPorID)
   .delete(eliminar);
 
-router.route('/crear')
-  .post(insertar);
+
+  router.post("/crear", upload.single("img"), insertar);
+// router.route('/crear')
+//   .post(insertar);
 
 router.route('/:id/editar')
   .put(editar);

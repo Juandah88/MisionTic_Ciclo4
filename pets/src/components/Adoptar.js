@@ -5,10 +5,16 @@ import axios from 'axios';
 export default class Adoptar extends Component {
 
 
-    getPets = async () => {
-        const res = await axios.get('http://localhost:5000/api/mascotas')
-        this.setState({ pets: res.data });
-    }
+    get = () => {
+        axios
+          .get("http://localhost:5000/api/mascotas")
+          .then((response) => {
+            this.setState({ pets: response.data });
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+      };
 
     render() {
         return (

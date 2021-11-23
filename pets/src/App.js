@@ -36,7 +36,7 @@ function App() {
                     <Link className="navbar-brand" to="/Nosotros">Nosotros</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="navbar-brand" to="/admin">Adiministracion</Link>
+                    <Link className="navbar-brand" to="/admin">Agragar Mascota</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="navbar-brand" to="/Contacto">Contacto</Link>
@@ -48,6 +48,7 @@ function App() {
               </div>
             </div>
           </nav>
+         
         </header>
       </div>
       <Routes>

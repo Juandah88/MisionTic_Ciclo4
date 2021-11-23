@@ -7,6 +7,7 @@ import Contacto from './components/Contacto';
 import Nosotros from './components/Nosotros';
 import Adoptar from './components/Adoptar';
 import Login from './components/Login';
+import {DetallesMascotas} from './components/DetallesMascotas'
 
 
 
@@ -58,6 +59,7 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
       </Routes>
     </Router>
 

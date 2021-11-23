@@ -1,0 +1,19 @@
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+.ContainerMascotas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    font-size: 25px;
+    
+}
+.Mascotadiv{
+    padding: 20px;
+}
+.CenterNombre{
+    text-align: center;
+}

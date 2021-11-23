@@ -84,6 +84,7 @@ body {
     background: linear-gradient(to right, var(--terciario), var(--fondo-v));
 }
 
+
 footer {
     clear: both;
     position: relative;

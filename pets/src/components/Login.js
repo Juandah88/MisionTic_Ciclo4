@@ -1,11 +1,9 @@
 import React from "react";
-import Foter from './Footer';
-
 import { FacebookLoginButton } from 'react-social-login-buttons'
 const Login = () => {
 
     return(
-    <div class="row">
+    <div class="row ContainerMain">
         <div class="col-md-4 offset-md-4">
             <div class="card mt-4 text-center mb-4">
                 <div class="card-header">
@@ -26,11 +24,13 @@ const Login = () => {
                 </div>
             </div>
         </div>
+
        
         
        
     </div>
      
+
 
     );
 }

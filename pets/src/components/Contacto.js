@@ -116,11 +116,16 @@ const Contacto = () => {
         </div>
       </section>
       <br/>
+
       <br/> 
       <br/>
 
-      <Foter />
+   
+     
+
+
     </div>
+
   );
 };
 

@@ -1,5 +1,4 @@
-import React from 'react';
-import Foter from './Footer';
+import React from "react";
 
 const Adoptar = () => {
     return ( 
@@ -7,7 +6,7 @@ const Adoptar = () => {
             <h1>Página adoptar</h1>
             <br/>
             <br/>
-            <Foter/>
+            
         </div>
      );
 }

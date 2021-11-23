@@ -42,8 +42,7 @@ const Nosotros = () => {
             <br />
             <br />
             <br />
-        
-            <Foter />
+
         </div>
     );
 }

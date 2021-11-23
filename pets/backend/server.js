@@ -7,16 +7,13 @@ const cors = require('cors');
 
 const app = express();
 
-
 //Settings
 const port  = process.env.port || 5000;
 
+app.use('/public', express.static(__dirname + "/storage/imgs"))
 //MiddleWare
 app.use(express.json());
 app.use(cors());
-
-
-
 
 //Se obtiene la URL de Atlas si no ejecuta en  local
 const uri = process.env.ATLAS_URI ?  process.env.ATLAS_URI : 'mongodb://localhost/LocalPets'

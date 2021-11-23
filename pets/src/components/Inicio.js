@@ -270,20 +270,18 @@ const Inicio = () => {
             </div>
          
             
-        </section>
-        <br />
-        <br />
-        <br/>
-        
+            </section>
+           
 
         
 
         
 
             
-        <Foter />
-    </div>
-        
+
+            <Foter />
+        </div>
+
     );
 }
 

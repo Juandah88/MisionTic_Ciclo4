@@ -1,8 +1,4 @@
 import React from "react";
-
-
-
-
 import { FacebookLoginButton } from 'react-social-login-buttons'
 
 const Login = () => {

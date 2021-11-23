@@ -1,5 +1,4 @@
-import React from 'react';
-import Foter from './Footer';
+import React from "react";
 
 const Adoptar = () => {
     return ( 

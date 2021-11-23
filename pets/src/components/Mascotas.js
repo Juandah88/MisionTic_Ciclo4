@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Footer from "./Footer";
 import { Form, Row, Col, Button, Container } from "react-bootstrap";
 import Api from "../helpers/Conector.js";
 import "../css/GuardarRegistro.css";
@@ -10,14 +9,6 @@ export default class Admin extends Component {
   constructor(props) {
     super(props);
 
-    // this.onChangeNombre = this.onChangeNombre.bind(this);
-    // this.onChangeRaza = this.onChangeRaza.bind(this);
-    // this.onChangeGenero = this.onChangeGenero.bind(this);
-    // this.onChangeEdad = this.onChangeEdad.bind(this);
-    // this.onChangeFoto = this.onChangeFoto.bind(this);
-    // this.onChangePerfil = this.onChangePerfil.bind(this);
-    // this.onChangeTipo = this.onChangeTipo.bind(this);
-
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
@@ -25,6 +16,7 @@ export default class Admin extends Component {
       modalIsertar: false,
       OcultarMostrar: false,
       OcultarMostrarBtAGregar: true,
+      OcultarMostrarBtCancelar:false,
       elementId: "",
       _id: "",
       nombre: "",
@@ -59,7 +51,7 @@ export default class Admin extends Component {
           //Cuando termina de hacer la insercción se carga nuevamente el listado de mascotas
           this.get();
           swal({
-            title: "Nuevo mascota agregada a la familia!",
+            title: "Nueva mascota agregada a la familia!",
             icon: "success",
             button: "Aceptar!",
           });
@@ -91,6 +83,7 @@ export default class Admin extends Component {
       this.setState({
         OcultarMostrarBtAGregar: true,
         OcultarMostrar: false,
+        OcultarMostrarBtCancelar:false,
       });
       this.limpiarCampos();
   }; 
@@ -100,6 +93,7 @@ export default class Admin extends Component {
   delete = (mascota) => {
       this.setState({
         _id: mascota._id,
+        OcultarMostrarBtCancelar:false,
       });
   
     swal({
@@ -115,15 +109,18 @@ export default class Admin extends Component {
             .then(() => { })
             .catch((err) => {
               console.log(err);
+              
             });
-          this.get();
+            
           swal("Registro eliminado exitosamente!", {
             icon: "success",
-          });
+            
+          });this.get()
         } else {
           swal("Acción cancelada");
         }
       });
+      
       this.limpiarCampos();
   };
     //Fin Función Elimanar Mascotas
@@ -131,7 +128,13 @@ export default class Admin extends Component {
   // Para prevenir que se vuelva a cargar la página
   onSubmit(e) {
     e.preventDefault();
-  } // Fin para prevenir la carga de la página
+    const formData = new FormData();
+    this.state.foto !== "" && formData.append("img", this.state.foto);
+    
+
+    this.state._id ? this.put(formData) : this.post(formData);
+  }
+   // Fin para prevenir la carga de la página
 
   // se limpian los campos del estado
   limpiarCampos = () => {
@@ -143,9 +146,18 @@ export default class Admin extends Component {
       foto: "",
       perfil: "",
       tipo: "",
+      OcultarMostrar:false,
     });
-
+   
   };
+  BotonCancelar=(e)=>{
+    this.limpiarCampos();
+    this.setState({
+      OcultarMostrarBtCancelar:false,
+      OcultarMostrarBtAGregar: true,
+    })
+  
+  }
   // Fin limpiar campos
 
   // se crea el objeto para pasarlo al método
@@ -176,6 +188,8 @@ export default class Admin extends Component {
       tipo: mascota.tipo,
       OcultarMostrar: true,
       OcultarMostrarBtAGregar: false,
+      OcultarMostrarBtCancelar:true,
+      
     });
   };
   //Fin Función para mostrar los campos de editar mascotas
@@ -192,7 +206,7 @@ export default class Admin extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ContainerMain">
         <div className="content">
           <Container className="my-auto">
             <Form onSubmit={this.onSubmit}>
@@ -250,8 +264,8 @@ export default class Admin extends Component {
                     onChange={this.onInputChange}
                   >
                     <option>Tipo</option>
-                    <option value={0}>Canino</option>
-                    <option value={1}>Felino</option>
+                    <option value={1}>Canino</option>
+                    <option value={0}>Felino</option>
                   </Form.Select>
                 </Form.Group>
               </Row>
@@ -288,6 +302,12 @@ export default class Admin extends Component {
                   Agragar Mascotas
                 </Button>
               ) : null}
+                {this.state.OcultarMostrarBtCancelar?
+                <Button variant="success"
+                type="button"
+                onClick={this.BotonCancelar}>
+                Cancelar</Button>
+               :null}
               {this.state.OcultarMostrar ? (
                 <Button cvariant="primary" onClick={this.put}>
                   Actualizar
@@ -312,9 +332,9 @@ export default class Admin extends Component {
                     <td className="HideiTdId">{pet._id}</td>
                     <td>{pet.nombre}</td>
                     <td>{pet.edad}</td>
-                    <td>{pet.genero != 0 ? 'Macho' : 'Hembra'}</td>
+                    <td>{pet.genero !== 1 ? 'Macho' : 'Hembra'}</td>
                     <td>{pet.perfil}</td>
-                    <td>{pet.tipo != 0 ? 'Canino' : 'felino'}</td>
+                    <td>{pet.tipo !== 0 ? 'Canino' : 'Felino'}</td>
                     <td>
                       <button
                         type="button"
@@ -342,7 +362,6 @@ export default class Admin extends Component {
             </table>
           </Container>
         </div>
-        <Footer />
       </div>
     );
   }

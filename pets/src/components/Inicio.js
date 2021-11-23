@@ -2,13 +2,17 @@ import React from 'react'
 import Foter from './Footer';
 import '../css/Inicio.css';
 import videoperro from "../media/videoperro.mp4";
-import perro from "../media/perro.jpg"
+import contacto from "../media/contacto.mp4";
+import cats from "../media/cats.mp4";
+import lengua from "../media/lengua.mp4";
+import perrosaltando from "../media/perrosaltando.mp4";
+import candark from "../media/candark.mp4"
 
 import { Link } from 'react-router-dom';
 const Inicio = () => {
     return (
-        <div>
-            <section className="">
+        <div  >
+            <section>
                 
                 <div id="carouselExampleCaptions" className="carousel slide banner" data-bs-ride="carousel">
                     <div className="carousel-indicators">
@@ -80,7 +84,7 @@ const Inicio = () => {
          
        
 
-        <section className="inicio container-fluid ">
+            <section className="inicio container-fluid ">
             
                
             
@@ -118,7 +122,7 @@ const Inicio = () => {
                 </div>
                
                 <div className="cover-conta">
-                <video className="video" src={videoperro} autoPlay loop muted/>
+                <video className="video" src={contacto} autoPlay loop muted/>
             </div>
                
             </div>
@@ -128,7 +132,8 @@ const Inicio = () => {
             <div class="info-columna card">
                 <div class="card  h-100  desva ">
                 <figure>
-                    <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/>
+                    {/* <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
+                    <video className="videotargeta" src={cats} autoPlay loop muted/>
                    <div className="capa">
                     <h3 className="tituloborder ">Adoptame</h3>
                     <p className="tituloborder">Ayuda a un perrito de la calle a tener un hogar y una familia</p>
@@ -171,7 +176,7 @@ const Inicio = () => {
             <div class="col info-columna card">
                 <div class="card h-100  desva">
                     <figure>
-                        <img src="assets/img/slider/adoptar-un-perro.jpg" class="img-fluid rounded-start desvanecer" alt="..."/>
+                        <video className="videotargeta" src={candark} autoPlay loop muted/>
                         
                         <div className="capa">
                             <h3 className="tituloborder">Beneficios de adoptar un perro</h3>
@@ -180,33 +185,33 @@ const Inicio = () => {
                         </div>
                     </figure>
 
-                <div class="card-body  bg-targeta">
-                    <h5 class="card-title"></h5>
+            <div class="card-body  bg-targeta">
+                <h5 class="card-title"></h5>
                     <div className="accordion-item bg-dark">
-                    <h2 className="accordion-header" id="headingTwo">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <strong className="title">¿Cuáles son los beneficios de adoptar?</strong>
-                    </button>
-                    </h2>
-                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div className="accordion-body titulos-flecha">
-                        <ul>
-                            <li>Enseña a niños valores como respeto a la vida, amistad y amor. Crea sentido de responsabilidad y
-                            promueve la comunicación entre padres e hijos</li>
-                            <br />
-                            <li>Disminuyen la soledad, la ansiedad, el estrés y subiendo el ánimo y la autoestima.</li>
-                            <br />
-                            <li>Estimulan el contacto social y nos ayudan a estar en forma.</li>
-                            <br />
-                            <li>Podrás escoger entre más de 130 perritos, él que concuerde con tu personalidad (ya seas
-                            hiperactivo, calmado o consentidor).</li>
-                        </ul>
+                        <h2 className="accordion-header" id="headingTwo">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong className="title">¿Cuáles son los beneficios de adoptar?</strong>
+                            </button>
+                            </h2>
+                        <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div className="accordion-body titulos-flecha">
+                                <ul>
+                                    <li>Enseña a niños valores como respeto a la vida, amistad y amor. Crea sentido de responsabilidad y
+                                    promueve la comunicación entre padres e hijos</li>
+                                    <br />
+                                    <li>Disminuyen la soledad, la ansiedad, el estrés y subiendo el ánimo y la autoestima.</li>
+                                    <br />
+                                    <li>Estimulan el contacto social y nos ayudan a estar en forma.</li>
+                                    <br />
+                                    <li>Podrás escoger entre más de 130 perritos, él que concuerde con tu personalidad (ya seas
+                                    hiperactivo, calmado o consentidor).</li>
+                                </ul>
 
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
                 </div>
                 <div class="card-footer ">
                     <small class="tituloborder text-center">lleva un Amigo a Tu Familia</small>
@@ -216,7 +221,8 @@ const Inicio = () => {
             <div class="col info-columna card">
                 <div class="card h-100  desva">
                     <figure>
-                        <img src="assets/img/slider/family-dog.jpg" class="img-fluid rounded-start desvanecer" alt="..."/>
+                        {/* <img src="assets/img/slider/family-dog.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
+                        <video className="videotargeta" src={perrosaltando} autoPlay loop muted/>
                         <div className="capa">
                             <h3 className="tituloborder">Cuida a tu mascota</h3>
                             <p  className="tituloborder">Son los seres mas amables, sencillos, juguetones 
@@ -281,7 +287,7 @@ const Inicio = () => {
 
             
         <Foter />
-        </div>
+    </div>
         
     );
 }

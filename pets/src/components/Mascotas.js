@@ -342,7 +342,7 @@ export default class Admin extends Component {
             </table>
           </Container>
         </div>
-        <Footer />
+        
       </div>
     );
   }

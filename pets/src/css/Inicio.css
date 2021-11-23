@@ -115,13 +115,8 @@
 /***************** fin ************/
 
 
-/******************** body *******************/
-.inicio{
-  
-  /* background: rgb(112,218,255);
-  background: linear-gradient(97deg, rgba(112,218,255,1) 15%, rgba(66,177,255,1) 29%, rgba(32,246,224,1) 49%, rgba(50,147,249,1) 71%, rgba(8,169,230,1) 87%); */
-}   
-/******* fin *******/
+
+
 
 /***************** efecto targeta **************/
 
@@ -159,6 +154,10 @@
 /********* fin ***********/
 
 /***** efecto targeta hover texto *****/
+.inicio figure video{
+  width: 100%;
+  transition:  all 500ms ease-out;
+}
 .inicio figure img{
   width: 100%;
   transition:  all 500ms ease-out;
@@ -206,21 +205,24 @@
 /**************** fin *******************/
 /******************* video y texto ****************/
 
-video{
+.video{
  
   border-radius: 34px;
   object-fit: cover;
   width: 40%;
   height: 25%;
+  border: 3px solid #000;
+ 
 }
  
-video{
+.video{
   margin-left: 150px;
   border-radius: 34px;
   object-fit: cover;
   width: 70%;
   height: 90%;
 }
+
 .about-container{
   display:flex;
   
@@ -258,11 +260,21 @@ video{
 .fotn{
   font-size: 20px;
   border: 2px solid red
-
 } 
+.videotargeta{
+  border: 2px solid #000;
+  border-radius: 12px;
+
+}
 /************ fin ***********/
 .clearfix{
   margin-top: -60px;
+}
+
+.navbar{
+  position:sticky;
+  top: 0;
+
 }
 
 
@@ -297,6 +309,7 @@ video{
   .video{
     width: 100%;
     margin-left: auto;
+   
     
   }
   .cover-conta > video{

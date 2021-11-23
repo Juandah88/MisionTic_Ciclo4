@@ -26,8 +26,12 @@ const Login = () => {
                 </div>
             </div>
         </div>
-        <Foter />
-</div>
+       
+        
+       
+    </div>
+     
+
     );
 }
 export default Login;

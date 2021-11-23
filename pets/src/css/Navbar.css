@@ -7,7 +7,8 @@
 
 
 .img_size {
-width: 120px;
+width: 70px;
+
 
   }
 
@@ -89,13 +90,16 @@ width: 120px;
   display: block;
   text-align: center;
 }
+/* pinto de restauracion
+hois ve */
   /****************** Fin *********************** */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 830px) {
     .nav-links-btn:hover{
       background-color: rgb(212, 212, 212);
       padding: 9px 30px;
       border-radius: 4px;
       transition: all 0.3s ease-out;
+      
     }
     .nav__color {
       background: rgb(0,0,0);
@@ -125,6 +129,13 @@ width: 120px;
   }
 }
 @media screen and (max-width:  598px ) {
+
+  .menuhamburguesa{
+    margin-top: -70px;   
+
+  }
+}
+@media screen and (max-width:  770px ) {
 
   .menuhamburguesa{
     margin-top: -70px;   

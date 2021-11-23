@@ -96,21 +96,9 @@
   margin-left: 130px;
   font-size: 30px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 
-}
-.titulosadoptar{
-  width: 77%;
-  height: auto;
-  text-align: justify;
-  margin-left: 90px;
-  font-family: sans-serif;
-  
-}
-.adoptarcan{
-  font-family: fantasy;
- 
-} 
 .titulos-flecha{
   color: #eeeeee;
   text-shadow: 1px 1px 5px red, 0 0 22px rgb(12, 0, 0);
@@ -162,8 +150,8 @@
 }
 .inicio .card:hover{
   transform: translateY(-15px);
-  box-shadow: 0 8px 13px rgba(250, 248, 248, 0.2);
-  background-color: #72cbee;
+  box-shadow: 0 8px 13px rgba(41, 35, 35, 0.2);
+  background-color: #6f9eaaa4;
 }
 .card:hover{
   box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
@@ -217,12 +205,7 @@
 
 /**************** fin *******************/
 /******************* video y texto ****************/
-/* .cover-conta{
-  height: 50%;
-  width: 100%;
-  object-fit: contain;
-    
-}  */
+
 video{
  
   border-radius: 34px;
@@ -259,6 +242,28 @@ video{
   line-height: 1.5px;
 
 }
+.titulosadoptar{
+  width: 100%;
+  height: auto;
+  text-align: justify;
+  margin-left: 90px;
+  font-family: sans-serif;
+  
+}
+.adoptarcan{
+  font-family: fantasy;
+ 
+ 
+}
+.fotn{
+  font-size: 20px;
+  border: 2px solid red
+
+} 
+/************ fin ***********/
+.clearfix{
+  margin-top: -60px;
+}
 
 
 
@@ -268,12 +273,7 @@ video{
     display: none; 
   }
  
-}
-@media screen and (max-width: 613px) {
-  .tes{
-    margin-left: 66px;
-   
-  }
+
   
   
 }
@@ -303,37 +303,17 @@ video{
     width: 100%;
 
   }
+  .tes{
+   margin-left: -10px;
+  }
  
 }
-@media screen and (max-width: 590){
-  .about-container{
-    flex-direction: column;
-    padding: 0;
-    height: auto;
+/************* vide *********************/
+@media screen and (max-width: 954px){
+  .titulopets{
+    margin-left: 90px;
   }
-  .about-desc{
-    width: 90%;
-    margin: 0 auto;
-    padding: 40px 20px 50px 20px;
-
-  }
-  .tes{
-    margin-left: 300px;
-  }
-  .about-desc > h3{
-    font-size: 20px;
-    text-align: center;
-    background-color: #29d18b;
-  }
-  .video{
-    width: 100%;
-    
-  }
-  .cover-conta > video{
-    width: 100%;
-
-  }
-
+  
 }
 
 

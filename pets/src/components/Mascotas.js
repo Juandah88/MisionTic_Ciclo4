@@ -9,14 +9,6 @@ export default class Admin extends Component {
   constructor(props) {
     super(props);
 
-    // this.onChangeNombre = this.onChangeNombre.bind(this);
-    // this.onChangeRaza = this.onChangeRaza.bind(this);
-    // this.onChangeGenero = this.onChangeGenero.bind(this);
-    // this.onChangeEdad = this.onChangeEdad.bind(this);
-    // this.onChangeFoto = this.onChangeFoto.bind(this);
-    // this.onChangePerfil = this.onChangePerfil.bind(this);
-    // this.onChangeTipo = this.onChangeTipo.bind(this);
-
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
@@ -35,7 +27,6 @@ export default class Admin extends Component {
       perfil: "",
       tipo: "",
       tipoModal: "",
-      
     };
   }
 
@@ -111,11 +102,13 @@ export default class Admin extends Component {
         icon: "warning",
         buttons: true,
         dangerMode: true,
+        
     }).then((willDelete) => {
         if (willDelete) {
           axios
             .delete(Api + "/mascotas/" + this.state._id)
-            .then(() => { })
+            .then(() => {this.get(); })
+            
             .catch((err) => {
               console.log(err);
               
@@ -124,20 +117,27 @@ export default class Admin extends Component {
           swal("Registro eliminado exitosamente!", {
             icon: "success",
             
-          });this.get()
+          })
         } else {
           swal("Acción cancelada");
         }
       });
       
       this.limpiarCampos();
+     
   };
     //Fin Función Elimanar Mascotas
 
   // Para prevenir que se vuelva a cargar la página
   onSubmit(e) {
     e.preventDefault();
-  } // Fin para prevenir la carga de la página
+    const formData = new FormData();
+    this.state.foto !== "" && formData.append("img", this.state.foto);
+    
+
+    this.state._id ? this.put(formData) : this.post(formData);
+  }
+   // Fin para prevenir la carga de la página
 
   // se limpian los campos del estado
   limpiarCampos = () => {
@@ -353,7 +353,7 @@ export default class Admin extends Component {
                         type="button"
                         className="btn btn-danger m-1"
                         onClick={() => {
-                          this.delete(pet);
+                          this.delete(pet);this.get();
                         }}
                       >
                         Eliminar

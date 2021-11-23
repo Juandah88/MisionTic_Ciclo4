@@ -1,0 +1,15 @@
+.nosot{
+    position: relative;
+    z-index: -1000;
+    margin-top: -170px;
+    
+}
+.green-bg {
+    background-color: var(--fondo-v);
+}
+.title-index{
+    
+    background-color: var(--fondo-v);
+
+}
+

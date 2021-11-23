@@ -1,149 +1,105 @@
 /* Footer */
 
 .footer-title {
-  color: var(--blue-c);
-  font-weight: bold;
-  text-transform: uppercase;
+    color: var(--blue-c);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .footer-a {
-  color: var(--blue-c);
-  font-weight: bold;
-  text-decoration: none;
-  list-style: none;
+    color: var(--blue-c);
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
 }
 
 .footer-li {
-  list-style-type: none;
+    list-style-type: none;
 }
+
 
 /*Fondos*/
-.green-bg {
-  background-color: var(--fondo-v);
-}
 
-.bg-nav {
-  background-color: var(--fondo-nav);
-  opacity: 0.9;
-}
-
-.bg-widget-footer {
-  background-color: var(--terciario);
-}
 
 /*Borde redondeado*/
+
 .border-radius-x {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 .link-index {
-  text-decoration: none;
-  color: var(--terciario);
-  font-weight: none;
+    text-decoration: none;
+    color: var(#ffffff);
+    font-weight: none;
 }
 
 .link-index:hover {
-  text-decoration: none;
-  color: var(--quarter);
-  font-weight: none;
+    text-decoration: none;
+    color: var(#000);
+    font-weight: none;
 }
 
 .text {
-  width: 28%;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 80px;
+    width: 10%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
 }
+
 .preguntas {
-  width: 55%;
-  margin-top: 5em;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .clearfix {
-  clear: both;
+    clear: both;
 }
 
 body {
-  background-color: var(--blue-c) !important;
+    background-color: var(--blue-c) !important;
 }
 
-.formadm {
-  margin-top: 150px;
-}
 
 /*Margen para id*/
-.margin-id {
-  margin-top: 150px;
-}
+
 
 /*Boton whastapp*/
-.btn-whatsapp {
-  display: block;
-  width: 60px;
-  height: 60px;
-  color: #ffffff;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  border-radius: 50%;
-  line-height: 80px;
-  text-align: center;
-  z-index: 999;
-  opacity: 0.8;
-  font-size: 3em;
-}
 
-.btn-whatsapp:hover {
-  opacity: 1;
-}
-
-.btn-up {
-  display: block;
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  right: 80px;
-  bottom: 20px;
-  line-height: 80px;
-  text-align: center;
-  z-index: 999;
-  opacity: 1;
-  font-size: 3em;
-}
-
-.btn-up a {
-  color: rgb(221, 156, 14);
-}
-
-.btn-whatsapp a {
-  color: #2b940b;
-}
 
 /*Botones redes sociales*/
 
 .img_redes_size {
-  color: #3f729b;
-  width: 30px;
+    color: #3f729b;
+    width: 30px;
 }
 
 .bsignup {
-  background: var(--fondo-v);
-  background: linear-gradient(to right, var(--terciario), var(--fondo-v));
+    background: var(--fondo-v);
+    background: linear-gradient(to right, var(--terciario), var(--fondo-v));
 }
+
 .bsignin {
-  background: var(--fondo-v);
-  background: linear-gradient(to right, var(--terciario), var(--fondo-v));
+    background: var(--fondo-v);
+    background: linear-gradient(to right, var(--terciario), var(--fondo-v));
 }
-.btn {
-  margin-bottom: 30px;
-}
-.img_porque_adoptar{
-  flex-wrap: wrap-reverse; width: 100%;
-}
+
+
 footer {
-  clear: both;
-  position: relative;
-  
+    clear: both;
+    position: relative;
+    background-color: #000000;
+    background-color: #28282a;
+    opacity: 0.8;
+    background-size: 5px 5px;
+    background-image: repeating-linear-gradient(45deg, #000000 0, #000000 0.5px, #28282a 0, #28282a 50%);
+    width: 100%;
+    height: 100%px;
+    
+}
+.margenariba{
+    margin-top: -100px;
+}
+.margen-footer{
+    margin-top: -140px;
 }

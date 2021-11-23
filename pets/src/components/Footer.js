@@ -2,12 +2,7 @@ import React from 'react';
 import '../css/Footer.css';
 const Foter = () => {
     return (
-        // <footer className="bg-primmary">
-        // <h4>Todolos derechos reservados &copy;</h4>
-        // </footer>
-
-        <div>
-
+        <div className="footer margen-footer">
             <footer className="text-center text-lg-start bg-nav text-muted">
                 {/*  Section: Social media */}
                 <section>
@@ -17,9 +12,7 @@ const Foter = () => {
                         <div className="me-5 d-none d-lg-block text-light">
                             <span className="fs-3">Síguenos y apoyanos en nuestras redes sociales</span>
                         </div>
-
-
-
+                        
                         <div>
                             <a href="https://es-la.facebook.com/" target="blank" className="me-4 btn-facebook">
                                 <img className="img_redes_size" src="assets/img/iconos/facebook.png" alt="instagram" />
@@ -39,15 +32,15 @@ const Foter = () => {
                 {/*  Section: Social media */}
 
                 {/*  Section: Links  */}
-                <section className="">
-                    <div className="container text-center text-md-start mt-5">
+                <section className="margenariba">
+                    <div className="container text-center text-md-start mt-">
                         {/*  Grid row */}
                         <div className="row mt-3">
                             {/*  Grid column */}
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
                                 <h6 className="footer-title text-center"><i className="bi bi-info-circle"></i> Adopta Un amigo </h6>
-                                <p className="text-light py-3">
+                                <p className="text-light py-">
                                     Aquí encotraras muchos Animalitos que buscan
                                     un hogar, son alegres dinamicos animate te sacaran una sonrisa.
                                 </p>
@@ -60,7 +53,7 @@ const Foter = () => {
                                 <h6 className="footer-title text-center">
                                     {/* Nuestras mascotas */}
                                 </h6>
-                                <ul className="py-3">
+                                <ul className="">
                                     <li className="footer-li"><a href="#!" className="footer-a">Perros</a></li>
                                     <li className="footer-li"><a href="#!" className="footer-a">Gatos</a></li>
                                     <li className="footer-li"><a href="#!" className="footer-a">Tienda para perros</a></li>
@@ -76,7 +69,7 @@ const Foter = () => {
                                 <h6 className="footer-title text-center">
                                     Contáctenos
                                 </h6>
-                                <ul className="py-3">
+                                <ul className="py">
                                     <li className="footer-li">
                                         <p className="text-light"><i className="bi bi-house-door"></i> Cra 1 # 2 -3, Bogotá
                                         </p>
@@ -105,9 +98,9 @@ const Foter = () => {
                 {/*  Section: Links  */}
 
                 {/*  Copyright */}
-                <div className="text-center p-4 text-light color_footer" >
+                {/* <div className="text-center p-4 text-light color_footer" >
                     &copy; 2021 Copyright: minTic UTP
-                </div>
+                </div> */}
                 {/*  Copyright */}
             </footer>
 

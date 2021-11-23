@@ -24,7 +24,7 @@ function App() {
             <div className="container-fluid">
               <div className="size_logo">
                 <Link className="navbar-brandv" to="/">
-                  <img className="navbar-brandv  img_size ml-8 logocasa" src="/img/logo.svg" alt="logo" />    
+                  <img className="navbar-brandv  img_size  logocasa" src="/assets/img/iconos/dog-icon.png" alt="logo" />    
                 </Link>
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -113,7 +113,7 @@ const Inicio = () => {
                         <br/>
                         <br/>
                         
-                        <p className="titulosadoptar tes">Nos alegra saber que estas pensando en adoptar, todos nuestros peludos están a la espera de una familia y son entregados en óptimas condiciones de salud y belleza a adoptantes responsables y amorosos. En esta página conocerás nuestro proceso de adopción y requisitos, pero lo primero es conocer al peludo que deseas adoptar, si ya tienes su nombre sigue leyendo nuestras condiciones, de lo contrario puedes conocer todos nuestro peluditos en los siguientes links.</p>
+                        <p className="titulosadoptar tes ">Nos alegra saber que estas pensando en adoptar, todos nuestros peludos están a la espera de una familia y son entregados en óptimas condiciones de salud y belleza a adoptantes responsables y amorosos. En esta página conocerás nuestro proceso de adopción y requisitos, pero lo primero es conocer al peludo que deseas adoptar, si ya tienes su nombre sigue leyendo nuestras condiciones, de lo contrario puedes conocer todos nuestro peluditos en los siguientes links.</p>
                     </div>
                 </div>
                
@@ -122,13 +122,6 @@ const Inicio = () => {
             </div>
                
             </div>
-          
-            
-
-
-            
-              
-          
             <br/>
         
             <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -268,10 +261,6 @@ const Inicio = () => {
                 </div>
             </div>
             </div>
-         
-            <br />
-            <br />
-            <br />
             <div className="clearfix"></div>
                 <div className="container-xxl border-radius-x green-bg my-4">
 
@@ -286,9 +275,14 @@ const Inicio = () => {
         <br />
         
 
+        
+
+        
+
             
         <Foter />
         </div>
+        
     );
 }
 

@@ -136,7 +136,7 @@ const Inicio = () => {
                     <video className="videotargeta" src={cats} autoPlay loop muted/>
                    <div className="capa">
                     <h3 className="tituloborder ">Adoptame</h3>
-                    <p className="tituloborder">Ayuda a un perrito de la calle a tener un hogar y una familia</p>
+                    <p className="tituloborder">Ayuda a un gato de la calle a tener un hogar y una familia</p>
                 
                    </div>
                 </figure>
@@ -168,10 +168,11 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <small class="text-center "><p className="tituloborder">Encuentra a tu Compañero</p></small>
-                </div>
-                </div>
+                    <div class="card-footer ">
+                        <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+                    </div>
+            
+            </div>
             </div>
             <div class="col info-columna card">
                 <div class="card h-100  desva">
@@ -214,8 +215,8 @@ const Inicio = () => {
                     </div>
                 </div>
                 <div class="card-footer ">
-                    <small class="tituloborder text-center">lleva un Amigo a Tu Familia</small>
-                </div>
+                        <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+                    </div>
                 </div>
             </div>
             <div class="col info-columna card">
@@ -261,24 +262,18 @@ const Inicio = () => {
                 </div>
                             
                </div>
-                    <div class="card-footer">
-                        <small class="text-center tituloborder">Momentos inolvidables</small>
+               <div class="card-footer ">
+                        <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
             </div>
             </div>
-            <div className="clearfix"></div>
-                <div className="container-xxl border-radius-x green-bg my-4">
-
-                <p className="text-center fs-3 p-4 listo">
-                <strong>¿Estás listo?</strong>
-                <Link className="link-index btn BotonColor " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
-                </p>
-            </div> 
+         
             
         </section>
         <br />
         <br />
+        <br/>
         
 
         

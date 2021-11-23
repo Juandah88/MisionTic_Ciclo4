@@ -25,6 +25,9 @@
   margin: 30px;
   cursor: pointer;
 }
+.btn{
+ 
+}
 .botonincio{
   margin-top: -130px;
   margin-left: 550px;
@@ -201,7 +204,35 @@
   margin: auto;
 
 }
+.card-footer{
+  background-color: rgb(103, 134, 136);
+  
+  text-align: center;
+  color:rgb(0, 0, 0); 
+  border-radius: 21px;
+}
 
+.card-footer:hover{
+  background:rgba(58, 43, 192, 0.6);
+  transition: all 0.3s ease-out;
+  
+}
+.link-card-footer{
+  color: #fff; 
+
+  transition: all 0.3s ease-out;
+  padding: 6px 30px;
+  text-decoration: none;
+
+}
+.link-card-footer:hover{
+  color: rgb(180, 144, 144); 
+ 
+  transition: all 0.3s ease-out;
+ 
+  text-decoration: none;
+
+} 
 /**************** fin *******************/
 /******************* video y texto ****************/
 
@@ -271,11 +302,7 @@
   margin-top: -60px;
 }
 
-.navbar{
-  position:sticky;
-  top: 0;
 
-}
 
 
 

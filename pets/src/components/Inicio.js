@@ -1,5 +1,4 @@
 import React from 'react'
-import Foter from './Footer';
 import '../css/Inicio.css';
 import videoperro from "../media/videoperro.mp4";
 // import perro from "../media/perro.jpg"
@@ -280,7 +279,7 @@ const Inicio = () => {
         
 
             
-        <Foter />
+  
         </div>
         
     );

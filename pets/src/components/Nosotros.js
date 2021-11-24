@@ -1,5 +1,4 @@
 import React from 'react';
-import Foter from './Footer';
 import '../css/Nosotros.css'
 
 const Nosotros = () => {

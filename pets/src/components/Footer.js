@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/Footer.css';
+import '../css/footer.css';
 const Foter = () => {
     return (
-        <div className="footer margen-footer">
+        <div className="footer margen-footer container-fluid">
             <footer className="text-center text-lg-start bg-nav text-muted">
                 {/*  Section: Social media */}
                 <section>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Foter from './Footer';
 import '../css/Inicio.css';
 import videoperro from "../media/videoperro.mp4";
 import contacto from "../media/contacto.mp4";
@@ -108,7 +107,7 @@ const Inicio = () => {
                 <
                     /div> 
             </div> */}
-            <div class="about-container">
+            <div className="about-container">
                 <div className="about-desc">
                     <div className="adoptarcan">
 
@@ -128,9 +127,9 @@ const Inicio = () => {
             </div>
             <br/>
         
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="info-columna card">
-                <div class="card  h-100  desva ">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div classNames="info-columna card">
+                <div className="card  h-100  desva ">
                 <figure>
                     {/* <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
                     <video className="videotargeta" src={cats} autoPlay loop muted/>
@@ -141,7 +140,7 @@ const Inicio = () => {
                    </div>
                 </figure>
                
-                <div class="card-body bg-targeta ">
+                <div className="card-body bg-targeta ">
                 <div className="accordion-item titulos-flecha">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -168,14 +167,14 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                    <div class="card-footer ">
-                        <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+                    <div className="card-footer ">
+                        <Link className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
             
             </div>
             </div>
-            <div class="col info-columna card">
-                <div class="card h-100  desva">
+            <div className="col info-columna card">
+                <div className="card h-100  desva">
                     <figure>
                         <video className="videotargeta" src={candark} autoPlay loop muted/>
                         
@@ -186,8 +185,8 @@ const Inicio = () => {
                         </div>
                     </figure>
 
-            <div class="card-body  bg-targeta">
-                <h5 class="card-title"></h5>
+            <div className="card-body  bg-targeta">
+                <h5 className="card-title"></h5>
                     <div className="accordion-item bg-dark">
                         <h2 className="accordion-header" id="headingTwo">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -214,13 +213,13 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card-footer ">
+                <div className="card-footer ">
                         <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
             </div>
-            <div class="col info-columna card">
-                <div class="card h-100  desva">
+            <div className="col info-columna card">
+                <div className="card h-100  desva">
                     <figure>
                         {/* <img src="assets/img/slider/family-dog.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
                         <video className="videotargeta" src={perrosaltando} autoPlay loop muted/>
@@ -231,8 +230,8 @@ const Inicio = () => {
                                 
                         </div>
                     </figure>
-                <div class="card-body  bg-targeta">
-                    <h5 class="card-title"></h5>
+                <div className="card-body  bg-targeta">
+                    <h5 className="card-title"></h5>
                     <div className="accordion-item titulos-flecha">
                         <h2 className="accordion-header" id="headingThree">
                         <button className="accordion-button collapsed" type="button"data-bs-toggle="collapse"
@@ -262,7 +261,7 @@ const Inicio = () => {
                 </div>
                             
                </div>
-               <div class="card-footer ">
+               <div className="card-footer ">
                         <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
@@ -271,15 +270,10 @@ const Inicio = () => {
          
             
             </section>
-           
+            <br/>
+            <br/>
+            <br/>
 
-        
-
-        
-
-            
-
-            <Foter />
         </div>
 
     );

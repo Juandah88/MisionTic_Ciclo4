@@ -1,5 +1,4 @@
 import React from "react";
-import Foter from "./Footer";
 import '../css/Contacto.css';
 const Contacto = () => {
   return (
@@ -116,8 +115,12 @@ const Contacto = () => {
         </div>
       </section>
       <br/>
+
+      <br/> 
       <br/>
-      <br/>
+
+   
+     
 
 
     </div>

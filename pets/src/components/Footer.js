@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/footer.css';
+import '../css/Footer.css';
 const Foter = () => {
     return (
         <div className="footer margen-footer container-fluid">
@@ -7,8 +7,6 @@ const Foter = () => {
                 {/*  Section: Social media */}
                 <section>
                     <div className=" container d-flex justify-content-center p-4 border-bottom align-items-center">
-
-
                         <div className="me-5 d-none d-lg-block text-light">
                             <span className="fs-3">Síguenos y apoyanos en nuestras redes sociales</span>
                         </div>

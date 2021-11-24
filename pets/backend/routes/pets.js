@@ -17,9 +17,8 @@ router.route('/:id')
   .delete(eliminar);
 
 // antes de ejecutar la insertar se envia los datos por el middleware 'ImgUpload'
-router.post("/crear", upload.single("img"), insertar);
+router.post('/crear', upload.single('foto'), insertar);
 
-router.route('/:id/editar')
-  .put(editar);
 
+router.put('/:id/editar', upload.single('foto'), editar);
 module.exports = router;

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/footer.css';
+import '../css/Footer.css';
 const Foter = () => {
     return (
         <div className="footer margen-footer container-fluid">

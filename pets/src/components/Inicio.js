@@ -280,7 +280,7 @@ const Inicio = () => {
         
 
             
-        <Foter />
+        
         </div>
         
     );

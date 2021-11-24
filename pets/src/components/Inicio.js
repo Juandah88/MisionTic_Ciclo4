@@ -177,8 +177,8 @@ const Inicio = () => {
                         <video className="videotargeta" src={candark} autoPlay loop muted/>
                         
                         <div className="capa">
-                            <h3 className="tituloborder">Beneficios de adoptar un perro</h3>
-                            <p  className="tituloborder"> son capaces de reconocer cuándo estás triste, angustiado o preocupado. En estas situaciones, el pequeño animal se acerca a ti y deja que lo acaricies</p>
+                            <h3 className="tituloborder">adopta a un perro</h3>
+                            <p  className="tituloborder"> son capaces de reconocer cuándo estás triste, angustiado o preocupado. </p>
                         
                         </div>
                     </figure>
@@ -224,7 +224,7 @@ const Inicio = () => {
                         <div className="capa">
                             <h3 className="tituloborder">Cuida a tu mascota</h3>
                             <p  className="tituloborder">Son los seres mas amables, sencillos, juguetones 
-                            y amorosos del mundo ellos siempre estaran para ti</p>
+                            y amorosos del mundo.</p>
                                 
                         </div>
                     </figure>

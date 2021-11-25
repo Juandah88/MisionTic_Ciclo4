@@ -1,7 +1,11 @@
 import React from "react";
+
+import '../css/Contacto.css';
+
 import style from "../css/Contacto.module.css";
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
+
 const Contacto = () => {
 
   const sendEmail = (e) => {

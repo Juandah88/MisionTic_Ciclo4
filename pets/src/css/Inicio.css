@@ -84,17 +84,12 @@
 
 /********************** titulos ******** ****************/
 
-.titulo-principal{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: azure; 
-  background: rgb(54,46,37);
-  background: linear-gradient(97deg, rgb(0, 0, 0) 20%, rgba(0,119,115,1) 49%, rgba(5,5,5,0.9640231092436975) 85%);background-color: rgb(61, 61, 61);
-  text-align: center;
-} 
+
 .tituloborder{
   text-shadow: 1px 1px 10px rgb(0, 195, 255), 0 0 22px rgb(102, 128, 146);
 }
 .titulopets{
-  margin-top:  -300px;
+  margin-top:  -90px;
   width: 70%;
   margin-left: 130px;
   font-size: 30px;
@@ -169,7 +164,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 230px;
+  height: 240px;
   background:rgba(11,103,123,0.6);
   transition: all 500ms ease-in-out;
   opacity:0;
@@ -182,7 +177,7 @@
 
 }
 .inicio figure:hover .capa h3{
-  margin-top:70px;
+  margin-top:40px;
   margin-bottom: 9px;
 
 }
@@ -240,17 +235,16 @@
  
   border-radius: 34px;
   object-fit: cover;
-  width: 40%;
-  height: 25%;
+ 
   border: 3px solid #000;
  
 }
  
 .video{
-  margin-left: 150px;
+  margin-left: 2px;
   border-radius: 34px;
   object-fit: cover;
-  width: 70%;
+  width: 100%;
   height: 90%;
 }
 
@@ -276,7 +270,7 @@
 
 }
 .titulosadoptar{
-  width: 100%;
+  width: 80%;
   height: auto;
   text-align: justify;
   margin-left: 90px;
@@ -340,11 +334,12 @@
     
   }
   .cover-conta > video{
-    width: 100%;
+    width: 95%;
+    margin-left: 20px;
 
   }
   .tes{
-   margin-left: -10px;
+   margin-left: 40px;
   }
  
 }
@@ -354,6 +349,34 @@
     margin-left: 90px;
   }
 
+
+@media screen and (max-width: 767px){
+  .inicio figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    background:rgba(11,103,123,0.6);
+    transition: all 500ms ease-in-out;
+    opacity:0;
+    visibility: hidden;
+    text-align: center;
+  }
+  .inicio figure:hover .capa h3{
+    margin-top:87px;
+    margin-bottom: 9px;
+  
+  }
+  .inicio figure .capa h3{
+   color:#fff;
+   font-weight: 400;
+   margin-bottom: 120px;
+   transition: all 500ms ease-out;
+   margin-top: 30px;
+  
+  
+  }
+ 
 
   
 }

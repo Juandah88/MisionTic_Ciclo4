@@ -8,9 +8,11 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
  
   <React.StrictMode>
+    
     <App />
+    <Foter></Foter>
 
-    <Foter />
+  
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -22,6 +22,7 @@ export function DetallesMascotas() {
     return <Spiner />;
   }
   return (
+    <div>
     <div className="ContainerMain ContainerMascotas">
       <div className="Mascotadiv">
         <p className="CenterNombre">Nombre {state.nombre}</p>
@@ -39,6 +40,7 @@ export function DetallesMascotas() {
         <p>Perfil {state.perfil}</p>
         
       </div>
+    </div>
     </div>
   );
 }

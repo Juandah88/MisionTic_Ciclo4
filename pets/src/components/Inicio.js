@@ -4,10 +4,11 @@ import videoperro from "../media/videoperro.mp4";
 // import perro from "../media/perro.jpg"
 
 import { Link } from 'react-router-dom';
+import Foter from './Footer';
 const Inicio = () => {
     return (
         <div>
-            <section className="">
+            <>
                 
                 <div id="carouselExampleCaptions" className="carousel slide banner" data-bs-ride="carousel">
                     <div className="carousel-indicators">
@@ -75,7 +76,7 @@ const Inicio = () => {
           
                 <Link className="link-index btn BotonColor botonincio " to="/Adoptar">¡Aqui esta tu proximo amigo!</Link>
                 
-            </section>
+            </>
          
        
 
@@ -272,14 +273,7 @@ const Inicio = () => {
         </section>
         <br />
         <br />
-        
 
-        
-
-        
-
-            
-  
         </div>
         
     );

@@ -1,8 +1,30 @@
 import React from "react";
-import '../css/Contacto.css';
+import style from "../css/Contacto.module.css";
+import emailjs from "emailjs-com";
+import swal from "sweetalert";
 const Contacto = () => {
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2g9fmp4', 'template_xopdnqy',e.target,'user_BLMjPgWw1lzctNbxUeHQt')
+      .then((result) => {
+          console.log(result.text);
+          console.log("enviado")
+          swal({
+            title: "Mensaje enviado exitosamente",
+            icon: "success",
+            button: "Aceptar!",
+          });
+      }, (error) => {
+          console.log(error.text);
+          console.log("nada")
+      });
+      e.target.reset();
+  };
   return (
-    <div className="mainconteiner ContainerMain">
+    <div className={"ContainerMain"}>
+    <div className=" mainconteiner">
       <section>
         <div className="container-xxl border-radius-x green-bg ">
           <div className="row align-items-start ">
@@ -20,102 +42,63 @@ const Contacto = () => {
                 cambiar e innovar pensando siempre en el bienestar de todos los
                 perritos.
               </p>
-              <img className="w-100" src="assets/img/porque-adoptar.jpg" alt="porque adoptar" />
+              <img
+                className="w-100"
+                src="assets/img/porque-adoptar.jpg"
+                alt="porque adoptar"
+              />
+              <div className={style.flex__container}>
+                <form className={style.from} onSubmit={sendEmail}>
+                  <div className={style.fromm__section}>
+                    <input
+                      type="text" name="name"
+                      className="from__input"
+                      placeholder="Nombre"
+                      required
+                    />
+                  </div>
+                  <div className={style.fromm__section}>
+                    <input
+                      type="email"
+                      name="email"
+                      className="from__input"
+                      placeholder="email"
+                      required
+                    />
+                  </div>
+                  <div className={style.fromm__section}>
+                    <textarea
+                      className={style.from__input}
+                      name="message"
+                      placeholder="mensaje"
+                      required
+                      
+                    ></textarea>
+                  </div>
+                  <div id="bt2">
+                  
+                    <input className={style.bto} type="submit" 
+                    id="" />
+                  </div>
+                </form>
+                <div className={style.imagen2}>
+                  <div className={style.imagen}>
+                    <img
+                      src="https://img.icons8.com/ios/452/gmail--v2.png"
+                      alt="Imagen"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <form
-            action="/add2"
-            name="Formulario"
-            method="post"
-            onsubmit="return validar(event)"
-          >
-            <div id="ContactenosSectionForm" style={{ padding: "2em" }}>
-              <div className="mb-3">
-                <label for="FirstName">Nombres</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="FirstName"
-                  name="nombre"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label for="LastName">Apellidos</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="LastName"
-                  name="apellido"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label for="InputEmail" className="form-label">
-                  Correo electrónico
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="InputEmail"
-                  name="email"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label for="SelectAsunto" className="form-label">
-                  Selecciona un asunto
-                </label>
-                <select
-                  className="form-select"
-                  aria-label="Default select example"
-                  name="asunto"
-                  required
-                >
-                  <option value="(PQR) - Peticiones, quejas y reclamos">
-                    (PQR) - Peticiones, quejas y reclamos
-                  </option>
-                  <option value="Donaciones">Donaciones</option>
-                  <option value="Recomendaciones">Recomendaciones</option>
-                  <option value="Reporta un caso">Reporta un caso</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
-              <div className="mb-3">
-                <label for="Comentarios" className="form-label">
-                  Comentarios
-                </label>
-                <textarea
-                  className="form-control"
-                  id="Comentarios"
-                  rows="3"
-                  name="comentarios"
-                  required
-                ></textarea>
-              </div>
-              <div className="d-grid gap-5">
-                <button type="submit" className="btn btn-success">
-                  Enviar
-                </button>
-                {/* <script>
-                function validar(e) {
-                  swal({
-                    title: "Gracias por contactarnos",
-                    text: "En máximo 3 días hábiles uno de nuestros asesores se contactará con usted.",
-                    icon: "success",
-                  }).then(function () {
-                    document.Formulario.submit();
-                  })
-                  return false;
-                }
-              </script> */}
-              </div>
-            </div>
-          </form>
         </div>
+       
       </section>
-
+    
+      </div>
     </div>
+    
   );
 };
 

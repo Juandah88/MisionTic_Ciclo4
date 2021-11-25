@@ -52,7 +52,7 @@ const Contacto = () => {
                   <div className={style.fromm__section}>
                     <input
                       type="text" name="name"
-                      className="from__input"
+                      className={style.from__input}
                       placeholder="Nombre"
                       required
                     />
@@ -61,7 +61,7 @@ const Contacto = () => {
                     <input
                       type="email"
                       name="email"
-                      className="from__input"
+                      className={style.from__input}
                       placeholder="email"
                       required
                     />

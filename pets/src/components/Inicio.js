@@ -4,6 +4,7 @@ import contacto from "../media/contacto.mp4";
 import cats from "../media/cats.mp4";
 import perrosaltando from "../media/perrosaltando.mp4";
 import candark from "../media/candark.mp4"
+import Contacto from './Contacto';
 
 import { Link } from 'react-router-dom';
 const Inicio = () => {

@@ -1,0 +1,21 @@
+.mascotaGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,230px);
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .mascotaCard{
+    list-style: none;
+    text-align: center;
+}
+
+.mascotaImagen{
+    border-radius: 10px;
+    background: rgb(6, 8, 8);
+    width: 230px;
+    height: 230px;
+
+}

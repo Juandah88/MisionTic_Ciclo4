@@ -59,10 +59,37 @@ petsController.eliminar = async (request, response) => {
 
 petsController.editar = async (request, response) => {
 
-    const { nombre, raza, genero, edad, foto, perfil, tipo, adoptado } = request.body;
-    await pet.findByIdAndUpdate(request.params.id, { nombre, raza, genero, edad, foto, perfil, tipo, adoptado })
-        .then(() => response.json('Mascota actualizada con éxito'))
-        .catch(error => response.status(400).json('Error: ', error));
+    try {
+        const mascotaEncontrada = await pet.findById({ _id: request.params.id });
+
+        if (!mascotaEncontrada) {
+            return response.status(404).json(`Mascota con id: ${request.params.id} no encontrada`)
+        }
+        //Se valida que venga un archivo en la solicitud
+        
+        if (request.file) {
+            console.log(request.file)
+            //Se valida si la mascota tiene foto
+            if (mascotaEncontrada.fotoNombre) {
+                //Se elimina la foto antigua
+                deleteImg(mascotaEncontrada.fotoNombre);
+            }
+            //Se actualiza la información de la imagen
+            const { filename } = request.file;
+            mascotaEncontrada.foto = mascotaEncontrada.setImgUrl(filename);
+            await mascotaEncontrada.save();
+        }
+        await mascotaEncontrada.updateOne(request.body);
+        response.json({
+            ok: true,
+            message: "Los datos de la mascota fueron actualizados correctamente.",
+        });
+    } catch (error) {
+        response.status(500).json({
+            ok: false,
+            message: error.message,
+        });
+    }
 
 }
 

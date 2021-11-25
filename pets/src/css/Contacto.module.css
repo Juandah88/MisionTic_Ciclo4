@@ -1,0 +1,135 @@
+
+.text-center{
+    margin-top: 80px;
+    
+}
+.flex__container{
+  width:60%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background: rgb(165, 163, 163);
+  border-radius: 20px;
+  margin: 30px auto;
+  padding: 40px;
+
+
+}
+
+.from{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  min-width: 200px;
+  flex:1;
+  text-align: center;
+  padding: 50px;
+}
+@media(min-width: 1024px){
+  .from{
+      display:flex;
+      flex-direction: column;
+      width:100%;
+      height:30%;
+      min-width: 400px;
+      flex:1;
+      text-align: center;
+      
+  }
+}
+
+
+.flex__img{
+  flex: 1;
+}
+.imagen img{
+  width:200px;
+}
+
+.from__input{
+  width:100%;
+  padding:6px;
+  margin: 6px;
+  outline: none;
+  border: transparent;
+  background:transparent;
+  border-bottom: solid #08777a;
+  color: #fff;
+}
+
+
+.from__input:hover{
+  width:100%;
+  padding:6px;
+  margin: 6px;
+  background:rgba(199, 193, 193, 0.055);
+  border-bottom:3px solid #08777a;
+}
+
+
+
+.from__input:focus{
+  width:100%;
+  background:transparent;
+  border-bottom:3px solid #40d323;
+}
+
+.from textarea{
+  min-height: 120px;
+  resize: none;
+  border:none;
+  width:100%;
+  padding:6px;
+  margin: 6px;
+  background:transparent;
+  border-bottom:3px solid #08777a;
+  outline: none;
+}
+
+input:hover{
+  border:none;
+  background:transparent;
+  outline: none;
+  width:100%;
+}
+
+
+.imagen img{
+  display:flex;
+  margin: 0 auto;
+  background:transparent;
+  border-radius: 20%;
+  width:60%;
+
+}
+
+
+.imagen2{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width:200px;
+  height:200px;
+  background:rgb(59, 56, 56);
+  border-radius: 100px;
+}
+
+.bto{
+  width:100%;
+  padding:10px;
+  border-radius: 10px;
+  outline:0;
+  background:#097272;
+  border: 0;
+}
+.bto:hover{
+  width:100%;
+  padding:10px;
+  border-radius: 10px;
+  outline:0;
+  background:#0faa4aa4;
+  border: 0;
+}

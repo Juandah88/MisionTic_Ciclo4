@@ -24,6 +24,7 @@ export default class Admin extends Component {
       genero: "",
       edad: "",
       foto: "",
+      fotoNombre: "",
       perfil: "",
       tipo: "",
       tipoModal: "",
@@ -102,11 +103,13 @@ export default class Admin extends Component {
         icon: "warning",
         buttons: true,
         dangerMode: true,
+        
     }).then((willDelete) => {
         if (willDelete) {
           axios
             .delete(Api + "/mascotas/" + this.state._id)
-            .then(() => { })
+            .then(() => {this.get(); })
+            
             .catch((err) => {
               console.log(err);
               
@@ -115,23 +118,32 @@ export default class Admin extends Component {
           swal("Registro eliminado exitosamente!", {
             icon: "success",
             
-          });this.get()
+          })
         } else {
           swal("Acción cancelada");
         }
       });
       
       this.limpiarCampos();
+     
   };
     //Fin Función Elimanar Mascotas
 
   // Para prevenir que se vuelva a cargar la página
   onSubmit(e) {
     e.preventDefault();
+    alert('asdasda')
     const formData = new FormData();
-    this.state.foto !== "" && formData.append("img", this.state.foto);
+    this.state.foto !== "" && formData.append('foto', this.state.foto);
+    this.state.foto !== "" && formData.append('fotoNombre', this.state.fotoNombre);
+    console.log(this.state.fotoNombre)
+    formData.append('nombre', this.state.nombre);
+    formData.append('edad', this.state.edad);
+    formData.append('tipo', this.state.tipo);
+    formData.append('genero', this.state.genero);
+    formData.append('raza', this.state.raza);
+    formData.append('perfil', this.state.perfil);
     
-
     this.state._id ? this.put(formData) : this.post(formData);
   }
    // Fin para prevenir la carga de la página
@@ -209,7 +221,7 @@ export default class Admin extends Component {
       <div className="ContainerMain">
         <div className="content">
           <Container className="my-auto">
-            <Form onSubmit={this.onSubmit}>
+            <Form onSubmit={this.onSubmit} >
               <Form.Group className="mb-3" controlId="formNombre">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control
@@ -350,7 +362,7 @@ export default class Admin extends Component {
                         type="button"
                         className="btn btn-danger m-1"
                         onClick={() => {
-                          this.delete(pet);
+                          this.delete(pet);this.get();
                         }}
                       >
                         Eliminar
@@ -362,6 +374,11 @@ export default class Admin extends Component {
             </table>
           </Container>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
       </div>
     );
   }

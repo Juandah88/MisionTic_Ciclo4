@@ -118,7 +118,7 @@ const Inicio = () => {
                     </div>
                 </div>
                
-                <div className="cover-conta container-fluid">
+                <div className="cover-conta ">
                 <video className="video" src={contacto} autoPlay loop muted/>
             </div>
                
@@ -266,9 +266,19 @@ const Inicio = () => {
             </div>
             </div>
             </section>
+
             <br/>
             <br/>
             <br/>
+
+
+        
+
+        
+
+            
+
+
         </div>
 
     );

@@ -20,7 +20,7 @@ function App() {
     <Router>
       <div>
         <header>
-          <nav className="navbar navbar-expand-md nav  navbar-dark nav__color ">
+          <nav className="navbar navbar-expand-md nav  nav__color ">
             <div className="container-fluid">
               <div className="size_logo">
                 <Link className="navbar-brandv" to="/">

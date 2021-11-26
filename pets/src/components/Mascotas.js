@@ -4,7 +4,7 @@ import { Form, Row, Col, Button, Container } from "react-bootstrap";
 import Api from "../helpers/Conector.js";
 import "../css/GuardarRegistro.css";
 import swal from "sweetalert";
-
+ 
 export default class Admin extends Component {
   constructor(props) {
     super(props);

@@ -40,20 +40,20 @@
     border: none;
     border-bottom: 3px solid rgb(106, 110, 111);
     outline: none;
-    background: transparent;
+   
   }
   input:focus {
     width: 100%;
     border: none;
     border-bottom: 3px solid rgb(13, 167, 8);
     outline: none;
-    background: transparent;
+
   }
   .form textarea {
     width: 100%;
     resize: none;
     height: 10em;
-    background: transparent;
+
     border: 0;
     outline: none;
     border-bottom: 3px solid rgb(106, 110, 111);
@@ -62,23 +62,13 @@
     width: 100%;
     resize: none;
     height: 10em;
-    background: transparent;
+
     border: 0;
     outline: none;
     background: rgb(141, 146, 145);
     border-bottom: 3px solid rgb(8, 163, 72);
   }
-  .form textarea:hover {
-    width: 100%;
-    resize: none;
-    height: 10em;
-    background: transparent;
-    border: 0;
-    outline: none;
-    background: rgb(98, 102, 101);
-    border-bottom: 3px solid rgb(8, 163, 72);
-    
-  }
+
  
   form button {
     width: 100% !important;

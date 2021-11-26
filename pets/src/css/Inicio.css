@@ -199,7 +199,7 @@
   margin: auto;
 
 }
-.card-footer{
+.footer{
   background-color: rgb(103, 134, 136);
   
   text-align: center;
@@ -207,9 +207,10 @@
   border-radius: 21px;
 }
 
-.card-footer:hover{
+.footer:hover{
   background:rgba(58, 43, 192, 0.6);
   transition: all 0.3s ease-out;
+
   
 }
 .link-card-footer{
@@ -221,7 +222,7 @@
 
 }
 .link-card-footer:hover{
-  color: rgb(180, 144, 144); 
+  color: rgb(151, 113, 113); 
  
   transition: all 0.3s ease-out;
  

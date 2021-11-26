@@ -166,7 +166,7 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                    <div  className="card-footer ">
+                    <div  className="card-footer footer ">
                         <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
             
@@ -212,7 +212,7 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                <div  className="card-footer ">
+                <div  className="card-footer footer ">
                         <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
@@ -260,7 +260,7 @@ const Inicio = () => {
                 </div>
                             
                </div>
-               <div className="card-footer ">
+               <div className="card-footer footer ">
                         <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>

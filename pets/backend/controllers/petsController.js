@@ -62,6 +62,8 @@ petsController.editar = async (request, response) => {
     try {
         const mascotaEncontrada = await pet.findById({ _id: request.params.id });
 
+        console.log( request.params.id)
+
         if (!mascotaEncontrada) {
             return response.status(404).json(`Mascota con id: ${request.params.id} no encontrada`)
         }

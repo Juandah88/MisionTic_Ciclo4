@@ -1,5 +1,6 @@
 import React from "react";
 
+import '../css/Contacto.module.css';
 
 import style from "../css/Contacto.module.css";
 import emailjs from "emailjs-com";

@@ -11,12 +11,12 @@ export default class Admin extends Component {
 
     this.onSubmit = this.onSubmit.bind(this);
     this.state = {
-      pets: [],
+
       modalIsertar: false,
-      ocultarMostrar: false,
-      ocultarMostrarBtAgregar: true,
-      ocultarMostrarBtCancelar: false,
       elementId: "",
+      tipoModal: "",
+
+      pets: [],
       _id: "",
       nombre: "",
       raza: "",
@@ -26,7 +26,7 @@ export default class Admin extends Component {
       fotoNombre: "",
       perfil: "",
       tipo: "",
-      tipoModal: "",
+
     };
 
     this.onFileChange = this.onFileChange.bind(this);
@@ -47,14 +47,13 @@ export default class Admin extends Component {
 
   // Función para agregar nuevas mascotas
   post = (formData) => {
-    alert('post')
     axios
       .post(Api + "/mascotas/crear", formData)
       .then(() => {
         //Cuando termina de hacer la insercción se carga nuevamente el listado de mascotas
         this.get();
         swal({
-          title: "Nueva mascota agregada a la familia!",
+          title: "Una mascota a llegado la familia!",
           icon: "success",
           button: "Aceptar!",
         });
@@ -68,14 +67,13 @@ export default class Admin extends Component {
 
   // Función para Editar mascotas
   put = (formData) => {
-    alert(this.state.foto)
     let API = `${Api}/mascotas/${this.state._id}/editar`;
     axios
       .put(API, formData)
       .then(() => {
         this.get();
         swal({
-          title: "registro editado!",
+          title: "Los cambios de la mascota han sido realizado con exíto!",
           icon: "success",
           button: "Aceptar!",
         });
@@ -84,11 +82,6 @@ export default class Admin extends Component {
         console.log(error);
       });
 
-    this.setState({
-      ocultarMostrarBtAgregar: true,
-      ocultarMostrar: false,
-      ocultarMostrarBtCancelar: false,
-    });
     this.limpiarCampos();
   };
   // Fin Función para Editar mascotas
@@ -228,7 +221,7 @@ export default class Admin extends Component {
         <div className="content">
           <Container className="my-auto">
             <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
-              <Form.Group className="mb-3" controlId="formNombre">
+              <Form.Group className="mb-3">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control
                   required
@@ -240,7 +233,7 @@ export default class Admin extends Component {
               </Form.Group>
 
               <Row className="mb-3">
-                <Form.Group as={Col} controlId="formEdad">
+                <Form.Group as={Col}>
                   <Form.Label>Edad</Form.Label>
                   <Form.Control
                     required
@@ -249,7 +242,7 @@ export default class Admin extends Component {
                     onChange={this.onInputChange}
                   />
                 </Form.Group>
-                <Form.Group as={Col} controlId="formRaza">
+                <Form.Group as={Col}>
                   <Form.Label>Raza</Form.Label>
                   <Form.Control
                     required
@@ -259,7 +252,7 @@ export default class Admin extends Component {
                   />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGenero">
+                <Form.Group as={Col}>
                   <Form.Label>Genero</Form.Label>
                   <Form.Select
                     required
@@ -273,7 +266,7 @@ export default class Admin extends Component {
                   </Form.Select>
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formTipo">
+                <Form.Group as={Col}>
                   <Form.Label>Tipo</Form.Label>
                   <Form.Select
                     required
@@ -288,7 +281,7 @@ export default class Admin extends Component {
                 </Form.Group>
               </Row>
 
-              <Form.Group className="mb-3" id="formTipo">
+              <Form.Group className="mb-3">
                 <Form.Label>Foto de la mascota</Form.Label>
                 <input
                   type="file"
@@ -298,9 +291,7 @@ export default class Admin extends Component {
               </Form.Group>
 
               <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
+                className="mb-3">
                 <Form.Label>Perfil de la mascota</Form.Label>
                 <Form.Control
                   required
@@ -311,27 +302,18 @@ export default class Admin extends Component {
                   onChange={this.onInputChange}
                 />
               </Form.Group>
-              {this.state.ocultarMostrarBtAgregar ? (
+              {
+                !this.state._id ?
+                  (<Button variant="primary" type="submit"> Agragar Mascotas </Button>)
+                  : (<Button variant="primary" type="submit"> Actualizar</Button>)
+              }
+              {this.state._id ?
                 <Button
-                  variant="primary"
-                  type="submit">
-                  Agragar Mascotas
-                </Button>
-              ) : null}
-              {this.state.ocultarMostrarBtCancelar ?
-                <Button variant="success"
-                  type="button"
-                  onClick={this.BotonCancelar}>
-                  Cancelar</Button>
+                  className="btn btn-danger m-1"
+                  onClick={this.botonCancelar}> Cancelar</Button>
                 : null}
-              {this.state.ocultarMostrar ? (
-                <Button variant="primary" onClick={this.put}>
-                  Actualizar
-                </Button>
-              ) : null}
             </Form>
             <hr />
-
             <table className="table table-bordered">
               <thead>
                 <tr>

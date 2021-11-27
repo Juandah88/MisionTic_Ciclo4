@@ -44,7 +44,10 @@ const Contacto = () => {
             perritos. 
           </p>
           </div>
+          {/* / from_wrap*/ }
           <div className={style.flex__container}>
+
+            
             <form className={style.from} onSubmit={sendEmail}>
               <div className={style.fromm__section}>
                   <input
@@ -78,16 +81,27 @@ const Contacto = () => {
                     id="" />
                   </div>
                 </form>
+                <div className="abajo">
                 <div className={style.imagen2}>
                   <div className={style.imagen}>
-                    <img
-                      src="https://img.icons8.com/ios/452/gmail--v2.png"
-                      alt="Imagen"
-                    />
-                  </div>
+                  <section className="contact-info">
+                    <h2>INFORMACIOB<br/>CONTACTO</h2>
+
+                  </section>
+                  <section className="info-items">
+                    <p><span className=""></span>mascotas@gmail.com</p>
+                    <p><span className=""></span>31425033</p>
+
+                  </section>
+                  <img src="assets/img/slider/mascotas0.jpg " className="" alt="..." />
+                     
+                       
+                    
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
   );
 };

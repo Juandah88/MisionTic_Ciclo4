@@ -77,18 +77,8 @@ const Inicio = () => {
                 </div>
           
                 <Link className="link-index btn BotonColor botonincio " to="/Adoptar">¡Aqui esta tu proximo amigo!</Link>
-                
             </section>
-         
-       
-
             <section className="inicio container-fluid ">
-            
-               
-            
-                    
-
-
             <div style={{ backgroundImage: `url(require("../assets/img/slider/family-dog.jpg"))` }}>
             </div>
         

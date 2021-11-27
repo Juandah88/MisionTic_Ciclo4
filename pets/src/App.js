@@ -28,6 +28,7 @@ function App() {
                 </Link>
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,6 +61,8 @@ function App() {
         <Route path="/Adoptar" element={<Adoptar />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+       
+
       </Routes>
     </Router>);
 }

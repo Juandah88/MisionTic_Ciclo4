@@ -1,11 +1,6 @@
-
-
-.text-center{
-    margin-top: 80px;
-    
-}
 .flex__container{
-  width:60%;
+  width:80%;
+  height: 90%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -14,7 +9,8 @@
   background: rgb(165, 163, 163);
   border-radius: 20px;
   margin: 30px auto;
-  padding: 40px;
+  
+  margin-top: -50px;
 
 
 }
@@ -22,11 +18,9 @@
 .from{
   display:flex;
   flex-direction: column;
-  width:100%;
-  min-width: 200px;
-  flex:1;
+
   text-align: center;
-  padding: 50px;
+  padding: 30px;
 }
 @media(min-width: 1024px){
   .from{
@@ -46,85 +40,94 @@
   flex: 1;
 }
 .imagen img{
-  width:200px;
+  width:400px;
 }
 
 .from__input{
-  width:100%;
+  width:90%;
   padding:6px;
   margin: 6px;
   outline: none;
   border: transparent;
   background:transparent;
-  border-bottom: solid #08777a;
+  border-bottom: solid #7a0808;
   color: #fff;
+  margin-left: -30px;
 }
 
 
 .from__input:hover{
-  width:100%;
+  width:90%;
   padding:6px;
   margin: 6px;
-  background:rgba(199, 193, 193, 0.055);
+  background:rgba(155, 10, 10, 0.055);
   border-bottom:3px solid #08777a;
+  margin-left: -30px;
 }
 
 
 
 .from__input:focus{
-  width:100%;
+  width:90%;
   background:transparent;
   border-bottom:3px solid #40d323;
+  margin-left: -px;
 }
 
 .from textarea{
-  min-height: 120px;
+  min-height: 160px;
   resize: none;
   border:none;
-  width:100%;
+  width:90%;
   padding:6px;
   margin: 6px;
   background:transparent;
-  border-bottom:3px solid #08777a;
+  border-bottom:3px solid #7a082a;
   outline: none;
+  margin-left: -27px;
 }
 
 input:hover{
   border:none;
   background:transparent;
   outline: none;
-  width:100%;
+  width:90%;
 }
 
 
 .imagen img{
   display:flex;
-  margin: 0 auto;
+  margin: 0 auto;                                                                   
   background:transparent;
-  border-radius: 20%;
-  width:60%;
+  
+  width:100%;
+  height: 495px;
+  background-color: #75c5c5;
+  margin-top: -162px;
+  opacity: 0.10;
 
 }
 
 
 .imagen2{
-  display:flex;
+  /* display:flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   width:200px;
   height:200px;
   background:rgb(59, 56, 56);
-  border-radius: 100px;
+  border-radius: 100px; */
 }
 
 .bto{
-  width:100%;
+  width:30%;
   padding:10px;
   border-radius: 10px;
   outline:0;
   background:#097272;
   border: 0;
+  margin-top: 36px;
 }
 .bto:hover{
   width:100%;

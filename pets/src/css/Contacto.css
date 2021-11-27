@@ -35,6 +35,31 @@
     text-shadow: 1px 1px 10px rgb(0, 195, 255), 0 0 22px rgb(102, 128, 146);
     
 }
+.abajo::before{
+    content: "";
+    height: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4090eca1;
+    opacity: 0.9;
+}
+
+.abajo{
+    background-color: #4090ec4b;
+    width: 40%;
+    height: 500px;
+    border-radius: 14px;
+   
+}
+.contact-info{
+    font-size: 2em;
+    color: aliceblue;
+    z-index: -1;
+}
+
+
 
 @media screen and (min-width: 1075px) {
     .parrafovideo{

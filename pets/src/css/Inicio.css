@@ -308,10 +308,6 @@
   
     display: none; 
   }
- 
-
-  
-  
 }
 @media screen and (max-width: 960px) {
   .about-container{
@@ -338,7 +334,6 @@
   }
   .cover-conta > video{
     width: 100%;
-    
 
   }
   /* .tes{

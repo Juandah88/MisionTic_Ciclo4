@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+
+}
+.cover-container{
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0,6);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+  
+  
+.videos{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1000;
+    margin-top: -563px;
+    position: relative;
+   
+  
+   
+}
+.tuitulovideo{
+    margin-top: -490px;
+    font-family: serif;
+    font-size: 4em;
+    color: white;
+}
+.parrafovideo{
+    font-size: 23px;
+    color: azure;
+    width: 80%;
+    text-align: justify;
+    
+}
+
+@media screen and (min-width: 1075px) {
+    .parrafovideo{
+        font-size: 16px;      
+        width: 80%;
+    }
+    .videos{
+        margin-top: -500px;
+        z-index: -1000;
+    }
+}
+@media screen and (max-width: 1075px) {
+    .tuitulovideo{
+       margin-top: -400px;
+        z-index: -1000; 
+    } 
+    .parrafovideo{
+        font-size: 16px;
+        width: 80%;
+    }
+    .videos{
+        margin-top: -340px;
+        z-index: -1000;
+    }
+    
+   
+}
+@media screen and (max-width: 654px) {
+    .tuitulovideo{
+        font-size: 30px;
+        margin-top: -400px;
+        z-index: -1000; 
+        margin-top: -34px;
+     } 
+     .parrafovideo{
+         font-size: 16px;
+         width: 80%;
+     }
+     .videos{
+         margin-top: -200px;
+         z-index: -1000;
+     }
+
+}
+@media screen and (max-width: 375px) {
+    .parrafovideo{
+        font-size: 16px;
+        width: 70%; 
+        
+    }
+    .videos{
+        margin-top: 50px;
+        z-index: -1000;
+    }
+    .tuitulovideo{
+       
+        margin-top: -490px;
+        z-index: -1000; 
+        
+     } 
+}
+@media screen and (max-width: 675px) {
+    .parrafovideo{
+        font-size: 16px;
+        width: 70%; 
+        
+    }
+    .videos{
+        margin-top: -235px;
+        z-index: -1000;
+    }
+    .tuitulovideo{
+       
+        margin-top: -400px;
+        z-index: -1000; 
+        
+     } 
+}
+ 

@@ -20,11 +20,11 @@ function App() {
     <Router>
       <div>
         <header>
-          <nav className="navbar navbar-expand-md nav  nav__color ">
+          <nav className="navbar navbar-expand-md   nav__color ">
             <div className="container-fluid">
               <div className="size_logo">
-                <Link className="navbar-brandv" to="/">
-                  <img className="navbar-brandv  img_size  logocasa" src="/assets/img/iconos/dog-icon.png" alt="logo" />    
+                 <Link className="navbar-brandv" to="/">
+                  <img className="navbar-brandv  img_size ml-5" src="/img/logo.png" alt="logo" />
                 </Link>
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

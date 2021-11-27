@@ -1,13 +1,13 @@
 import React from "react";
 
-import '../css/Contacto.module.css';
+import '../css/Contacto.css';
 
 import style from "../css/Contacto.module.css";
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
+import manada from "../media/manada.mp4";
 
 const Contacto = () => {
-
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,41 +27,34 @@ const Contacto = () => {
       e.target.reset();
   };
   return (
-    <div className={"ContainerMain"}>
-    <div className=" mainconteiner">
-      <section>
-        <div className="container-xxl border-radius-x green-bg ">
-          <div className="row align-items-start ">
-            <div className="col">
-              <h3 className="text-center py-2">Contactate con nosotros</h3>
-              <p className="fs-6 p-3">
-                Es nuestra misión contribuir al bienestar de las mascotas,
-                buscar un hogar digno a cada uno de los animales y ayudar al
-                bienestar tanto de ellos, como de las personas que los llevan y
-                adoptan en su hogar, garantizando el confort y la comodidad.{" "}
-                <br />
-                <br />
-                Tu opinión es muy importante para nosotros, ya que nos ayuda a
-                mejorar como organización, y por supuesto, podemos mejorar,
-                cambiar e innovar pensando siempre en el bienestar de todos los
-                perritos.
-              </p>
-              <img
-                className="w-100"
-                src="assets/img/porque-adoptar.jpg"
-                alt="porque adoptar"
-              />
-              <div className={style.flex__container}>
-                <form className={style.from} onSubmit={sendEmail}>
-                  <div className={style.fromm__section}>
-                    <input
-                      type="text" name="name"
-                      className={style.from__input}
-                      placeholder="Nombre"
-                      required
-                    />
-                  </div>
-                  <div className={style.fromm__section}>
+    <div>
+    <div className="cover-container ">
+      <video className="videos" src={manada} autoPlay loop muted/>
+      <h3 className="text-center  tuitulovideo">Contactate con nosotros</h3>
+          <p className=" fs-7 parrafovideo">
+            * Es nuestra misión contribuir al bienestar de las mascotas,
+            buscar un hogar digno a cada uno de los animales y ayudar al
+            bienestar tanto de ellos, como de las personas que los llevan y
+            adoptan en su hogar, garantizando el confort y la comodidad.{" "}
+            <br />
+            <br />
+            * Tu opinión es muy importante para nosotros, ya que nos ayuda a
+            mejorar como organización, y por supuesto, podemos mejorar,
+            cambiar e innovar pensando siempre en el bienestar de todos los
+            perritos. 
+          </p>
+          </div>
+          <div className={style.flex__container}>
+            <form className={style.from} onSubmit={sendEmail}>
+              <div className={style.fromm__section}>
+                  <input
+                    type="text" name="name"
+                    className={style.from__input}
+                    placeholder="Nombre"
+                    required
+                  />
+              </div>
+              <div className={style.fromm__section}>
                     <input
                       type="email"
                       name="email"
@@ -95,14 +88,7 @@ const Contacto = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-       
-      </section>
-    
-      </div>
-    </div>
-    
+
   );
 };
 

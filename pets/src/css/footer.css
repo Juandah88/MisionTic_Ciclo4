@@ -4,6 +4,7 @@
   color: var(--blue-c);
   font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
 }
 
 .footer-a {
@@ -54,17 +55,22 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 80px;
+  font-family: 'Oswald', sans-serif;
 }
 .preguntas {
   width: 55%;
   margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Oswald', sans-serif;
 }
 .clearfix {
   clear: both;
+  font-family: 'Oswald', sans-serif;
 }
-
+.font{
+  font-family: 'Oswald', sans-serif;
+}
 body {
   background-color: var(--blue-c) !important;
 }

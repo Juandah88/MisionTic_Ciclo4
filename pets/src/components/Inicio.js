@@ -3,8 +3,8 @@ import '../css/Inicio.css';
 import contacto from "../media/contacto.mp4";
 import cats from "../media/cats.mp4";
 import perrosaltando from "../media/perrosaltando.mp4";
-import candark from "../media/candark.mp4"
-import Contacto from './Contacto';
+import candark from "../media/candark.mp4";
+
 
 import { Link } from 'react-router-dom';
 const Inicio = () => {
@@ -89,7 +89,7 @@ const Inicio = () => {
                     
 
 
-            <div style={{ backgroundImage: `url(require("../media/perro.jpg"))` }}>
+            <div style={{ backgroundImage: `url(require("../assets/img/slider/family-dog.jpg"))` }}>
             </div>
         
             {/* <h1 className="titulo-principal container-xxl "><p className="tituloborder"> Adopta con responsabilidad</p>  </h1> */}
@@ -119,7 +119,7 @@ const Inicio = () => {
                     </div>
                 </div>
                
-                <div className="cover-conta ">
+                <div className="cover-conta  ">
                 <video className="video" src={contacto} autoPlay loop muted/>
             </div>
                

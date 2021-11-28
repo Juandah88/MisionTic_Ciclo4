@@ -1,15 +1,21 @@
 import React from 'react';
-import '../css/Footer.css';
+
+import '../css/footer.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 const Foter = () => {
     return (
-        <div className="footer margen-footer container-fluid">
+        <div className=" margen-footer container-fluid">
             <footer className="text-center text-lg-start bg-nav text-muted">
                 {/*  Section: Social media */}
                 <section>
                     <div className=" container d-flex justify-content-center p-4 border-bottom align-items-center">
                         <div className="me-5 d-none d-lg-block text-light">
-                            <span className="fs-3">Síguenos y apoyanos en nuestras redes sociales</span>
+                            <span className="fs-3 font">Síguenos y apoyanos en nuestras redes sociales</span>
                         </div>
                         
                         <div>
@@ -38,8 +44,8 @@ const Foter = () => {
                             {/*  Grid column */}
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
-                                <h6 className="footer-title text-center"><i className="bi bi-info-circle"></i> Adopta Un amigo </h6>
-                                <p className="text-light py-">
+                                <h6 className="footer-title text-center font"><i className="bi bi-info-circle"></i> Adopta Un amigo </h6>
+                                <p className="text-light font">
                                     Aquí encotraras muchos Animalitos que buscan
                                     un hogar, son alegres dinamicos animate te sacaran una sonrisa.
                                 </p>
@@ -53,10 +59,10 @@ const Foter = () => {
                                     {/* Nuestras mascotas */}
                                 </h6>
                                 <ul className="">
-                                    <li className="footer-li"><a href="#!" className="footer-a">Perros</a></li>
+                                    <li className="footer-li"><FontAwesomeIcon icon={faMapMarkerAlt}/><a href="#!" className="footer-a">Perros</a></li>
                                     <li className="footer-li"><a href="#!" className="footer-a">Gatos</a></li>
-                                    <li className="footer-li"><a href="#!" className="footer-a">Tienda para perros</a></li>
-                                    <li className="footer-li"><a href="#!" className="footer-a">Objetos para Gatos</a></li>
+                                    <li className="footer-li font"><a href="#!" className="footer-a">Tienda para perros</a></li>
+                                    <li className="footer-li font"><a href="#!" className="footer-a">Objetos para Gatos</a></li>
                                 </ul>
 
                             </div>
@@ -65,27 +71,27 @@ const Foter = () => {
                             {/*  Grid column */}
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 {/*  Links */}
-                                <h6 className="footer-title text-center">
+                                <h6 className="footer-title text-center font">
                                     Contáctenos
                                 </h6>
                                 <ul className="py">
                                     <li className="footer-li">
-                                        <p className="text-light"><i className="bi bi-house-door"></i> Cra 1 # 2 -3, Bogotá
+                                        <p className="text-light"><i className="bi bi-house-door font"></i> Cra 1 # 2 -3, Bogotá
                                         </p>
                                     </li>
                                     <li className="footer-li">
                                         <p className="text-light">
-                                            <i className="bi bi-envelope"></i>
+                                            <i className="bi bi-envelope font"></i>
                                             mascotas@ejemplo.com
                                         </p>
                                     </li>
                                     <li className="footer-li">
                                         <p className="text-light">
-                                            <i className="bi bi-telephone"></i>
+                                            <i className="bi bi-telephone font"></i>
                                             + 57 315 333 3333</p></li>
                                     <li className="footer-li"><p className="text-light">
                                         <i className="bi bi-whatsapp"></i>
-                                        <a href="https://wa.me/5713201234567?text=Me%20interesa%20el%20auto%20que%20estás%20vendiendo" className="footer-a">320 123 45 67</a>
+                                       
                                     </p></li>
                                 </ul>
                             </div>
@@ -96,10 +102,10 @@ const Foter = () => {
                 </section>
                 {/*  Section: Links  */}
 
-                {/*  Copyright */}
-                {/* <div className="text-center p-4 text-light color_footer" >
+                 {/* Copyright */}
+                <div className="text-center p-4 text-light color_footer" >
                     &copy; 2021 Copyright: minTic UTP
-                </div> */}
+                </div>
                 {/*  Copyright */}
             </footer>
 

@@ -5,7 +5,7 @@ import '../css/Nosotros.css'
 const Nosotros = () => {
     return (
       
-        <div className="nosot section ContainerMain">
+        <div className="nosot section ">
              <br />
             <section id="nosotros" className="margin-id tutulo-nosotros">
                 <div className="container-xxl border-radius-x green-bg my">

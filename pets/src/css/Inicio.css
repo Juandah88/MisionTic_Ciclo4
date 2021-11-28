@@ -93,6 +93,7 @@
   width: 70%;
   margin-left: 130px;
   font-size: 30px;
+  margin-left: 54px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -238,7 +239,7 @@
   object-fit: cover;
  
   border: 3px solid #000;
- 
+  scroll-margin-right: 50px;
 }
  
 .video{
@@ -246,20 +247,20 @@
   border-radius: 34px;
   object-fit: cover;
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 .about-container{
   display:flex;
   
   padding: 20px 0 20px 0;
-
 }
+
 .about-desc{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 160%;
+  width: 100%;
   
 }
 .about-desc > h2{
@@ -271,15 +272,16 @@
 
 }
 .titulosadoptar{
-  width: 80%;
+  width: 90%;
   height: auto;
   text-align: justify;
-  margin-left: 90px;
-  font-family: sans-serif;
+  margin-left: 20px;
+  box-sizing: border-box;
+  border: 2px solid green;
   
 }
 .adoptarcan{
-  font-family: fantasy;
+  
  
  
 }
@@ -306,10 +308,6 @@
   
     display: none; 
   }
- 
-
-  
-  
 }
 @media screen and (max-width: 960px) {
   .about-container{
@@ -335,21 +333,22 @@
     
   }
   .cover-conta > video{
-    width: 95%;
-    margin-left: 20px;
+    width: 100%;
 
   }
-  .tes{
+  /* .tes{
    margin-left: 40px;
-  }
+  } */
  
 }
 /************* vide *********************/
+
 @media screen and (max-width: 954px){
   .titulopets{
     margin-left: 90px;
   }
 }
+
 
 
 @media screen and (max-width: 767px){

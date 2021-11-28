@@ -1,9 +1,16 @@
 /* Footer */
-
+.margen-footer{
+  background-color: #000000;
+    background-color: #28282a;
+    opacity: 0.8;
+    background-size: 5px 5px;
+    background-image: repeating-linear-gradient(45deg, #000000 0, #000000 0.5px, #28282a 0, #28282a 50%);
+}
 .footer-title {
   color: var(--blue-c);
   font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
 }
 
 .footer-a {
@@ -22,10 +29,7 @@
   background-color: var(--fondo-v);
 }
 
-.bg-nav {
-  background-color: var(--fondo-nav);
-  opacity: 0.9;
-}
+
 
 .bg-widget-footer {
   background-color: var(--terciario);
@@ -54,17 +58,22 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 80px;
+  font-family: 'Oswald', sans-serif;
 }
 .preguntas {
   width: 55%;
   margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Oswald', sans-serif;
 }
 .clearfix {
   clear: both;
+  font-family: 'Oswald', sans-serif;
 }
-
+.font{
+  font-family: 'Oswald', sans-serif;
+}
 body {
   background-color: var(--blue-c) !important;
 }

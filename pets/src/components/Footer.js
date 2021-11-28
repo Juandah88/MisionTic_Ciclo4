@@ -1,7 +1,11 @@
 import React from 'react';
+
 import '../css/footer.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 const Foter = () => {
     return (

@@ -1,9 +1,11 @@
 import React from 'react';
 import '../css/footer.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Foter = () => {
     return (
-        <div className="footer margen-footer container-fluid">
+        <div className=" margen-footer container-fluid">
             <footer className="text-center text-lg-start bg-nav text-muted">
                 {/*  Section: Social media */}
                 <section>
@@ -53,7 +55,7 @@ const Foter = () => {
                                     {/* Nuestras mascotas */}
                                 </h6>
                                 <ul className="">
-                                    <li className="footer-li"><a href="#!" className="footer-a">Perros</a></li>
+                                    <li className="footer-li"><FontAwesomeIcon icon={faMapMarkerAlt}/><a href="#!" className="footer-a">Perros</a></li>
                                     <li className="footer-li"><a href="#!" className="footer-a">Gatos</a></li>
                                     <li className="footer-li font"><a href="#!" className="footer-a">Tienda para perros</a></li>
                                     <li className="footer-li font"><a href="#!" className="footer-a">Objetos para Gatos</a></li>
@@ -85,7 +87,7 @@ const Foter = () => {
                                             + 57 315 333 3333</p></li>
                                     <li className="footer-li"><p className="text-light">
                                         <i className="bi bi-whatsapp"></i>
-                                        <a href="https://wa.me/5713201234567?text=Me%20interesa%20el%20auto%20que%20estás%20vendiendo" className="footer-a font">320 123 45 67</a>
+                                       
                                     </p></li>
                                 </ul>
                             </div>
@@ -96,10 +98,10 @@ const Foter = () => {
                 </section>
                 {/*  Section: Links  */}
 
-                {/*  Copyright */}
-                {/* <div className="text-center p-4 text-light color_footer" >
+                 {/* Copyright */}
+                <div className="text-center p-4 text-light color_footer" >
                     &copy; 2021 Copyright: minTic UTP
-                </div> */}
+                </div>
                 {/*  Copyright */}
             </footer>
 

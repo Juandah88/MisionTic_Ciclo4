@@ -21,7 +21,7 @@
     position: relative;   
 }
 .tuitulovideo{
-    margin-top: -400px;
+    margin-top: -430px;
     font-family: serif;
     font-size: 4em;
     color: white;
@@ -48,12 +48,12 @@
 .abajo{
     background-color: #4090ec4b;
     width: 40%;
-    height: 500px;
+    height: 490px;
     border-radius: 14px;
-   
+    max-width: 100%;
 }
 .contact-info{
-   margin-top: 20px;
+   margin-top: 3px;
     color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
    
 }
 .contact-info{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .contact-info span{
     font-size: 100px;
@@ -82,6 +82,23 @@
     text-align: center;
 
 }
+.info-items p{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.info-items p:nth-child(1) span{
+    font-size: 30px;
+}
+.info-items p:nth-child(2) span{
+    font-size: 30px;
+}
+.info-items p:nth-child(3) span{
+    font-size: 30px;
+}
+
 
 @media screen and (min-width: 1075px) {
     .parrafovideo{
@@ -89,7 +106,7 @@
         width: 80%;
     }
     .videos{
-        margin-top: -366px;
+        margin-top: -370px;
         z-index: -1000;
     }
 }
@@ -103,7 +120,7 @@
         width: 80%;
     }
     .videos{
-        margin-top: -340px;
+        margin-top: -380px;
         z-index: -1000;
     }
     
@@ -128,17 +145,17 @@
 }
 @media screen and (max-width: 375px) {
     .parrafovideo{
-        font-size: 16px;
-        width: 70%; 
+        font-size: 10px;
+        width: 60%; 
         
     }
     .videos{
-        margin-top: 50px;
+        margin-top: -20px;
         z-index: -1000;
     }
     .tuitulovideo{
        
-        margin-top: -490px;
+        margin-top: -530px;
         z-index: -1000; 
         
      } 
@@ -146,7 +163,7 @@
 @media screen and (max-width: 675px) {
     .parrafovideo{
         font-size: 16px;
-        width: 70%; 
+        width: 90%; 
         
     }
     .videos{
@@ -161,3 +178,23 @@
      } 
 }
  
+
+
+
+
+
+@media screen and (max-width: 629px){
+    .abajo{
+       
+        width: 100%;
+        height: 100%;
+        
+        
+        min-width: 100%;
+    }
+   
+}
+@media screen and (max-width: 653px){
+  
+   
+}

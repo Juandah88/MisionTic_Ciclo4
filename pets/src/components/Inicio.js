@@ -175,7 +175,7 @@ const Inicio = () => {
                     </figure>
 
             <div  className="card-body  bg-targeta">
-                <h5  className="card-title"></h5>
+               
                     <div className="accordion-item bg-dark">
                         <h2 className="accordion-header" id="headingTwo">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -220,7 +220,7 @@ const Inicio = () => {
                         </div>
                     </figure>
                 <div className="card-body  bg-targeta">
-                    <h5  className="card-title"></h5>
+                   
                     <div className="accordion-item titulos-flecha">
                         <h2 className="accordion-header" id="headingThree">
                         <button className="accordion-button collapsed" type="button"data-bs-toggle="collapse"

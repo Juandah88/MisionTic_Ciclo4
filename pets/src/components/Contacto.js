@@ -6,6 +6,11 @@ import style from "../css/Contacto.module.css";
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
 import manada from "../media/manada.mp4";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEnvelope, faComment} from '@fortawesome/free-solid-svg-icons';
+import {faMobile} from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {faPaw} from '@fortawesome/free-solid-svg-icons'
 
 const Contacto = () => {
   const sendEmail = (e) => {
@@ -81,20 +86,27 @@ const Contacto = () => {
                     id="" />
                   </div>
                 </form>
+                
                 <div className="abajo">
                 <div className={style.imagen2}>
                   <div className={style.imagen}>
                   <section className="contact-info">
-                    <h2>INFORMACIOB<br/>CONTACTO</h2>
+                  <span><FontAwesomeIcon className="logopata" icon={faPaw}/></span>
+                    <br/>
+                    <h2>INFORMACION<br/> CONTACTO</h2>
 
                   </section>
-                  <section className="info-items">
-                    <p><span className=""></span>mascotas@gmail.com</p>
-                    <p><span className=""></span>31425033</p>
+                  <section className="info-items"> 
+                      <p><span className=""><FontAwesomeIcon icon={faEnvelope}/></span>  mascotas@gmail.com</p>
+                      <p><span className=""> <FontAwesomeIcon icon={faMobile}/></span>     +57 31425033</p>
+                      <p><span className=""> <FontAwesomeIcon icon={faMapMarkerAlt}/></span>   BOGOTA-CUNDINAMARCA</p>
+
 
                   </section>
-                  <img src="assets/img/slider/mascotas0.jpg " className="" alt="..." />
-                     
+                 
+                  <div className="imagenformulario">
+                  <img src="assets/img/slider/oficina2.jpg " className="imagenformulario" alt=".imagen." />
+                  </div>
                        
                     
                 </div>

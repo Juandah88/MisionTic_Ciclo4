@@ -236,6 +236,7 @@ export default class Admin extends Component {
                 <Form.Group as={Col}>
                   <Form.Label>Edad</Form.Label>
                   <Form.Control
+                   type="number"
                     required
                     name="edad"
                     value={this.state.edad}
@@ -304,7 +305,7 @@ export default class Admin extends Component {
               </Form.Group>
               {
                 !this.state._id ?
-                  (<Button variant="primary" type="submit"> Agragar Mascotas </Button>)
+                  (<Button variant="primary" type="submit"> Agregar Mascotas </Button>)
                   : (<Button variant="primary" type="submit"> Actualizar</Button>)
               }
               {this.state._id ?

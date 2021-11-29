@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.abajo{
+    color: #fff;
+    background: #707070c4 !important;
+}
 .cover-container{
     height: 100vh;
     width: 100%;
@@ -25,7 +29,7 @@
     font-family: serif;
     font-size: 4em;
     color: white;
-    text-shadow: 1px 1px 10px rgb(0, 195, 255), 0 0 22px rgb(102, 128, 146);
+    text-shadow: 1px 1px 10px rgb(117, 121, 122), 0 0 22px rgb(102, 128, 146);
 }
 .parrafovideo{
     font-size: 23px;

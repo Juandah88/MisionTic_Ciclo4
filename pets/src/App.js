@@ -6,6 +6,7 @@ import Contacto from './components/Contacto';
 import Nosotros from './components/Nosotros';
 import Adoptar from './components/Adoptar';
 import Login from './components/Login';
+import {DetallesMascotas} from './components/DetallesMascotas'
 
 
 
@@ -19,14 +20,15 @@ function App() {
     <Router>
       <div>
         <header>
-          <nav className="navbar navbar-expand-md nav  navbar-dark nav__color ">
+          <nav className="navbar navbar-expand-md   nav__color ">
             <div className="container-fluid">
               <div className="size_logo">
-                <Link className="navbar-brandv" to="/">
-                  <img className="navbar-brandv  img_size  logocasa" src="/assets/img/iconos/dog-icon.png" alt="logo" />    
+                 <Link className="navbar-brandv" to="/">
+                  <img className="navbar-brandv  img_size ml-5" src="/img/logo.png" alt="logo" />
                 </Link>
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -58,6 +60,9 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+       
+
       </Routes>
     </Router>);
 }

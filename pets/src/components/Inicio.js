@@ -1,11 +1,10 @@
 import React from 'react'
 import '../css/Inicio.css';
-import videoperro from "../media/videoperro.mp4";
 import contacto from "../media/contacto.mp4";
 import cats from "../media/cats.mp4";
-import lengua from "../media/lengua.mp4";
 import perrosaltando from "../media/perrosaltando.mp4";
-import candark from "../media/candark.mp4"
+import candark from "../media/candark.mp4";
+
 
 import { Link } from 'react-router-dom';
 const Inicio = () => {
@@ -78,19 +77,9 @@ const Inicio = () => {
                 </div>
           
                 <Link className="link-index btn BotonColor botonincio " to="/Adoptar">¡Aqui esta tu proximo amigo!</Link>
-                
             </section>
-         
-       
-
             <section className="inicio container-fluid ">
-            
-               
-            
-                    
-
-
-            <div style={{ backgroundImage: `url(require("../media/perro.jpg"))` }}>
+            <div style={{ backgroundImage: `url(require("../assets/img/slider/family-dog.jpg"))` }}>
             </div>
         
             {/* <h1 className="titulo-principal container-xxl "><p className="tituloborder"> Adopta con responsabilidad</p>  </h1> */}
@@ -107,7 +96,7 @@ const Inicio = () => {
                 <
                     /div> 
             </div> */}
-            <div className="about-container">
+            <div class="about-container">
                 <div className="about-desc">
                     <div className="adoptarcan">
 
@@ -120,7 +109,7 @@ const Inicio = () => {
                     </div>
                 </div>
                
-                <div className="cover-conta">
+                <div className="cover-conta  ">
                 <video className="video" src={contacto} autoPlay loop muted/>
             </div>
                
@@ -128,7 +117,7 @@ const Inicio = () => {
             <br/>
         
             <div className="row row-cols-1 row-cols-md-3 g-4">
-            <div classNames="info-columna card">
+            <div className="info-columna card">
                 <div className="card  h-100  desva ">
                 <figure>
                     {/* <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
@@ -167,26 +156,26 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                    <div className="card-footer ">
-                        <Link className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+                    <div  className="card-footer footer ">
+                        <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
             
             </div>
             </div>
-            <div className="col info-columna card">
-                <div className="card h-100  desva">
+            <div  className="col info-columna card">
+                <div  className="card h-100  desva">
                     <figure>
                         <video className="videotargeta" src={candark} autoPlay loop muted/>
                         
                         <div className="capa">
-                            <h3 className="tituloborder">Beneficios de adoptar un perro</h3>
-                            <p  className="tituloborder"> son capaces de reconocer cuándo estás triste, angustiado o preocupado. En estas situaciones, el pequeño animal se acerca a ti y deja que lo acaricies</p>
+                            <h3 className="tituloborder">adopta a un perro</h3>
+                            <p  className="tituloborder"> son capaces de reconocer cuándo estás triste, angustiado o preocupado. </p>
                         
                         </div>
                     </figure>
 
-            <div className="card-body  bg-targeta">
-                <h5 className="card-title"></h5>
+            <div  className="card-body  bg-targeta">
+               
                     <div className="accordion-item bg-dark">
                         <h2 className="accordion-header" id="headingTwo">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -213,25 +202,25 @@ const Inicio = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card-footer ">
-                        <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+                <div  className="card-footer footer ">
+                        <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
             </div>
-            <div className="col info-columna card">
-                <div className="card h-100  desva">
+            <div  className="col info-columna card">
+                <div  className="card h-100  desva">
                     <figure>
                         {/* <img src="assets/img/slider/family-dog.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
                         <video className="videotargeta" src={perrosaltando} autoPlay loop muted/>
                         <div className="capa">
                             <h3 className="tituloborder">Cuida a tu mascota</h3>
                             <p  className="tituloborder">Son los seres mas amables, sencillos, juguetones 
-                            y amorosos del mundo ellos siempre estaran para ti</p>
+                            y amorosos del mundo.</p>
                                 
                         </div>
                     </figure>
                 <div className="card-body  bg-targeta">
-                    <h5 className="card-title"></h5>
+                   
                     <div className="accordion-item titulos-flecha">
                         <h2 className="accordion-header" id="headingThree">
                         <button className="accordion-button collapsed" type="button"data-bs-toggle="collapse"
@@ -261,18 +250,25 @@ const Inicio = () => {
                 </div>
                             
                </div>
-               <div className="card-footer ">
-                        <Link class="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
+               <div className="card-footer footer ">
+                        <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
             </div>
             </div>
-         
-            
             </section>
+
             <br/>
             <br/>
             <br/>
+
+
+        
+
+        
+
+            
+
 
         </div>
 

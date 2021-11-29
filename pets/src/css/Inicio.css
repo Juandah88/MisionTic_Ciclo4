@@ -84,20 +84,16 @@
 
 /********************** titulos ******** ****************/
 
-.titulo-principal{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: azure; 
-  background: rgb(54,46,37);
-  background: linear-gradient(97deg, rgb(0, 0, 0) 20%, rgba(0,119,115,1) 49%, rgba(5,5,5,0.9640231092436975) 85%);background-color: rgb(61, 61, 61);
-  text-align: center;
-} 
+
 .tituloborder{
   text-shadow: 1px 1px 10px rgb(0, 195, 255), 0 0 22px rgb(102, 128, 146);
 }
 .titulopets{
-  margin-top:  -300px;
+  margin-top:  -90px;
   width: 70%;
   margin-left: 130px;
   font-size: 30px;
+  margin-left: 54px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -169,7 +165,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 230px;
+  height: 240px;
   background:rgba(11,103,123,0.6);
   transition: all 500ms ease-in-out;
   opacity:0;
@@ -182,7 +178,7 @@
 
 }
 .inicio figure:hover .capa h3{
-  margin-top:70px;
+  margin-top:40px;
   margin-bottom: 9px;
 
 }
@@ -204,7 +200,7 @@
   margin: auto;
 
 }
-.card-footer{
+.footer{
   background-color: rgb(103, 134, 136);
   
   text-align: center;
@@ -212,9 +208,10 @@
   border-radius: 21px;
 }
 
-.card-footer:hover{
+.footer:hover{
   background:rgba(58, 43, 192, 0.6);
   transition: all 0.3s ease-out;
+
   
 }
 .link-card-footer{
@@ -226,7 +223,7 @@
 
 }
 .link-card-footer:hover{
-  color: rgb(180, 144, 144); 
+  color: rgb(151, 113, 113); 
  
   transition: all 0.3s ease-out;
  
@@ -240,31 +237,30 @@
  
   border-radius: 34px;
   object-fit: cover;
-  width: 40%;
-  height: 25%;
-  border: 3px solid #000;
  
+  border: 3px solid #000;
+  scroll-margin-right: 50px;
 }
  
 .video{
-  margin-left: 150px;
+  margin-left: 2px;
   border-radius: 34px;
   object-fit: cover;
-  width: 70%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .about-container{
   display:flex;
   
   padding: 20px 0 20px 0;
-
 }
+
 .about-desc{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 160%;
+  width: 100%;
   
 }
 .about-desc > h2{
@@ -276,15 +272,16 @@
 
 }
 .titulosadoptar{
-  width: 100%;
+  width: 90%;
   height: auto;
   text-align: justify;
-  margin-left: 90px;
-  font-family: sans-serif;
+  margin-left: 20px;
+  box-sizing: border-box;
+  border: 2px solid green;
   
 }
 .adoptarcan{
-  font-family: fantasy;
+  
  
  
 }
@@ -311,10 +308,6 @@
   
     display: none; 
   }
- 
-
-  
-  
 }
 @media screen and (max-width: 960px) {
   .about-container{
@@ -343,20 +336,49 @@
     width: 100%;
 
   }
-  .tes{
-   margin-left: -10px;
-  }
+  /* .tes{
+   margin-left: 40px;
+  } */
  
 }
 /************* vide *********************/
+
 @media screen and (max-width: 954px){
   .titulopets{
     margin-left: 90px;
   }
-  
 }
 
 
 
+@media screen and (max-width: 767px){
+  .inicio figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    background:rgba(11,103,123,0.6);
+    transition: all 500ms ease-in-out;
+    opacity:0;
+    visibility: hidden;
+    text-align: center;
+  }
+  .inicio figure:hover .capa h3{
+    margin-top:87px;
+    margin-bottom: 9px;
+  
+  }
+  .inicio figure .capa h3{
+   color:#fff;
+   font-weight: 400;
+   margin-bottom: 120px;
+   transition: all 500ms ease-out;
+   margin-top: 30px;
+  
+  
+  }
+ 
 
+  
+}
 

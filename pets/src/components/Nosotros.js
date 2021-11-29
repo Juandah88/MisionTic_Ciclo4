@@ -1,10 +1,11 @@
 import React from 'react';
+
 import '../css/Nosotros.css'
 
 const Nosotros = () => {
     return (
       
-        <div className="nosot">
+        <div className="nosot section ">
              <br />
             <section id="nosotros" className="margin-id tutulo-nosotros">
                 <div className="container-xxl border-radius-x green-bg my">
@@ -16,6 +17,8 @@ const Nosotros = () => {
                         llevamos a cabo campañas de busqueda y rescate, busqueda de hogares y seguimiento para los animales una vez que
                         son adoptados. Nos financiamos del apoyo económico de las empresas publicas y privadas que conrtibuyen grandemente
                         a esta labor.
+
+                        
                     </p>
 
                 <div className="container">

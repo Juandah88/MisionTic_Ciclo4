@@ -8,6 +8,9 @@ import Adoptar from './components/Adoptar';
 import Login from './components/Login';
 import {DetallesMascotas} from './components/DetallesMascotas'
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
+
 
 
 function App() {
@@ -29,7 +32,7 @@ function App() {
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"><span><FontAwesomeIcon className="log" icon={faBars}/></span></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
 

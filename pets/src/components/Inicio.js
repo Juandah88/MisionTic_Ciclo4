@@ -9,7 +9,7 @@ import candark from "../media/candark.mp4";
 import { Link } from 'react-router-dom';
 const Inicio = () => {
     return (
-        <div  >
+        <div className="">
             <section>
                 
                 <div id="carouselExampleCaptions" className="carousel slide banner" data-bs-ride="carousel">
@@ -78,7 +78,7 @@ const Inicio = () => {
           
                 <Link className="link-index btn BotonColor botonincio " to="/Adoptar">¡Aqui esta tu proximo amigo!</Link>
             </section>
-            <section className="inicio container-fluid ">
+            <section className="inicio container-fluid bod">
             <div style={{ backgroundImage: `url(require("../assets/img/slider/family-dog.jpg"))` }}>
             </div>
         
@@ -101,7 +101,7 @@ const Inicio = () => {
                     <div className="adoptarcan">
 
                         <h3 className="text-center my-auto titulopets tituloborder tes">
-                        En Pets tenemos a muchos buscando un hogar ❤️</h3>
+                        Adopta con respons tenemos a muchos buscando un hogar ❤️</h3>
                         <br/>
                         <br/>
                         
@@ -256,11 +256,13 @@ const Inicio = () => {
                 </div>
             </div>
             </div>
+           
+            
+            
             </section>
+            
 
-            <br/>
-            <br/>
-            <br/>
+          
 
 
         

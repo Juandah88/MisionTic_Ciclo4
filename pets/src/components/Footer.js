@@ -2,14 +2,13 @@ import React from 'react';
 
 import '../css/Footer.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-
-
-
-
+import {faDog } from '@fortawesome/free-solid-svg-icons';
+import {faCat } from '@fortawesome/free-solid-svg-icons';
+import {faHome } from '@fortawesome/free-solid-svg-icons';
 const Foter = () => {
     return (
-        <div className=" margen-footer container-fluid">
+        <div className="ancho-footer">
+        <div className=" margen-footer container-fluid ">
             <footer className="text-center text-lg-start bg-nav text-muted">
                 {/*  Section: Social media */}
                 <section>
@@ -45,7 +44,9 @@ const Foter = () => {
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
                                 <h6 className="footer-title text-center font"><i className="bi bi-info-circle"></i> Adopta Un amigo </h6>
-                                <p className="text-light font">
+                                <br/>
+                                
+                                <p className="text-light ">
                                     Aquí encotraras muchos Animalitos que buscan
                                     un hogar, son alegres dinamicos animate te sacaran una sonrisa.
                                 </p>
@@ -53,16 +54,14 @@ const Foter = () => {
                             {/*  Grid column */}
 
                             {/*  Grid column */}
-                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div className="col-md-4 col-lg-2 col-xl-2 mx-auto mb-8">
                                 {/*  Links */}
-                                <h6 className="footer-title text-center">
-                                    {/* Nuestras mascotas */}
-                                </h6>
+                                
                                 <ul className="">
-                                    <li className="footer-li"><FontAwesomeIcon icon={faMapMarkerAlt}/><a href="#!" className="footer-a">Perros</a></li>
-                                    <li className="footer-li"><a href="#!" className="footer-a">Gatos</a></li>
-                                    <li className="footer-li font"><a href="#!" className="footer-a">Tienda para perros</a></li>
-                                    <li className="footer-li font"><a href="#!" className="footer-a">Objetos para Gatos</a></li>
+                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faDog}/><a target="_selft" href="/adoptar" className="footer-a"> Perros</a></li>
+                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faCat}/><a  target="_selft" href="/adoptar" className="footer-a"> Gatos</a></li>
+                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faHome}/><a target="_selft" href="https://www.ciudaddemascotas.com/perros" className="footer-a"> Tienda para perros</a></li>
+                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faHome}/><a target="_selft" href="https://www.ciudaddemascotas.com/perros" className="footer-a">  Objetos para Gatos</a></li>
                                 </ul>
 
                             </div>
@@ -103,13 +102,14 @@ const Foter = () => {
                 {/*  Section: Links  */}
 
                  {/* Copyright */}
-                <div className="text-center p-4 text-light color_footer" >
+                <div className="text-center p3 text-light color_footer" >
+                    
                     &copy; 2021 Copyright: minTic UTP
                 </div>
                 {/*  Copyright */}
             </footer>
 
-
+            </div>
 
         </div>
 

@@ -8,6 +8,7 @@
 
 .img_size {
 width: 70px;
+border: none;
 
 
   }
@@ -97,20 +98,21 @@ hois ve */
   /****************** Fin *********************** */
 @media screen and (max-width: 830px) {
     .nav-links-btn:hover{
-      background-color: rgb(212, 212, 212);
+      background-color: rgb(0, 208, 245);
       padding: 9px 30px;
       border-radius: 4px;
       transition: all 0.3s ease-out;
       
     }
     .nav__color {
-      background: rgb(0,0,0);
-      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(19,53,84,1) 23%, rgba(36,103,164,1) 55%, rgba(149,236,241,1) 97%);
+      background: rgb(10,31,59);
+      background: linear-gradient(0deg, rgba(10,31,59,1) 0%, rgba(14,76,113,1) 50%, rgba(19,40,66,1) 89%);
       margin: 0;
       padding: 0;
       box-sizing: border-box; 
     }
 }
+
 
 @media screen and (min-width: 607px ) {
   .menuhamburguesa{

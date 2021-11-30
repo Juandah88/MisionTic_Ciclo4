@@ -2,10 +2,18 @@
 
 .container__color {
     margin-top: 30px;
-    background: rgb(194, 201, 199);
-    border-radius: 10px;
-  }
+    background: rgb(10,31,59);
+    background: linear-gradient(0deg, rgba(10,31,59,1) 0%, rgba(14,76,113,1) 50%, rgba(19,40,66,1) 89%);
   
+    border-radius: 10px;
+
+  }
+.fondo-formulario{
+  background-image: url(../media/fondo-pta.jpg);
+  margin-top:-97px;
+  z-index: -1000;
+}
+
 /* Fin */
 
 /* Formulario */

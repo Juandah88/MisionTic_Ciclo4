@@ -39,12 +39,14 @@ const Contacto = () => {
       <video className="videos" src={manada} autoPlay loop muted/>
       <h3 className="text-center  tuitulovideo">Contacta con nosotros</h3>
           <p className=" fs-7 parrafovideo">
+          <br/>
             * Es nuestra misión contribuir al bienestar de las mascotas,
             buscar un hogar digno a cada uno de los animales y ayudar al
             bienestar tanto de ellos, como de las personas que los llevan y
             adoptan en su hogar, garantizando el confort y la comodidad.{" "}
             <br />
             <br />
+            <br/>
             * Tu opinión es muy importante para nosotros, ya que nos ayuda a
             mejorar como organización, y por supuesto, podemos mejorar,
             cambiar e innovar pensando siempre en el bienestar de todos los
@@ -106,10 +108,12 @@ const Contacto = () => {
 
 
                   </section>
+                  
                  
                   <div className="imagenformulario">
                   <img src="assets/img/slider/oficina2.jpg " className="imagenformulario" alt=".imagen." />
                   </div>
+                 
                        
                     
                 </div>

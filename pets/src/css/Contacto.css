@@ -22,7 +22,7 @@
 }
 .tuitulovideo{
     margin-top: -430px;
-    font-family: serif;
+    font-family: sans-serif;
     font-size: 4em;
     color: white;
     text-shadow: 1px 1px 10px rgb(0, 195, 255), 0 0 22px rgb(102, 128, 146);
@@ -109,6 +109,7 @@
     margin-top: -80px;
     z-index: -1000;
 }
+
 /****************fin ***************************/
 
 
@@ -118,7 +119,7 @@
         width: 80%;
     }
     .videos{
-        margin-top: -390px;
+        margin-top: -320px;
         z-index: -1000;
     }
 }
@@ -129,10 +130,10 @@
     } 
     .parrafovideo{
         font-size: 16px;
-        width: 80%;
+        width: 90%;
     }
     .videos{
-        margin-top: -380px;
+        margin-top: -500px;
         z-index: -1000;
     }
     
@@ -164,6 +165,7 @@
     .videos{
         margin-top: -20px;
         z-index: -1000;
+
     }
     .tuitulovideo{
        
@@ -201,7 +203,22 @@
     }
    
 }
-@media screen and (max-width: 653px){
-  
+@media screen and (max-width: 1552px){
+    .tuitulovideo{
+        margin-top: -450px;
+    }
+    .videos{
+        margin-top: -370px;
+        height: 660px;
+    }
    
+}
+@media screen and (max-width: 1552px){
+    .tuitulovideo{
+        margin-top: -450px;
+    }
+    .videos{
+        margin-top: -363px;
+       
+    }
 }

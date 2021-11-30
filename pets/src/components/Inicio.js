@@ -10,6 +10,12 @@ import { Link } from 'react-router-dom';
 const Inicio = () => {
     return (
         <div className="">
+            <div className="indicador-contenedor">
+                <div className="indicador_scroll"></div>
+            </div>
+            <div id="ir_ariba" className="ocultar ir_ariba">
+                <i className="fa fa-angle-up fa-4x"></i>
+            </div>
             <section>
                 
                 <div id="carouselExampleCaptions" className="carousel slide banner" data-bs-ride="carousel">
@@ -101,7 +107,7 @@ const Inicio = () => {
                     <div className="adoptarcan">
 
                         <h3 className="text-center my-auto titulopets tituloborder tes">
-                        Adopta con respons tenemos a muchos buscando un hogar ❤️</h3>
+                        tenemos  a muchos peliditos buscando un hogar ❤️</h3>
                         <br/>
                         <br/>
                         

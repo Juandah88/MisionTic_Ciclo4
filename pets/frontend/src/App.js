@@ -8,7 +8,8 @@ import Nosotros from './components/Nosotros';
 import Adoptar from './components/Adoptar';
 import Login from './components/Login';
 import {DetallesMascotas} from './components/DetallesMascotas'
-
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
 export default class App extends React.Component {
@@ -27,7 +28,7 @@ export default class App extends React.Component {
       <Router>
       <div>
         <header>
-          <nav className="navbar navbar-expand-md   nav__color ">
+          <nav className="navbar navbar-expand-lg   nav__color ">
             <div className="container-fluid">
               <div className="size_logo">
                  <Link className="navbar-brandv" to="/">
@@ -36,7 +37,7 @@ export default class App extends React.Component {
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 
-                <span className="navbar-toggler-icon"></span>
+                <span ><FontAwesomeIcon className="logopata bg-white" icon={faBars}/></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -82,7 +83,7 @@ export default class App extends React.Component {
       <Router>
       <div>
         <header>
-          <nav className="navbar navbar-expand-md   nav__color ">
+          <nav className="navbar navbar-expand-md    ">
             <div className="container-fluid">
               <div className="size_logo">
                  <Link className="navbar-brandv" to="/">
@@ -124,7 +125,9 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/mascota:id" element={<DetallesMascotas/>}>
+
+      </Route>
        
 
       </Routes>

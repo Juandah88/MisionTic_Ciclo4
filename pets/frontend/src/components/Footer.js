@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/footer.css';
+import '../css/Footer.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDog } from '@fortawesome/free-solid-svg-icons';
 import {faCat } from '@fortawesome/free-solid-svg-icons';

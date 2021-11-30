@@ -413,16 +413,10 @@
   }
 }
 
-.ir_ariba{
+#botonarriba{
   position: fixed;
-  z-index: 1000;
-  right: 25px;
-  bottom: 25px;
-  background-color: #0059ff;
+  bottom: 20px;
+  right: 20px;
   width: 70px;
-  height: 70px;
-  color:white;
-  text-align: center;
-  border-radius: 50%;
-  transition: all .2s;
+  color: white;
 }

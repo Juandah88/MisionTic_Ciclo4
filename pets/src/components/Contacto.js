@@ -104,12 +104,13 @@ const Contacto = () => {
 
 
                   </section>
-                 
+
                   
-                  <div className="imagenformulario">
+                 <div className="imagenformulario">
                   <img src="assets/img/slider/oficina2.jpg " className="imagenformulario" alt=".imagen." />
                   </div>
-                    
+                 
+
                 </div>
               </div>
             </div>

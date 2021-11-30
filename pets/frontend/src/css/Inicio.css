@@ -91,7 +91,9 @@
 
 /********************** titulos ******** ****************/
 
-
+.titulosadoptar{
+  text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
+}
 .tituloborder{
   text-shadow: 1px 1px 10px rgb(0, 0, 0), 0 0 22px rgb(0, 149, 255);
 }

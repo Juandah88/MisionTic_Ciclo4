@@ -12,3 +12,4 @@ var nav = document.getElementById('nav');
 menuhamburguesa.addEventListener('click', function(){
   nav.classList.toggle('mostrar');
 })
+

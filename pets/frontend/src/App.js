@@ -82,7 +82,7 @@ export default class App extends React.Component {
       <Router>
       <div>
         <header>
-          <nav className="navbar navbar-expand-md   nav__color ">
+          <nav className="navbar navbar-expand-md    ">
             <div className="container-fluid">
               <div className="size_logo">
                  <Link className="navbar-brandv" to="/">
@@ -124,7 +124,9 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/mascota:id" element={<DetallesMascotas/>}>
+
+      </Route>
        
 
       </Routes>

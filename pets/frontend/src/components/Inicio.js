@@ -3,13 +3,15 @@ import '../css/Inicio.css';
 import contacto from "../media/contacto.mp4";
 import cats from "../media/cats.mp4";
 import perrosaltando from "../media/perrosaltando.mp4";
-import candark from "../media/candark.mp4"
-import Contacto from './Contacto';
+import candark from "../media/candark.mp4";
+
 
 import { Link } from 'react-router-dom';
+
 const Inicio = () => {
     return (
-        <div  >
+        <div>
+        
             <section>
                 
                 <div id="carouselExampleCaptions" className="carousel slide banner" data-bs-ride="carousel">
@@ -77,19 +79,9 @@ const Inicio = () => {
                 </div>
           
                 <Link className="link-index btn BotonColor botonincio " to="/Adoptar">¡Aqui esta tu proximo amigo!</Link>
-                
             </section>
-         
-       
-
-            <section className="inicio container-fluid ">
-            
-               
-            
-                    
-
-
-            <div style={{ backgroundImage: `url(require("../media/perro.jpg"))` }}>
+            <section className="inicio container-fluid bod">
+            <div style={{ backgroundImage: `url(require("../assets/img/slider/family-dog.jpg"))` }}>
             </div>
         
             {/* <h1 className="titulo-principal container-xxl "><p className="tituloborder"> Adopta con responsabilidad</p>  </h1> */}
@@ -111,7 +103,7 @@ const Inicio = () => {
                     <div className="adoptarcan">
 
                         <h3 className="text-center my-auto titulopets tituloborder tes">
-                        En Pets tenemos a muchos buscando un hogar ❤️</h3>
+                        tenemos  a muchos peliditos buscando un hogar ❤️</h3>
                         <br/>
                         <br/>
                         
@@ -119,7 +111,7 @@ const Inicio = () => {
                     </div>
                 </div>
                
-                <div className="cover-conta ">
+                <div className="cover-conta  ">
                 <video className="video" src={contacto} autoPlay loop muted/>
             </div>
                
@@ -185,7 +177,7 @@ const Inicio = () => {
                     </figure>
 
             <div  className="card-body  bg-targeta">
-                <h5  className="card-title"></h5>
+               
                     <div className="accordion-item bg-dark">
                         <h2 className="accordion-header" id="headingTwo">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -230,7 +222,7 @@ const Inicio = () => {
                         </div>
                     </figure>
                 <div className="card-body  bg-targeta">
-                    <h5  className="card-title"></h5>
+                   
                     <div className="accordion-item titulos-flecha">
                         <h2 className="accordion-header" id="headingThree">
                         <button className="accordion-button collapsed" type="button"data-bs-toggle="collapse"
@@ -264,22 +256,15 @@ const Inicio = () => {
                         <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
+                
             </div>
-            </div>
-            </section>
-
-            <br/>
-            <br/>
-            <br/>
-
-
-        
-
-        
-
             
-
-
+            </div>
+           
+            
+            
+            </section>
+        
         </div>
 
     );

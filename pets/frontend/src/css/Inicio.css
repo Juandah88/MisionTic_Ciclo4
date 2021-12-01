@@ -4,6 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+}
+.bod{
+  background-image: url(../media/fondo-pta.jpg);
+  margin-top:-22px;
+  border-radius: 5px; 
+  
+  
 }
 :root {
   --sombra-texto: #000;
@@ -11,23 +19,21 @@
   --secundario: #015012;
   --terciario: #2b723a;
   --quarter: #58c06f;
-  --fondo-v: #c2bbbb;
+ 
   --fondo-nav: #135321;
   --blue-c: #fcf9f9;
 }
 /* Botones */
 
 .BotonColor{
-  background: #015012;
+  background: #0e86aa;
   padding: 10px 10px;
   color: #fff !important;
   font-weight: bold;
   margin: 30px;
   cursor: pointer;
 }
-.btn{
- 
-}
+
 .botonincio{
   margin-top: -130px;
   margin-left: 550px;
@@ -48,6 +54,7 @@
 .listo,
 .title {
   color: #000;
+ 
 }
 
 .text-shadow {
@@ -84,15 +91,19 @@
 
 /********************** titulos ******** ****************/
 
-
+.titulosadoptar{
+  text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
+}
 .tituloborder{
-  text-shadow: 1px 1px 10px rgb(0, 195, 255), 0 0 22px rgb(102, 128, 146);
+  text-shadow: 1px 1px 10px rgb(0, 0, 0), 0 0 22px rgb(0, 149, 255);
 }
 .titulopets{
   margin-top:  -90px;
   width: 70%;
   margin-left: 130px;
-  font-size: 30px;
+  font-size: 40px;
+  margin-left: 54px;
+  color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -131,20 +142,29 @@
   overflow: hidden;
 }
 
+.title{
+  background-color: transparent;
+}
+
 .info-columna:hover{
-  box-shadow: 5px 10px 20px 1px rgb(225,255,255, 0.273) !important;
+  box-shadow: 5px 10px 20px 1px rgb(255, 255, 255)ortant;
   transition: all 0.7s linear;
 }
 /**************** fin *******************/
 
 /******** colores targeta ****************/
+.card{
+  background-color: #0f8cca8f;
+  
+}
 .bg-targeta{
-  background-color: #c6eef1;
+  background-color:transparent;
 }
 .inicio .card:hover{
   transform: translateY(-15px);
   box-shadow: 0 8px 13px rgba(41, 35, 35, 0.2);
-  background-color: #6f9eaaa4;
+  background: rgba(245, 249, 250, 0.205);
+
 }
 .card:hover{
   box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
@@ -200,21 +220,26 @@
 
 }
 .footer{
-  background-color: rgb(103, 134, 136);
+  background-color: #ffffff;
   
   text-align: center;
-  color:rgb(0, 0, 0); 
+  color:rgb(255, 253, 253); 
   border-radius: 21px;
 }
 
 .footer:hover{
-  background:rgba(58, 43, 192, 0.6);
+  background: #0059ff;
   transition: all 0.3s ease-out;
+  color:white
 
   
 }
+.link-card-footer:hover{
+  color: white;
+}
 .link-card-footer{
-  color: #fff; 
+  color: rgb(15, 14, 14); 
+  
 
   transition: all 0.3s ease-out;
   padding: 6px 30px;
@@ -222,10 +247,8 @@
 
 }
 .link-card-footer:hover{
-  color: rgb(151, 113, 113); 
  
   transition: all 0.3s ease-out;
- 
   text-decoration: none;
 
 } 
@@ -237,8 +260,8 @@
   border-radius: 34px;
   object-fit: cover;
  
-  border: 3px solid #000;
- 
+  border: 3px solid rgb(247, 247, 247);
+  scroll-margin-right: 50px;
 }
  
 .video{
@@ -246,20 +269,21 @@
   border-radius: 34px;
   object-fit: cover;
   width: 100%;
-  height: 90%;
+  height: 100%;
+  
 }
 
 .about-container{
   display:flex;
   
   padding: 20px 0 20px 0;
-
 }
+
 .about-desc{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 160%;
+  width: 100%;
   
 }
 .about-desc > h2{
@@ -271,24 +295,24 @@
 
 }
 .titulosadoptar{
-  width: 80%;
+  width: 90%;
+  font-size: 20px;
   height: auto;
   text-align: justify;
-  margin-left: 90px;
-  font-family: sans-serif;
+  margin-left: 20px;
+  box-sizing: border-box;
+
+  color: #eeeeee;
   
 }
-.adoptarcan{
-  font-family: fantasy;
- 
- 
-}
+
+
 .fotn{
   font-size: 20px;
   border: 2px solid red
 } 
 .videotargeta{
-  border: 2px solid #000;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 12px;
 
 }
@@ -306,10 +330,6 @@
   
     display: none; 
   }
- 
-
-  
-  
 }
 @media screen and (max-width: 960px) {
   .about-container{
@@ -335,21 +355,24 @@
     
   }
   .cover-conta > video{
-    width: 95%;
-    margin-left: 20px;
+    width: 100%;
 
   }
-  .tes{
+  /* .tes{
    margin-left: 40px;
-  }
+  } */
  
 }
+
+
 /************* vide *********************/
+
 @media screen and (max-width: 954px){
   .titulopets{
     margin-left: 90px;
   }
 }
+
 
 
 @media screen and (max-width: 767px){
@@ -374,12 +397,28 @@
    font-weight: 400;
    margin-bottom: 120px;
    transition: all 500ms ease-out;
-   margin-top: 30px;
-  
-  
+   margin-top: 30px;  
   }
- 
-
   
 }
 
+@media screen and (max-width: 531px){
+  .titulopets{
+    margin-left: 70px;
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 360px){
+  .titulopets{
+    margin-left: 50px;
+    
+  }
+}
+
+#botonarriba{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  color: white;
+}

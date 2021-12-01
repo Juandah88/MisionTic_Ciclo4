@@ -1,0 +1,4 @@
+node_modules
+.env
+pets/backend/storage/
+pets/frontend/node_modules/

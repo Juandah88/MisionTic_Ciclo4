@@ -217,9 +217,16 @@ export default class Admin extends Component {
 
   render() {
     return (
-      <div className="ContainerMain">
-        <div className="content">
-          <Container className="my-auto">
+      <div className="ContainerMain ">
+        
+        <div className="fondo-formulario ">
+        <br/>
+        <div className="content  text-white">
+        <br/>
+        <br/>
+        <br/>
+          <h1 className="text-center text-white bg-dark container-lg ">Ingresa los datos de tu mascota</h1>
+            <Container className="my-auto table-hover bg-dark">
             <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
               <Form.Group className="mb-3">
                 <Form.Label>Nombre</Form.Label>
@@ -236,6 +243,7 @@ export default class Admin extends Component {
                 <Form.Group as={Col}>
                   <Form.Label>Edad</Form.Label>
                   <Form.Control
+                   type="number"
                     required
                     name="edad"
                     value={this.state.edad}
@@ -304,7 +312,7 @@ export default class Admin extends Component {
               </Form.Group>
               {
                 !this.state._id ?
-                  (<Button variant="primary" type="submit"> Agragar Mascotas </Button>)
+                  (<Button variant="primary" type="submit"> Agregar Mascotas </Button>)
                   : (<Button variant="primary" type="submit"> Actualizar</Button>)
               }
               {this.state._id ?
@@ -314,9 +322,9 @@ export default class Admin extends Component {
                 : null}
             </Form>
             <hr />
-            <table className="table table-bordered">
+            <table className="table table-dark table-hover  table-responsive ">
               <thead>
-                <tr>
+                <tr >
                   <th scope="col">Nombre</th>
                   <th scope="col">Edad (años)</th>
                   <th scope="col">Genero</th>
@@ -360,6 +368,7 @@ export default class Admin extends Component {
           </Container>
         </div>
         <br />
+        </div>
       </div>
     );
   }

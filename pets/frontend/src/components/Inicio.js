@@ -102,9 +102,11 @@ const Inicio = () => {
             <div class="about-container">
                 <div className="about-desc">
                     <div className="adoptarcan">
+                        
 
                         <h3 className="text-center my-auto titulopets tituloborder tes">
                         tenemos  a muchos peliditos buscando un hogar ❤️</h3>
+                        {/* <img className="icon-perro" src="assets/img/iconos/dog-icon.png"/> */}
                         <br/>
                         <br/>
                         

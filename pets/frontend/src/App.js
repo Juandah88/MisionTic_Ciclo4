@@ -100,7 +100,7 @@ export default class App extends React.Component {
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 
-                <span className="navbar-toggler-icon"><FontAwesomeIcon className="logopata bg-white" icon={faBars}/></span>
+                <span><FontAwesomeIcon className="logopata " icon={faBars}/></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
 

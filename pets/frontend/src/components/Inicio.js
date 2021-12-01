@@ -6,16 +6,17 @@ import perrosaltando from "../media/perrosaltando.mp4";
 import candark from "../media/candark.mp4";
 
 
+
 import { Link } from 'react-router-dom';
 
 const Inicio = () => {
     return (
-        <div>
-        
+        <div className="contenedor">
+          
             <section>
                 
                 <div id="carouselExampleCaptions" className="carousel slide banner" data-bs-ride="carousel">
-                    <div className="carousel-indicators">
+                    <div   className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active"
                             aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
@@ -256,15 +257,15 @@ const Inicio = () => {
                         <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
-                
+
             </div>
-            
             </div>
            
             
             
             </section>
-        
+         
+
         </div>
 
     );

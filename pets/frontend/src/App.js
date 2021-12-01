@@ -12,6 +12,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
+
+
 export default class App extends React.Component {
 
   constructor(props){
@@ -70,7 +72,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/AdoptarMascota:id" element={<DetallesMascotas/>}></Route>
        
 
       </Routes>
@@ -92,7 +94,7 @@ export default class App extends React.Component {
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 
-                <span className="navbar-toggler-icon"></span>
+                <span >< img className="w-100" src="../assets/img/iconos/btmenu.jpg" alt="BtMenu"/></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -125,7 +127,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}>
 
       </Route>
        

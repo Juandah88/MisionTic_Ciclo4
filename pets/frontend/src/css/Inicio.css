@@ -8,7 +8,7 @@
 }
 .bod{
   background-image: url(../media/fondo-pta.jpg);
-  margin-top:-22px;
+  margin-top:-24px;
   border-radius: 5px; 
   
   
@@ -92,6 +92,7 @@
 /********************** titulos ******** ****************/
 
 .titulosadoptar{
+ 
   text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
 }
 .tituloborder{
@@ -110,7 +111,7 @@
 
 .titulos-flecha{
   color: #eeeeee;
-  text-shadow: 1px 1px 10px rgb(14, 13, 13), 0 0 22px rgb(245, 243, 243);
+  text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
   background: rgb(0,5,8);
   background: rgb(0,5,8);
 background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba(0,0,0,1) 100%);

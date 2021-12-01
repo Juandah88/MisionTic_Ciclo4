@@ -34,6 +34,7 @@ const Adoptar = () => {
               }
               alt={pet.nombre}
             ></img>
+            
             </Link>
             </div>
           </li>

@@ -262,6 +262,7 @@ const Inicio = () => {
 
             </div>
             </div>
+            <br/>
            
             
             

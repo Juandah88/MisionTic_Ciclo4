@@ -7,15 +7,11 @@ import candark from "../media/candark.mp4";
 
 
 import { Link } from 'react-router-dom';
+
 const Inicio = () => {
     return (
-        <div className="">
-            <div className="indicador-contenedor">
-                <div className="indicador_scroll"></div>
-            </div>
-            <div id="ir_ariba" className="ocultar ir_ariba">
-                <i className="fa fa-angle-up fa-4x"></i>
-            </div>
+        <div>
+        
             <section>
                 
                 <div id="carouselExampleCaptions" className="carousel slide banner" data-bs-ride="carousel">
@@ -260,24 +256,15 @@ const Inicio = () => {
                         <Link  className="link-card-footer " to="/Adoptar">Aquí puedes ver las mascotas disponibles</Link>
                     </div>
                 </div>
+                
             </div>
+            
             </div>
            
             
             
             </section>
-            
-
-          
-
-
         
-
-        
-
-            
-
-
         </div>
 
     );

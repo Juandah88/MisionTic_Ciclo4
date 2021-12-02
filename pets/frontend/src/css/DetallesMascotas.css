@@ -75,3 +75,6 @@ input:hover{
     background: #fff;
 
 }
+.HideInputId{
+    visibility: hidden;
+}

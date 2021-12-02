@@ -75,7 +75,7 @@ export function DetallesMascotas() {
         form?
       <form className="formAdoptar" onSubmit={onsSubmitsend}>
           <h2 className="h2Adoptar">Adoptar la Mascota</h2>
-          <input  type="text" name="id" value={state._id}/>
+          <input className="HideInputId"  type="text" name="id" value={state._id}/>
           <input type="text" name="name" placeholder="Tú nombre" required/>
           <input type="email" name="email" placeholder="ejemplo@gmail.com" required/>
           <textarea name="message"placeholder="¿Porque quieres adoptar?" required /><br/>

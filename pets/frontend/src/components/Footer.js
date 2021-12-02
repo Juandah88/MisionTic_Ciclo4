@@ -7,7 +7,7 @@ import {faCat } from '@fortawesome/free-solid-svg-icons';
 import {faHome } from '@fortawesome/free-solid-svg-icons';
 const Foter = () => {
     return (
-        <div className="ancho-footer">
+        <div className="ancho-footer ">
         <div className=" margen-footer container-fluid ">
             <footer className="text-center text-lg-start bg-nav text-muted">
                 {/*  Section: Social media */}

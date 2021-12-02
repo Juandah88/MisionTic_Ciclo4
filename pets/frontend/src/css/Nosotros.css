@@ -9,12 +9,15 @@
 }
 .tiyulo{
     text-shadow: 1px 1px 10px rgb(255, 255, 255), 0 0 22px rgb(44, 173, 145);
+    
 }
 
 .parrafo{
+  
+    margin-left: 10%;
     text-align: justify;
     font-size: 20px;
-    width: 90%;
+    width: 80%;
     text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
     
     

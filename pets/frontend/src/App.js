@@ -59,7 +59,7 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}></Route>
       </Routes>
     </Router>);
 }

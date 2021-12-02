@@ -57,11 +57,10 @@ export function DetallesMascotas() {
     <div className="ContainerMain ContainerMascotas">
       <div className="Mascotadiv">
         <p className="CenterNombre">Nombre {state.nombre}</p>
-        <img
+        
+        <img className="AdotarImg"
           
-          src={
-            "https://cdn.pixabay.com/photo/2018/10/01/09/21/pets-3715733__480.jpg"
-          }
+          src={ state.foto}
           alt={state.nombre}
         ></img>
         <button type="button" class="btn btn-success" onClick={onClickAdoptar}>Adoptar</button>

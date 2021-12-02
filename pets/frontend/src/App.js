@@ -13,10 +13,12 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
 
+
 import { Fragment } from 'react';
 import ScrollButton from './components/ScrollButton';
-import { Content, Heading } from './components/Styles';
-  
+
+
+
 export default class App extends React.Component {
 
   constructor(props){
@@ -76,7 +78,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/AdoptarMascota:id" element={<DetallesMascotas/>}></Route>
        
 
       </Routes>
@@ -133,7 +135,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}>
 
       </Route>
        

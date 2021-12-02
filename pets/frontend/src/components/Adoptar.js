@@ -27,11 +27,9 @@ const Adoptar = () => {
           <li key={pet._id} className="mascotaCard">
             {pet.nombre.toUpperCase()}
             <div className="mascotaImagen">
-            <Link to={`/mascota${pet._id}`}>
+            <Link to={`/AdoptarMascota/${pet._id}`}>
             <img className="mascotaImagen"
-              src={
-                "https://cdn.pixabay.com/photo/2018/10/01/09/21/pets-3715733__480.jpg"
-              }
+              src={pet.foto}
               alt={pet.nombre}
             ></img>
             

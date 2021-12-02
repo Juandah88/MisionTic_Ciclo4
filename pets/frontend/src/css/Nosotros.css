@@ -1,31 +1,18 @@
 .nosot{
     position: relative;
     z-index: -1000;
-  
-    background-image: url(../media/fondo-pta.jpg);
-    margin-top:-94px;
-    border-radius: 5px; 
+    margin-top: -170px;
     
 }
-.tiyulo{
-    text-shadow: 1px 1px 10px rgb(255, 255, 255), 0 0 22px rgb(44, 173, 145);
+.green-bg {
+    background-color: var(--fondo-v);
+}
+.title-index{
+    
+    background-color: var(--fondo-v);
+
+}
+.section{
+    margin-bottom: -80px;
 }
 
-.parrafo{
-    text-align: justify;
-    font-size: 20px;
-    width: 90%;
-    text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
-    
-    
-}
-
-
-.parrafos{
-    text-align: justify;
-    font-size: 23px;
-    width: 90%;
-    text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
-   
-    
-}

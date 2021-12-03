@@ -1,20 +1,7 @@
-.ConteinerMascota{
-
-    width: 30em;
-    height: 20em;
-    background: rgb(165, 164, 164);
-}
-.AdotarImg{
-    width: 100%;
-
+img{
+    width: 70%;
     border-radius: 10px;
-    background: red;
-    object-fit: contain;
-
-    height: auto;
-
 }
-
 .ContainerMascotas{
     display: flex;
     justify-content: center;
@@ -24,14 +11,12 @@
     font-size: 25px;
     
 }
-.Mascotadiv{
-    padding: 20px;
-}
+
 .CenterNombre{
     text-align: center;
 }
 button{
-    width: 100%;
+    width: 70%;
 }
 .formAdoptar{
     width: 70%;
@@ -74,4 +59,7 @@ input:hover{
     outline: #fff;
     background: #fff;
 
+}
+.HideInputId{
+    visibility: hidden;
 }

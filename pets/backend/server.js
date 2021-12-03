@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 
 //Settings
-const port  = process.env.port || 5000;
+const port  = process.env.PORT || 3000;
 
 app.use('/public', express.static(__dirname + "/storage/imgs"))
 //MiddleWare

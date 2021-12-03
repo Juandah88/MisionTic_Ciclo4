@@ -36,6 +36,7 @@ const Contacto = () => {
     <div className="cover-container ">
       <video className="videos" src={manada} autoPlay loop muted/>
       <h3 className="text-center  tuitulovideo">Contacta con nosotros</h3>
+       
           <p className=" fs-7 parrafovideo">
             * Es nuestra misión contribuir al bienestar de las mascotas,
             buscar un hogar digno a cada uno de los animales y ayudar al
@@ -89,25 +90,25 @@ const Contacto = () => {
                 </form>
                 
                 <div className="abajo">
-                <div className={style.imagen2}>
-                  <div className={style.imagen}>
-                  <section className="contact-info">
-                  <span><FontAwesomeIcon className="logopata" icon={faDog}/></span>
-                    <br/>
-                    <h2>INFORMACION<br/>DE CONTACTO</h2>
+                  <div className={style.imagen2}>
+                    <div className={style.imagen}>
+                    <section className="contact-info">
+                    <span><FontAwesomeIcon className="logopata" icon={faDog}/></span>
+                      <br/>
+                      <h2>INFORMACION<br/>DE CONTACTO</h2>
 
-                  </section>
-                  <section className="info-items"> 
-                      <p><span className=""><FontAwesomeIcon icon={faEnvelope}/></span>mascotas@gmail.com</p>
-                      <p><span className=""> <FontAwesomeIcon icon={faMobile}/></span>+57 31425033</p>
-                      <p><span className=""> <FontAwesomeIcon icon={faMapMarkerAlt}/></span>BOGOTA-CUNDINAMARCA</p>
+                    </section>
+                    <section className="info-items"> 
+                        <p><span className=""><FontAwesomeIcon icon={faEnvelope}/></span>mascotas@gmail.com</p>
+                        <p><span className=""> <FontAwesomeIcon icon={faMobile}/></span>+57 31425033</p>
+                        <p><span className=""> <FontAwesomeIcon icon={faMapMarkerAlt}/></span>BOGOTA-CUNDINAMARCA</p>
 
 
-                  </section>
+                    </section>
 
-                  
-                 <div className="imagenformulario">
-                  <img src="assets/img/slider/oficina2.jpg " className="imagenformulario" alt=".imagen." />
+                    
+                  <div className="imagenformulario">
+                    <img src="assets/img/slider/oficina2.jpg " className="imagenformulario" alt=".imagen." />
                   </div>
                  
 

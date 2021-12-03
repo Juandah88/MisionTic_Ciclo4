@@ -12,8 +12,20 @@
     text-align: center;
     color:#fff;
     font-size: 30px;
-    border: 5px solid #fff;
+  
+    
+
+ 
     object-fit: fill;
+}
+.mascotaCard:hover{
+
+  color:rgb(216, 109, 109);
+  font-size: 30px;
+  
+  
+
+  
 }
 
 .mascotaImagen{
@@ -22,6 +34,7 @@
     width: 250px;
     height: 250px;
     color: aliceblue;
+    
    
     
 
@@ -29,7 +42,9 @@
 .mascotaImagen:hover{
   color: aliceblue;
   opacity:.8;
- 
+  
+
+  
 }
 
 .fondo-img{
@@ -38,7 +53,7 @@
   border-radius: 5;
   z-index: -1000;
   
+  
+  
 
 }
-
-

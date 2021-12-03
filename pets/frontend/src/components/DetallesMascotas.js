@@ -53,26 +53,39 @@ export function DetallesMascotas() {
     return <Spiner />;
   }
   return (
-    <div>
+    <div className="fondo-img">
+    
     <div className="ContainerMain ContainerMascotas">
-      <div className="Mascotadiv">
-        <p className="CenterNombre">Nombre {state.nombre}</p>
-        
+    <p className="CenterNombre ">{state.nombre}</p>
+      <div className="Mascotadiv contenedora">
+      
+      <figure>
         <img className="AdotarImg"
           
           src={ state.foto}
           alt={state.nombre}
         ></img>
-        <button type="button" class="btn btn-success" onClick={onClickAdoptar}>Adoptar</button>
-        
+       
+      
+     
+      <div className="DetalleMascota capas">
+        <h3>Raza: {state.raza}</h3>
+        <h3>Edad: {state.edad}</h3>
+        <h3>Perfil: {state.perfil}</h3>
+        <button type="button" class="btn btns" onClick={onClickAdoptar}>Adoptar</button>
+   
+  
+      
       </div>
-      <div className="DetalleMascota">
-        <p>Raza {state.raza}</p>
-        <p>Edad {state.edad}</p>
-        <p>Perfil {state.perfil}</p>
-        
+      </figure>  
+     
+      
       </div>{
+        
+
+     
         form?
+      
       <form className="formAdoptar" onSubmit={onsSubmitsend}>
           <h2 className="h2Adoptar">Adoptar la Mascota</h2>
           <input  type="text" name="id" value={state._id}/>
@@ -86,6 +99,6 @@ export function DetallesMascotas() {
 }
     
     </div>
-    </div>
+     </div>
   );
 }

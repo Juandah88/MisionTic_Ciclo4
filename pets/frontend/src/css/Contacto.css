@@ -5,7 +5,7 @@
 }
 .abajo{
     color: #fff;
-    background: #707070c4 !important;
+    background: #707070c4 ;
 }
 .cover-container{
     height: 100vh;
@@ -23,6 +23,7 @@
     height: 700px;
     z-index: -1000;
     position: relative;   
+    max-width: 100%;
     
 }
 .tuitulovideo{
@@ -207,3 +208,21 @@
     }
    
 }
+ 
+@media screen and (max-width: 313px){
+    .parrafovideo{
+        font-size: 13px;
+        width: 90%; 
+        
+    }
+    .videos{
+        margin-top: -294px;
+        z-index: -1000;
+    }
+    .tuitulovideo{
+       
+        margin-top: -500px;
+        z-index: -1000; 
+        
+     } 
+    }

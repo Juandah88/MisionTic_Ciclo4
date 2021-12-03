@@ -123,7 +123,7 @@ const Inicio = () => {
         
             <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="info-columna card">
-                <div className="card  h-100  desva ">
+                <div className="card  h-100  desvanecer ">
                 <figure>
                     {/* <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
                     <video className="videotargeta" src={cats} autoPlay loop muted/>

@@ -21,7 +21,11 @@ const Adoptar = () => {
     return <Spiner />;
   }
   return (
+    <div className="fondo-img">
+    <br/>
     <div className="ContainerMain">
+    <br/>
+    
       <ul className="mascotaGrid">
         {state.map((pet) => (
           <li key={pet._id} className="mascotaCard">
@@ -38,6 +42,7 @@ const Adoptar = () => {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };

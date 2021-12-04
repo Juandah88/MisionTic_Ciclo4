@@ -12,21 +12,12 @@
     text-align: center;
     color:#fff;
     font-size: 30px;
-  
-    
-
- 
     object-fit: fill;
+    font-family: fantasy;
+    text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
 }
-.mascotaCard:hover{
 
-  color:rgb(216, 109, 109);
-  font-size: 30px;
-  
-  
 
-  
-}
 
 .mascotaImagen{
     border-radius: 150px;
@@ -34,26 +25,17 @@
     width: 250px;
     height: 250px;
     color: aliceblue;
-    
-   
-    
-
 }
 .mascotaImagen:hover{
   color: aliceblue;
-  opacity:.8;
-  
-
-  
+  opacity:.8;   
 }
-
 .fondo-img{
   background-image: url(../media/fondo-pta.jpg);
   margin-top:-70px;
   border-radius: 5;
   z-index: -1000;
-  
-  
-  
-
 }
+
+
+

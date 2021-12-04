@@ -28,7 +28,7 @@ const Adoptar = () => {
     
       <ul className="mascotaGrid">
         {state.map((pet) => (
-          <li key={pet._id} className="mascotaCard">
+          <li key={pet._id} className="mascotaCard masco">
             {pet.nombre.toUpperCase()}
             <div className="mascotaImagen">
             <Link to={`/AdoptarMascota/${pet._id}`}>
@@ -36,9 +36,10 @@ const Adoptar = () => {
               src={pet.foto}
               alt={pet.nombre}
             ></img>
-            
+              
             </Link>
             </div>
+           
           </li>
         ))}
       </ul>

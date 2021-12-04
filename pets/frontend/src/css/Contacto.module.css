@@ -9,8 +9,7 @@
   border-radius: 20px;
   margin:  auto;
   margin-top: -92px;
-  background: rgb(0,184,222);
-  background: linear-gradient(90deg, rgba(0,184,222,1) 0%, rgba(49,142,194,1) 54%, rgba(0,124,147,1) 100%);
+  background-color: #fffcfc;
   border:3px solid rgb(238, 237, 237);
 }
 

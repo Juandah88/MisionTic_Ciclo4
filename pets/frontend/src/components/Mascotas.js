@@ -215,6 +215,10 @@ export default class Admin extends Component {
     }
   }
 
+  cerrarSesion(){
+    localStorage.clear();
+  }
+
   render() {
     return (
       <div className="ContainerMain ">
@@ -227,6 +231,9 @@ export default class Admin extends Component {
         <br/>
           <h1 className="text-center text-white bg-dark container-lg ">Ingresa los datos de tu mascota</h1>
             <Container className="my-auto table-hover bg-dark">
+            <Button
+                  className="btn btn-secondary btn-sm m-1"
+                  onClick={this.cerrarSesion}>Cerrar Sesión</Button>
             <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
               <Form.Group className="mb-3">
                 <Form.Label>Nombre</Form.Label>

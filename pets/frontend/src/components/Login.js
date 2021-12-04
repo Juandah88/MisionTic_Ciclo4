@@ -1,5 +1,9 @@
-import React, { Component } from 'react';
-import { Form, Button, Container, h1 } from "react-bootstrap";
+ import React, { Component } from 'react';
+import { Form, Container } from "react-bootstrap";
+import axios from 'axios';
+import Api from '../helpers/Conector';
+import swal from "sweetalert";
+
 
 class Login extends Component {
 
@@ -9,8 +13,9 @@ class Login extends Component {
 
         this.pressChange = this.pressChange.bind(this);
         this.pressClick = this.pressClick.bind(this);
+        this.changeStateApp = this.props.onTryLogin;
         this.state= {
-            username: '',
+            email: '',
             password: ''
         };
     }
@@ -18,14 +23,24 @@ class Login extends Component {
     // handleClick = (e) => {
     //     alert('estos es una funcion')
     //   }
-    pressClick(){
-        alert('estos es una funcion');
-    }
+    async pressClick(){
+       let response = await axios.post(Api + '/usuarios/credenciales',this.state);
+       if(response.data.length == 1){
+           //Actualizacion del estado componente App
+           this.changeStateApp(true,response.data[0].email);
+       }else{
+        swal({
+            title: "Contraseña Incorrecta!",
+            icon: "error",
+            button: "Aceptar!",
+          });
+       }
+    }   
 
       async pressChange(e){
-        if (e.target.name === 'usename') {
+        if (e.target.name === 'email') {
            await this.setState({
-               username: e.target.value,
+               email: e.target.value,
           });
       } else{
            await this.setState({
@@ -35,18 +50,6 @@ class Login extends Component {
       console.log(this.state);
       }
 
-    //  handleChange = (e) => {
-    //    if (e.target.name === 'usename') {
-    //          this.setState({
-    //             username: e.target.value,
-    //        });
-    //    } else{
-    //          this.setState({
-    //         password: e.target.value,
-    //        });
-    //    }
-    //    console.log(this.state);
-    //   }
     render() {
         return (
     <div className="ContainerMain">
@@ -55,10 +58,10 @@ class Login extends Component {
         <Container className="my-auto">
           <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
           <Form.Group className="mb-3">
-            <Form.Label>Nombre de Usuario</Form.Label>
+            <Form.Label>Email de Usuario</Form.Label>
             <Form.Control
                     required
-                    name="username"
+                    name="email"
                     onChange={this.pressChange}
                   />
             </Form.Group>

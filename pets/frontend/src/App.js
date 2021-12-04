@@ -1,5 +1,5 @@
 import './css/Navbar.css'
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Inicio from './components/Inicio';
 import Mascotas from './components/Mascotas';
@@ -12,15 +12,39 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
+
 export default class App extends React.Component {
 
+  
   constructor(props){
     super(props);
     this.state = {
-      logged: true,
+      logged: false,
       username: "",
-    }
+    };
+    this.updateState = this.updateState.bind(this);
+
   }
+
+  // useEffect(()=>{
+  //   const userlogged = localStorage.getItem('LoggedApp')
+  //   if (userlogged) {
+  //     updateState(userlogged[0],userlogged[1]);
+  //   }
+  // },[]) 
+
+  async updateState(logged,username){
+    
+    await this.setState({
+      logged: logged,
+      username: username,
+    });
+    const user = this.state;
+    localStorage.setItem( 'LoggedApp',JSON.stringify(user));
+    console.log(this.state);
+  }
+
+  
 
   renderLogin(){
     return (
@@ -66,7 +90,7 @@ export default class App extends React.Component {
       </div>
       <Routes>
         <Route path="/Nosotros" element={<Nosotros />} />
-        <Route path="/admin" element={<Login />} />
+        <Route path="/admin" element={<Login onTryLogin = {this.updateState} />} />
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
@@ -136,7 +160,11 @@ export default class App extends React.Component {
   }
 
   render(){
-    if (this.state.logged) {
+    
+    const userlogged = localStorage.getItem('LoggedApp')
+    if (userlogged) {
+      return this.renderApp();
+    }else if (this.state.logged) {
       return this.renderApp();
     }else{
       return this.renderLogin();

@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema(
   );
 
   userSchema.methods.encryptPassword = async (password) => {
-    return await encryptPassword(password)
+   return encryptPassword(password)
   };
   
   userSchema.methods.matchPassword = async function (password) {

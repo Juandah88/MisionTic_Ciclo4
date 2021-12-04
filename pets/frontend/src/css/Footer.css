@@ -1,7 +1,7 @@
 /* Footer */
 
 .margen-footer{
-  
+  border-left: 12px;
   background: rgb(10,31,59);
   background: linear-gradient(0deg, rgba(10,31,59,1) 0%, rgba(14,76,113,1) 50%, rgba(19,40,66,1) 89%);
   

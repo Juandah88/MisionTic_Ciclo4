@@ -1,5 +1,5 @@
 img{
-    width: 100%;
+    width: 70%;
     border-radius: 10px;
 }
 .ContainerMascotas{
@@ -11,14 +11,12 @@ img{
     font-size: 25px;
     
 }
-.Mascotadiv{
-    padding: 20px;
-}
+
 .CenterNombre{
     text-align: center;
 }
 button{
-    width: 100%;
+    width: 70%;
 }
 .formAdoptar{
     width: 70%;
@@ -61,4 +59,7 @@ input:hover{
     outline: #fff;
     background: #fff;
 
+}
+.HideInputId{
+    visibility: hidden;
 }

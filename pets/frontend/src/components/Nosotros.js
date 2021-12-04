@@ -7,6 +7,7 @@ const Nosotros = () => {
       
         <div className="nosot section ">
              <br />
+             <br />
             <section id="nosotros" className="margin-id ">
                 <div className="container-xxl border-radius-x green-bg my">
                 <br />

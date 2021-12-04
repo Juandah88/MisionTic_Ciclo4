@@ -13,6 +13,12 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 
 
+
+import { Fragment } from 'react';
+import ScrollButton from './components/ScrollButton';
+
+
+
 export default class App extends React.Component {
 
   
@@ -50,9 +56,10 @@ export default class App extends React.Component {
     return (
       // <Login />
       <Router>
+      
       <div>
         <header>
-          <nav className="navbar navbar-expand-lg   nav__color ">
+          <nav id="menu" className="navbar navbar-expand-md nav__color ">
             <div className="container-fluid">
               <div className="size_logo">
                  <Link className="navbar-brandv" to="/">
@@ -94,7 +101,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/AdoptarMascota:id" element={<DetallesMascotas/>}></Route>
        
 
       </Routes>
@@ -105,9 +112,11 @@ export default class App extends React.Component {
   renderApp(){
     return(
       <Router>
+      <Fragment>
       <div>
+     
         <header>
-          <nav className="navbar navbar-expand-md    ">
+          <nav className="navbar navbar-expand-md sticky-top  nav__color   ">
             <div className="container-fluid">
               <div className="size_logo">
                  <Link className="navbar-brandv" to="/">
@@ -116,7 +125,7 @@ export default class App extends React.Component {
               </div>
               <button className="navbar-toggler menuhamburguesa " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 
-                <span className="navbar-toggler-icon"></span>
+                <span><FontAwesomeIcon className="logopata " icon={faBars}/></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -149,12 +158,16 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/mascota:id" element={<DetallesMascotas/>}>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}>
 
       </Route>
        
 
       </Routes>
+      <ScrollButton />
+   
+      </Fragment>
+ 
     </Router>
     );
   }
@@ -171,4 +184,5 @@ export default class App extends React.Component {
     }
 
   }
+  
 }

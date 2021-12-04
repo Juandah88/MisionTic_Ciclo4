@@ -25,22 +25,6 @@ connection.once('open', () => {
   console.log("Base de datos conectada satisfactoriamente");
 })
 
-//METODO CREDENCIALES
-async function findData(collectionName, filter ){
-    try {
-        let collection = connection.collection(collectionName);
-        let cursor = collection.find(filter);
-        let result = [];
-        let currentDocument = await cursor.next();
-        while(currentDocument){
-            result.push(currentDocument);
-            currentDocument = await cursor.next();
-        }
-        return result
-      } catch (ex) {
-        return null;
-      }
-}
 
 
 //Router
@@ -49,5 +33,3 @@ app.use('/api/usuarios', require('./routes/users.js'))
 
 //Se inicializa el servidor
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));
-
-module.exports.findData = findData;

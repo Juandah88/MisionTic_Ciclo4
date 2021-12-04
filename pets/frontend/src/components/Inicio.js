@@ -1,9 +1,7 @@
 import React from 'react'
 import '../css/Inicio.css';
-import contacto from "../media/contacto.mp4";
-import cats from "../media/cats.mp4";
-import perrosaltando from "../media/perrosaltando.mp4";
-import candark from "../media/candark.mp4";
+
+
 
 
 
@@ -11,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Inicio = () => {
     return (
-        <div className="contenedor">
+        <div className="contenedor ContainerMain">
           
             <section>
                 
@@ -115,7 +113,7 @@ const Inicio = () => {
                 </div>
                
                 <div className="cover-conta  ">
-                <video className="video" src={contacto} autoPlay loop muted/>
+                <video className="video" src="../assets/img/media/contacto.mp4" autoPlay loop muted/>
             </div>
                
             </div>
@@ -126,7 +124,7 @@ const Inicio = () => {
                 <div className="card  h-100  desva ">
                 <figure>
                     {/* <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
-                    <video className="videotargeta" src={cats} autoPlay loop muted/>
+                    <video className="videotargeta" src="../assets/img/media/cats.mp4" autoPlay loop muted/>
                    <div className="capa">
                     <h3 className="tituloborder ">Adoptame</h3>
                     <p className="tituloborder">Ayuda a un gato de la calle a tener un hogar y una familia</p>
@@ -170,7 +168,7 @@ const Inicio = () => {
             <div  className="col info-columna card">
                 <div  className="card h-100  desva">
                     <figure>
-                        <video className="videotargeta" src={candark} autoPlay loop muted/>
+                        <video className="videotargeta" src="../assets/img/media/candark.mp4" autoPlay loop muted/>
                         
                         <div className="capa">
                             <h3 className="tituloborder">adopta a un perro</h3>
@@ -216,7 +214,7 @@ const Inicio = () => {
                 <div  className="card h-100  desva">
                     <figure>
                         {/* <img src="assets/img/slider/family-dog.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
-                        <video className="videotargeta" src={perrosaltando} autoPlay loop muted/>
+                        <video className="videotargeta" src="../assets/img/media/perrosaltando.mp4" autoPlay loop muted/>
                         <div className="capa">
                             <h3 className="tituloborder">Cuida a tu mascota</h3>
                             <p  className="tituloborder">Son los seres mas amables, sencillos, juguetones 

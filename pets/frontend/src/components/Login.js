@@ -1,37 +1,91 @@
-import React from "react";
-import { FacebookLoginButton } from 'react-social-login-buttons'
-const Login = () => {
+ import React, { Component } from 'react';
+import { Form, Container } from "react-bootstrap";
+import axios from 'axios';
+import Api from '../helpers/Conector';
+import swal from "sweetalert";
 
-    return(
-    <div class="row ContainerMain">
-        <div class="col-md-4 offset-md-4">
-            <div class="card mt-4 text-center mb-4">
-                <div class="card-header">
-                    <h3>Inicio de Sesión</h3>
-                </div>
-                <div class="card-body">
-                    <form action="/signin" method="POST">
-                        <div class="form-group mb-4">
-                        <input class="form-control" type="email" name="email" placeholder="Insert Email" autofocus required></input>
-                        </div> 
-                        <div class="form-group mb-4">
-                            <input class="form-control" type="password" name="password" placeholder="Insert Password" required></input>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary btn-block" type="submit">SignIn</button>
-                        </div>
-                    </form>
-                </div>
+
+class Login extends Component {
+
+    constructor(prosp){
+
+        super(prosp);
+
+        this.pressChange = this.pressChange.bind(this);
+        this.pressClick = this.pressClick.bind(this);
+        this.changeStateApp = this.props.onTryLogin;
+        this.state= {
+            email: '',
+            password: ''
+        };
+    }
+
+    // handleClick = (e) => {
+    //     alert('estos es una funcion')
+    //   }
+    async pressClick(){
+       let response = await axios.post(Api + '/usuarios/credenciales',this.state);
+       if(response.data.length == 1){
+           //Actualizacion del estado componente App
+           this.changeStateApp(true,response.data[0].email);
+       }else{
+        swal({
+            title: "Contraseña Incorrecta!",
+            icon: "error",
+            button: "Aceptar!",
+          });
+       }
+    }   
+
+      async pressChange(e){
+        if (e.target.name === 'email') {
+           await this.setState({
+               email: e.target.value,
+          });
+      } else{
+           await this.setState({
+           password: e.target.value,
+          });
+      }
+      console.log(this.state);
+      }
+
+    render() {
+        return (
+    <div className="ContainerMain">
+        <div className="content">
+            <h1 className="text-center mt-3"> Login </h1>
+        <Container className="my-auto">
+          <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
+          <Form.Group className="mb-3">
+            <Form.Label>Email de Usuario</Form.Label>
+            <Form.Control
+                    required
+                    name="email"
+                    onChange={this.pressChange}
+                  />
+            </Form.Group>
+            <Form.Group className="mb-3">
+            <Form.Label>Contraseña</Form.Label>
+            <Form.Control
+                    required
+                    name="password"
+                    type='password'
+                    onChange={this.pressChange}
+                  />
+            </Form.Group>
+            <Form.Control
+                    type="button"
+                     value="Login"
+                     className="btn btn-success m-1"
+                    onClick={this.pressClick}
+                  />
+            
+            </Form>
+                </Container>
             </div>
         </div>
-
-       
-        
-       
-    </div>
-     
-
-
-    );
+        );
+    }
 }
 export default Login;

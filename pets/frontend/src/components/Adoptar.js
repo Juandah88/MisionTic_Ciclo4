@@ -5,6 +5,8 @@ import "../../src/css/Adoptar.css";
 import { Link } from "react-router-dom";
 import { Spiner } from "./Spiner";
 
+
+
 const Adoptar = () => {
   const [state, setState] = useState([]);
   const [isLoding, setIsLoding] = useState(true);

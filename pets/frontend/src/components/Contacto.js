@@ -48,7 +48,7 @@ const Contacto = () => {
             mejorar como organización, y por supuesto, podemos mejorar,
             cambiar e innovar pensando siempre en el bienestar de todos los
             perritos. 
-          </p>
+          </p> 
           </div>
           {/* / from_wrap*/ }
           <section className="body" >

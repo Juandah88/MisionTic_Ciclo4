@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/Footer.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDog } from '@fortawesome/free-solid-svg-icons';
-import {faCat } from '@fortawesome/free-solid-svg-icons';
+
 import {faHome } from '@fortawesome/free-solid-svg-icons';
 const Foter = () => {
     return (

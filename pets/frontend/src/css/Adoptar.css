@@ -22,9 +22,11 @@
 .mascotaImagen{
     border-radius: 150px;
     background: rgb(6, 8, 8);
-    width: 250px;
+    width: 450px;
     height: 250px;
     color: aliceblue;
+    min-width: 200px;
+    max-width: 100%;
 }
 .mascotaImagen:hover{
   color: aliceblue;

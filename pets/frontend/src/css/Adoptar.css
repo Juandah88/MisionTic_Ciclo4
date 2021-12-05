@@ -10,12 +10,34 @@
   .mascotaCard{
     list-style: none;
     text-align: center;
+    color:#fff;
+    font-size: 30px;
+    object-fit: fill;
+    font-family: fantasy;
+    text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
 }
+
+
 
 .mascotaImagen{
-    border-radius: 10px;
+    border-radius: 150px;
     background: rgb(6, 8, 8);
-    width: 230px;
-    height: 230px;
-
+    width: 450px;
+    height: 250px;
+    color: aliceblue;
+    min-width: 200px;
+    max-width: 100%;
 }
+.mascotaImagen:hover{
+  color: aliceblue;
+  opacity:.8;   
+}
+.fondo-img{
+  background-image: url(../media/fondo-pta.jpg);
+  margin-top:-70px;
+  border-radius: 5;
+  z-index: -1000;
+}
+
+
+

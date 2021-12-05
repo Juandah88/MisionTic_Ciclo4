@@ -1,7 +1,35 @@
+
+.ConteinerMascota{
+
+    width: 30em;
+    height: 20em;
+    background: rgb(230, 219, 219);
+}
+.AdotarImg{
+   
+    border: 4px solid rgb(248, 244, 244); 
+    width: 80%;
+    margin-right: 80px;
+    border-radius: 5%;
+    
+    object-fit: contain;
+   height: 500px;
+
+    object-fit: cover;
+   
+
+}
+.formAdoptar{
+    margin-top: -100px;
+
+    
+}
+
 img{
     width: 70%;
     border-radius: 10px;
 }
+
 .ContainerMascotas{
     display: flex;
     justify-content: center;
@@ -10,11 +38,37 @@ img{
     flex-wrap: wrap;
     font-size: 25px;
     
+   
+    
+}
+
+.Mascotadiv{
+    padding: 20px;
+    color: #fff;
+    font-size: 35px;
+  
 }
 
 .CenterNombre{
     text-align: center;
+    color: #fff;
+    font-family: fantasy;
+    text-shadow: 1px 3px 30px rgb(0, 0, 0), 0 0 22px rgb(0, 149, 255);
+    margin-top: 60px;
+    font-size: 40px;
+    padding: 1px;
+    border: 4px solid rgb(255, 255, 255);  
+    border-radius: 4px;
+    text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
+    
+
+   
+    background: clip;
+   
 }
+
+
+
 button{
     width: 70%;
 }
@@ -23,43 +77,260 @@ button{
     display: block !important;
     border-radius: 10px ;
     border :solid rgb(248, 247, 247);
-    margin: 10px;
+    margin: 30px;
     padding: 50px;
-    background: rgb(3, 176, 189);
+    background: rgb(0,184,222);
+    background: linear-gradient(90deg, rgba(0,184,222,1) 0%, rgba(49,142,194,1) 54%, rgb(4, 189, 221) 100%);
+    margin-top: -100px;
+    text-shadow: 1px 3px 30px rgb(0, 0, 0), 0 0 22px rgb(12, 80, 129);
 
 }
+
 .submit{
     width: 100% !important;
 }
 textarea{
     width: 100%;
-    resize: none;
-    border: 1px solid rgb(17, 16, 16);
+   
     margin: 3px;
     border-radius: 10px;
-    outline: #fff;
+    outline: rgb(230, 219, 219);
+    
+   
+}
+textarea:hover{
+    width: 100%;
+    resize: none;
+    background-color: rgb(233, 232, 232);
+    margin: 3px;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    outline: rgb(34, 33, 33);
     
    
 }
 .h2Adoptar{
     text-align: center;
     color: #fff;
+    margin-top: -20px;
+    padding: 5px;
+    font-family: initial;
+    
+    
+   
 }
+
 input{
-    border: 1px solid rgb(17, 16, 16);
     margin: 3px;
     border-radius: 10px;
     outline: #fff;
     height: 40px;
 }
 input:hover{
-    border: 1px solid rgb(17, 16, 16);
+   
     margin: 3px;
     border-radius: 10px;
-    outline: #fff;
-    background: #fff;
+    outline: rgb(24, 23, 23);
+    background: rgb(235, 231, 231);
 
 }
+/* .DetalleMascota{
+    color:#fff;
+    border: 10px solid red;
+    background-color: aqua;
+    margin-left: 50% ;
+    margin-top: -60%;
+} */
+/************************************* efecto taegeta imagen **************************/
+.contenedora{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -9%;
+
+}
+.contenedora figure{
+    position: relative;
+    height: 400px;
+    width: 55%;
+    overflow: hidden;
+    
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+    border-radius: 3%; 
+}
+.contenedora figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+
+}
+.contenedora figure .capas{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 118, 141, 0.308);
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    border: 5px solid #fff;
+    border-radius: 4%;
+    font-family: initial;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0), 0 0 22px rgb(0, 149, 255);
+}
+.contenedora figure:hover >.capas{
+   opacity: 1;
+   visibility: visible;
+   border: 5px solid rgb(4, 216, 253);
+}
+.contenedora figure:hover > .capas h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.contenedora figure:hover > img{
+    transform: scale(1.3);
+
+
+}
+.contenedora figure .capas h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+.contenedora figure .capas p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 250px; 
+    width: 100%;
+    margin: auto;
+}
+/************************************* fin **************************/
+
+/************************************* botnes **************************/
+.btns{
+    width: 40%;
+    border: 2px solid rgb(5, 182, 226);
+    background-color: transparent;
+    color: #fff;
+  
+    
+}
+.btns:hover{
+    width: 40%;
+    border: 2px solid #fff;
+    background-color: rgb(0, 174, 255);
+}
+
+.btnes{
+    width: 200px;
+    border: 2px solid rgb(255, 252, 252);
+    background-color: #51709e;
+    color: #fff;
+  
+    
+}
+.btnes:hover{
+    width: 200px;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;  
+}
+
+.codigo{
+   display: none;
+}
+
+
+@media screen and (max-width: 1064px){
+    .formAdoptar{
+        margin-top: -30px;
+    }
+    
+
+}
+@media screen and (max-width: 594px){
+    
+    .contenedora figure{
+        width: 400px;
+    }
+    .formAdoptar{
+        width: 100%;
+    }
+    
+    
+    .contenedora figure:hover >.capas{
+    opacity: 1;
+    visibility: visible;
+    border: 5px solid rgb(4, 216, 253);
+    }
+    .contenedora figure:hover > .capas h3{
+     margin-top: 70px;
+     margin-bottom: 15px;
+    }
+    .contenedora figure:hover > img{
+     transform: scale(1.3);
+ 
+ 
+    }
+    .contenedora figure img{
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out;
+    
+    }
+    .contenedora figure .capas{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(1, 118, 141, 0.308);
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        border: 5px solid #fff;
+        border-radius: 4%;
+        font-family: initial;
+        text-shadow: 1px 1px 10px rgb(0, 0, 0), 0 0 22px rgb(0, 149, 255);
+    }
+    .contenedora figure:hover >.capas{
+       opacity: 1;
+       visibility: visible;
+       border: 5px solid rgb(4, 216, 253);
+    }
+}
+
+
+@media screen and (max-width: 594px)and(max-width: 588px){
+    input{
+        margin-left: -23px;
+       width: 500px;
+    }
+    .texts{
+     margin-left: -23px;
+     width: 500px;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .HideInputId{
     visibility: hidden;
 }
+

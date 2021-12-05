@@ -5,7 +5,7 @@
 }
 .abajo{
     color: #fff;
-    background: #707070c4 !important;
+    background: #707070c4 ;
 }
 .cover-container{
     height: 100vh;
@@ -23,6 +23,7 @@
     height: 700px;
     z-index: -1000;
     position: relative;   
+    max-width: 100%;
     
 }
 .tuitulovideo{
@@ -51,9 +52,9 @@
 }
 
 .abajo{
-    background-color: #4090ec4b;
-    width: 40%;
-    height: 490px;
+    background-color: #0077ff4b;
+    width: 50%;
+    height: 500px;
     border-radius: 14px;
     max-width: 100%;
 }
@@ -177,6 +178,7 @@
         z-index: -1000; 
         
      } 
+    
 }
 @media screen and (max-width: 914px) {
     .parrafovideo{
@@ -196,14 +198,63 @@
      } 
 }
  
-@media screen and (max-width: 629px){
+@media screen and (max-width: 689px){
     .abajo{
        
         width: 100%;
         height: 100%;
         
-        
+       
         min-width: 100%;
     }
    
+   
+}
+@media screen and (max-width: 756px){
+    .abajo{
+       
+        width: 100%;
+        height: 100%;
+        
+       
+        min-width: 100%;
+    }
+   
+   
+}
+ 
+@media screen and (max-width: 323px){
+    .parrafovideo{
+        font-size: 13px;
+        width: 80%; 
+        
+    }
+    .videos{
+        margin-top: -294px;
+        z-index: -1000;
+    }
+    .tuitulovideo{
+       
+        margin-top: -550px;
+        z-index: -1000; 
+        
+     } 
+}
+
+
+@media screen and (max-width: 277px){
+    .tuitulovideo{
+        margin-top: -570px;
+        z-index: -1;
+    }
+    .parrafovideo{
+        font-size: 10px;
+        width: 80%; 
+        
+    }
+    .videos{
+        margin-top: -300px;
+        z-index: -1000;
+    }
+
 }

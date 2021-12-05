@@ -58,10 +58,10 @@ const Foter = () => {
                                 {/*  Links */}
                                 
                                 <ul className="">
-                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faDog}/><a target="_selft" href="/adoptar" className="footer-a"> Perros</a></li>
-                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faCat}/><a  target="_selft" href="/adoptar" className="footer-a"> Gatos</a></li>
-                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faHome}/><a target="_selft" href="https://www.ciudaddemascotas.com/perros" className="footer-a"> Tienda para perros</a></li>
-                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faHome}/><a target="_selft" href="https://www.ciudaddemascotas.com/perros" className="footer-a">  Objetos para Gatos</a></li>
+                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faDog}/><a target="_selft" href="/adoptar" className="footer-a"> Mascotas</a></li>
+                                    
+                                    <li className="footer-li footer-iconos"><FontAwesomeIcon icon={faHome}/><a target="_selft" href="https://www.ciudaddemascotas.com/perros" className="footer-a"> Tienda para Mascotas</a></li>
+                                   
                                 </ul>
 
                             </div>

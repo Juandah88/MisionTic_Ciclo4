@@ -1,5 +1,5 @@
 import './css/Navbar.css'
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Inicio from './components/Inicio';
 import Mascotas from './components/Mascotas';
@@ -85,9 +85,6 @@ export default class App extends React.Component {
                   <li className="nav-item">
                     <Link className="navbar-brand nav-links-btn" to="/Adoptar">Adoptar</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="navbar-brand" to="/Login">Login</Link>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -141,9 +138,6 @@ export default class App extends React.Component {
                   </li>
                   <li className="nav-item">
                     <Link className="navbar-brand nav-links-btn" to="/Adoptar">Adoptar</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="navbar-brand" to="/Login">Login</Link>
                   </li>
                 </ul>
               </div>

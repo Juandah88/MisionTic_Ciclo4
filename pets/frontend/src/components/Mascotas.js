@@ -4,6 +4,7 @@ import { Form, Row, Col, Button, Container } from "react-bootstrap";
 import Api from "../helpers/Conector.js";
 import "../css/GuardarRegistro.css";
 import swal from "sweetalert";
+import { Link } from "react-router-dom";
  
 export default class Admin extends Component {
   constructor(props) {
@@ -231,9 +232,12 @@ export default class Admin extends Component {
         <br/>
           <h1 className="text-center text-white bg-dark container-lg ">Ingresa los datos de tu mascota</h1>
             <Container className="my-auto table-hover bg-dark">
-            <Button
-                  className="btn btn-secondary btn-sm m-1"
-                  onClick={this.cerrarSesion}>Cerrar Sesión</Button>
+            <Link to={'/'}>
+            <Button 
+                  className="btn btn-secondary m-1"
+                  onClick={this.cerrarSesion}>Cerrar Sesión
+            </Button>
+            </Link>
             <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
               <Form.Group className="mb-3">
                 <Form.Label>Nombre</Form.Label>

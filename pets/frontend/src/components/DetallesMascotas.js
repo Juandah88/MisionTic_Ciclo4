@@ -7,6 +7,11 @@ import '../../src/css/DetallesMascotas.css'
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faDog, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faMobile} from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+
 export function DetallesMascotas() {
   let { id } = useParams();
   const [state, setState] = useState([]);
@@ -53,39 +58,57 @@ export function DetallesMascotas() {
     return <Spiner />;
   }
   return (
-    <div>
-    <div className="ContainerMain ContainerMascotas">
-      <div className="Mascotadiv">
-        <p className="CenterNombre">Nombre {state.nombre}</p>
-        
-        <img className="AdotarImg"
-          
-          src={ state.foto}
-          alt={state.nombre}
-        ></img>
-        <button type="button" class="btn btn-success" onClick={onClickAdoptar}>Adoptar</button>
-        
-      </div>
-      <div className="DetalleMascota">
-        <p>Raza {state.raza}</p>
-        <p>Edad {state.edad}</p>
-        <p>Perfil {state.perfil}</p>
-        
-      </div>{
-        form?
-      <form className="formAdoptar" onSubmit={onsSubmitsend}>
-          <h2 className="h2Adoptar">Adoptar la Mascota</h2>
-          <input className="HideInputId"  type="text" name="id" value={state._id}/>
-          <input type="text" name="name" placeholder="Tú nombre" required/>
-          <input type="email" name="email" placeholder="ejemplo@gmail.com" required/>
-          <textarea name="message"placeholder="¿Porque quieres adoptar?" required /><br/>
-          <button type="submit"  class="btn btn-success">Enviar</button>
-          <button type="button"  class="btn btn-danger" onClick={onclickCancelar}>Cancelar</button>
-        </form>
-        :null
-}
+    <div className="fondo-img">
     
-    </div>
-    </div>
+      <div className="ContainerMain ContainerMascotas">
+      <p className="CenterNombre ">{state.nombre}</p>
+        <div className="Mascotadiv contenedora">
+        
+        <figure>
+          <img className="AdotarImg"
+            
+            src={ state.foto}
+            alt={state.nombre}
+          ></img>
+        
+        
+      
+        <div className="DetalleMascota capas">
+          <h3>Raza: {state.raza}</h3>
+          <h3>Edad: {state.edad}</h3>
+          <h3>Perfil: {state.perfil}</h3>
+          <button type="button" class="btn btns" onClick={onClickAdoptar}>Adoptar</button>
+    
+    
+        
+        </div>
+        </figure>  
+          
+        </div>{
+          
+
+      
+        form?
+
+      
+        <form className="formAdoptar" onSubmit={onsSubmitsend}>
+            <h2 className="h2Adoptar">Adoptar la Mascota</h2>
+            <input className="codigo"  type="text" name="id" value={state._id}/>
+            <input type="text" name="name" placeholder="Tú nombre" required/>
+            <input type="email" name="email" placeholder="ejemplo@gmail.com" required/>
+            <textarea className="texts" name="message"placeholder="¿Porque quieres adoptar?" required /><br/>
+            <button type="submit"  class="btn btnes">Enviar</button>
+            <button type="button"  class="btn btnes" onClick={onclickCancelar}>Cancelar</button>
+          </form>
+          :null
+        }
+        
+          
+      </div>
+      
+
+    </div> 
+
+    
   );
 }

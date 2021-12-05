@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 
 //Settings
-const port  = process.env.port || 5000;
+const port  = process.env.PORT || 3000;
 
 app.use('/public', express.static(__dirname + "/storage/imgs"))
 //MiddleWare
@@ -24,6 +24,9 @@ const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("Base de datos conectada satisfactoriamente");
 })
+
+
+
 //Router
 app.use('/api/mascotas', require('./routes/pets'));
 app.use('/api/usuarios', require('./routes/users.js'))

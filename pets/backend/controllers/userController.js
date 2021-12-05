@@ -1,5 +1,6 @@
 const userController = {};
 const user = require('../models/user');
+const serverData = require ("../server")
 
 userController.obtener = async (request, response) => {
     await user.find()
@@ -41,4 +42,21 @@ userController.insertar = async(request, response) => {
       .catch(err => response.status(400).json('Error: ' + err));
       
 }};
+
+userController.credenciales = async (request, response) => {
+  
+  const userDataBase = await user.findOne({ email: request.body.email });
+
+    var passwordIsValid = await userDataBase.matchPassword(request.body.password);
+    response.json(passwordIsValid)
+
+
+  // console.log(req.body);
+  // let data = await serverData.findData ("users",{
+  //   email: req.body.email,
+  //   password: req.body.password
+  // });
+  // res.send(data);
+};
+
 module.exports = userController;

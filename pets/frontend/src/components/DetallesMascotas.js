@@ -89,6 +89,7 @@ export function DetallesMascotas() {
 
       
         form?
+
       
         <form className="formAdoptar" onSubmit={onsSubmitsend}>
             <h2 className="h2Adoptar">Adoptar la Mascota</h2>
@@ -107,6 +108,7 @@ export function DetallesMascotas() {
       
 
     </div> 
+
     
   );
 }

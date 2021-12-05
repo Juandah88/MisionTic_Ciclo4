@@ -267,21 +267,21 @@ const Inicio = () => {
             
             
            
-            <section className="about contain">
-                <div className="about-text">
-                    <h2 className="bsubtitulo">LO QUE HACEMOS</h2>
+            <section className="about contain row container-fluid">
+                <div className="about-text col-xs-12 col-sm-12 row">
+                    <h2 className="bsubtitulo ">LO QUE HACEMOS</h2>
                     <br/>
                    
-                    <p className="about-parrafo1">Los animales que llegan a la fundación reciben atención veterinaria completa, incluyendo esterilización, vacunación, desparacitación, identificación con microchip y cualquier tratamiento necesario para garantizar su bienestar hasta que logremos encontrarles un hogar que los cuide de por vida.</p>
+                    <p className="about-parrafo1 ">Los animales que llegan a la fundación reciben atención veterinaria completa, incluyendo esterilización, vacunación, desparacitación, identificación con microchip y cualquier tratamiento necesario para garantizar su bienestar hasta que logremos encontrarles un hogar que los cuide de por vida.</p>
                     
                     
                 </div>
                 
                 <figure 
-                className="about-img wrap">
+                className="about-img wrap col-xs-12 col-sm-12">
                     <div className="targeta-wrap">
                         <div className="targeta">
-                            <div className="adelante">
+                            <div className="adelante ">
                             <img src="assets/img/slider/family-dog.jpg" className="about-picture "></img> 
                             </div>
                             <div className="atras">
@@ -292,23 +292,23 @@ const Inicio = () => {
 
                 </figure>
 
-                <figure className="about-img wrap">
+                <figure className="about-img wrap col-xs-12 col-sm-12">
                     <div className="targeta-wrap">
                         <div className="targeta">
                             <div className="adelante">
                                 <img src="assets/img/slider/masco.jpg" className="about-picture "></img>
                             </div>
-                            <div className="atras">
+                            <div className="atras ">
                             <img src="assets/img/slider/perro1.jpg" className="about-picture "></img>
                             </div>
                         </div>
                     </div>
                 </figure>
                 
-                <div className="about-text">
-                    <h2 className="bsubtitulo2">LO QUE QUEREMOS</h2>
+                <div className="about-text col-sm-12">
+                    <h2 className="bsubtitulo2 ">LO QUE QUEREMOS</h2>
                     <br/>
-                    <p className="about-parrafo2">Promover la sensibilización colectiva fomentando la esterilización, el respeto a la vida, el NO al maltrato animal y la adopción responsable y soñamos con convertirnos en una organización líder en la protección y preservación de los animales que son víctimas del maltrato y la indiferencia.</p>
+                    <p className="about-parrafo2 col-xs-6">Promover la sensibilización colectiva fomentando la esterilización, el respeto a la vida, el NO al maltrato animal y la adopción responsable y soñamos con convertirnos en una organización líder en la protección y preservación de los animales que son víctimas del maltrato y la indiferencia.</p>
                     
                  
                 </div>

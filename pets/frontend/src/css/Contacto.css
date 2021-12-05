@@ -209,10 +209,10 @@
    
 }
  
-@media screen and (max-width: 313px){
+@media screen and (max-width: 320px){
     .parrafovideo{
-        font-size: 13px;
-        width: 90%; 
+        font-size: 11px;
+        width: 80%; 
         
     }
     .videos{
@@ -221,8 +221,26 @@
     }
     .tuitulovideo{
        
-        margin-top: -500px;
+        margin-top: -600px;
         z-index: -1000; 
         
      } 
+}
+
+
+@media screen and (max-width: 277px){
+    .tuitulovideo{
+        margin-top: -570px;
+        z-index: -1;
     }
+    .parrafovideo{
+        font-size: 10px;
+        width: 80%; 
+        
+    }
+    .videos{
+        margin-top: -300px;
+        z-index: -1000;
+    }
+
+}

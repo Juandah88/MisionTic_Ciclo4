@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+   ;
 }
 .bod{
   background-image: url(../media/fondo-pta.jpg) ;
@@ -115,7 +115,7 @@
   text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
   background: rgb(0,5,8);
   background: rgb(0,5,8);
-background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba(0,0,0,1) 100%);
 
 }
 .titulos-flecha2{
@@ -333,6 +333,14 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
   
     display: none; 
   }
+  .titulopets{
+    margin-left: 4%;
+    font-size: 27px;
+    width: 100%;
+  }
+  .titulosadoptar{
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 960px) {
   .about-container{
@@ -364,6 +372,12 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
   /* .tes{
    margin-left: 40px;
   } */
+  .titulopets{
+    margin-left: 2%;
+    margin-left: 2%;
+    font-size: 33px;
+    width: 100%;
+  }
  
 }
 
@@ -390,7 +404,9 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
   max-width: 100%;
   height: 100%;
   align-items: center;
-  border-radius: 9%;
+  border-radius: 4%;
+  min-width: 100px;
+  
  
  
 
@@ -404,10 +420,11 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
   font-size: 23px;
   height: auto;
   text-align: justify;
-  
+  min-width: 20%;
+  margin-left: auto;
   box-sizing: border-box;
   color: #eeeeee;
-  margin-left: 8%;
+  margin-left: auto;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
@@ -420,11 +437,11 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
   font-size: 23px;
   height: auto;
   text-align: justify;
- 
+
   
   box-sizing: border-box;
   color: #eeeeee;
-  margin-left: -3%;
+  margin-left: auto;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
@@ -444,7 +461,7 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
   width: 70%;
  
   font-size: 30px;
-  margin-left: 18%;
+  margin-left: 28%;
   color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-shadow: 1px 1px 5px rgb(18, 18, 19), 0 0 22px rgb(12, 0, 0);
@@ -454,52 +471,14 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
 /*****************************fin ***************************/
 
 
-@media screen and (max-width: 767px){
-  .inicio figure .capa{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 400px;
-    background:rgba(11,103,123,0.6);
-    transition: all 500ms ease-in-out;
-    opacity:0;
-    visibility: hidden;
-    text-align: center;
-  }
-  .inicio figure:hover .capa h3{
-    margin-top:87px;
-    margin-bottom: 9px;
-  
-  }
-  .inicio figure .capa h3{
-   color:#fff;
-   font-weight: 400;
-   margin-bottom: 120px;
-   transition: all 500ms ease-out;
-   margin-top: 30px;  
-  }
-  
-}
 
-@media screen and (max-width: 531px){
-  .titulopets{
-    margin-left: 70px;
-    font-size: 23px;
-  }
-}
-@media screen and (max-width: 360px){
-  .titulopets{
-    margin-left: 50px;
-    
-  }
-}
 
 @media screen and (max-width: 914px){
   .inicio figure .capa{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 400px;
+    height: 160px;
     background:rgba(11,103,123,0.6);
     transition: all 500ms ease-in-out;
     opacity:0;
@@ -518,12 +497,15 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
    transition: all 500ms ease-out;
    margin-top: 30px;  
   }
+  .bsubtitulo, .bsubtitulo2{
+    margin-right: -70px;
+  }
   
 }
 
 
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1022px){
   .about{
     grid-template-columns: 1fr;
   }
@@ -534,8 +516,8 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
     grid-row: 3/4;
   }
   
+  
 }
-
 
 .wrap{
  
@@ -599,4 +581,159 @@ background: linear-gradient(58deg, rgba(0,5,8,1) 0%, rgba(27,79,105,1) 50%, rgba
 .adelante{
   width: 100%;
  
+}
+@media (max-width: 521px){
+  .about{
+    padding: 0%;
+  }
+  .about-parrafo1, .about-parrafo2{
+    color: #fff;
+   
+    width: 70%;
+    font-size: 18px;
+    height: auto;
+    text-align: justify;
+    min-width: 150px;
+    margin-left: 13vh;
+  }
+  
+  
+  .bsubtitulo, .bsubtitulo2{
+   
+    width: 70%;
+   
+    font-size: 30px;
+    margin-left: 22%;
+   margin-right: auto;
+  }
+  .inicio figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 280px;
+    background:rgba(11, 106, 123, 0.6);
+    transition: all 500ms ease-in-out;
+    opacity:0;
+    visibility: hidden;
+    text-align: center;
+  }
+  .inicio figure:hover .capa h3{
+    margin-top:60px;
+    margin-bottom: 9px;
+  
+  }
+  .inicio figure .capa h3{
+   color:#fff;
+   font-weight: 400;
+   margin-bottom: 120px;
+   transition: all 500ms ease-out;
+   margin-top: 30px;
+  
+  
+  }
+  
+  
+}
+@media (max-width: 430px){
+  .about{
+    padding: 0%;
+  }
+  .about-parrafo1, .about-parrafo2{
+    color: #fff;
+   
+    width: 65%;
+    font-size: 18px;
+    height: auto;
+    text-align: justify;
+    min-width: 150px;
+    margin-left: 7vh;
+  }
+  .targeta{
+    width: 240px;
+    margin-right: 70px;
+  }
+  
+  
+  .bsubtitulo, .bsubtitulo2{
+   
+    width: 70%;
+   
+    font-size: 25px;
+    margin-left: 20%;
+   margin-right: auto;
+  }
+  
+  
+}
+@media (max-width: 333px){
+  .about{
+    padding: 0%;
+  }
+  .about-parrafo1, .about-parrafo2{
+    color: #fff;
+   
+    width: 50%;
+    font-size: 18px;
+    height: auto;
+    text-align: justify;
+    min-width: 150px;
+    margin-left: -2%;
+  }
+  .targeta{
+    width: 240px;
+    margin-right: 90px;
+  }
+  .titulopets{
+    margin-left: 2%;
+    
+    font-size: 27px;
+    width: 100%;
+  }
+  .inicio figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 175px;
+    background:rgba(11, 106, 123, 0.6);
+    transition: all 500ms ease-in-out;
+    opacity:0;
+    visibility: hidden;
+    text-align: center;
+  }
+  .inicio figure:hover .capa h3{
+    margin-top:30px;
+    margin-bottom: 9px;
+  
+  }
+ 
+  
+  
+  .bsubtitulo, .bsubtitulo2{
+   
+    width: 70%;
+   
+    font-size: 20px;
+    margin-left: 13%;
+   margin-right: auto;
+  }
+  
+  
+}
+@media (max-width: 443px){
+  .about{
+    padding: 0%;
+  }
+
+
+  .targeta{
+  margin-left: -80px;
+
+  }
+  .bsubtitulo, .bsubtitulo2{
+    margin-left: 14%;
+  }
+  .about-parrafo1, .about-parrafo2{
+    margin-left: 8%;
+  }
+  
 }

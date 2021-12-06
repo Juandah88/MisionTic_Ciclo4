@@ -7,11 +7,6 @@ import '../../src/css/DetallesMascotas.css'
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faDog, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {faMobile} from '@fortawesome/free-solid-svg-icons';
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-
 export function DetallesMascotas() {
   let { id } = useParams();
   const [state, setState] = useState([]);

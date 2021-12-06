@@ -16,6 +16,8 @@ export default class Admin extends Component {
       modalIsertar: false,
       elementId: "",
       tipoModal: "",
+      ocultarMostrarBtCancelar:false,
+      ocultarMostrarBtAgregar:true,
 
       pets: [],
       _id: "",
@@ -161,9 +163,11 @@ export default class Admin extends Component {
 
   botonCancelar = (e) => {
     this.limpiarCampos();
+  
     this.setState({
       ocultarMostrarBtCancelar: false,
       ocultarMostrarBtAgregar: true,
+     
     })
 
   }
@@ -324,11 +328,11 @@ export default class Admin extends Component {
                 />
               </Form.Group>
               {
-                !this.state._id ?
-                  (<Button variant="primary" type="submit"> Agregar Mascotas </Button>)
+                this.state.ocultarMostrarBtAgregar?
+                  ( <Button variant="primary" type="submit"> Agregar Mascotas</Button>)
                   : (<Button variant="primary" type="submit"> Actualizar</Button>)
               }
-              {this.state._id ?
+              {this.state.ocultarMostrarBtCancelar?
                 <Button
                   className="btn btn-danger m-1"
                   onClick={this.botonCancelar}> Cancelar</Button>

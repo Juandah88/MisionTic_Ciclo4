@@ -31,11 +31,11 @@ const Contacto = () => {
       e.target.reset();
   };
   return (
-    <div  className="ContainerMain">
+    <div>
     <div className="cover-container ">
-      <video className="videos" src="../assets/img/media/manada.mp4" autoPlay loop muted/>
+      <video className="videos" src={manada} autoPlay loop muted/>
       <h3 className="text-center  tuitulovideo">Contacta con nosotros</h3>
-    
+       
           <p className=" fs-7 parrafovideo">
             * Es nuestra misión contribuir al bienestar de las mascotas,
             buscar un hogar digno a cada uno de los animales y ayudar al

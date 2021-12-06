@@ -5,6 +5,8 @@ import "../../src/css/Adoptar.css";
 import { Link } from "react-router-dom";
 import { Spiner } from "./Spiner";
 
+
+
 const Adoptar = () => {
   const [state, setState] = useState([]);
   const [isLoding, setIsLoding] = useState(true);
@@ -21,10 +23,14 @@ const Adoptar = () => {
     return <Spiner />;
   }
   return (
+    <div className="fondo-img">
+    <br/>
     <div className="ContainerMain">
+    <br/>
+    
       <ul className="mascotaGrid">
         {state.map((pet) => (
-          <li key={pet._id} className="mascotaCard">
+          <li key={pet._id} className="mascotaCard masco">
             {pet.nombre.toUpperCase()}
             <div className="mascotaImagen">
             <Link to={`/AdoptarMascota${pet._id}`}>
@@ -32,12 +38,14 @@ const Adoptar = () => {
               src={pet.foto}
               alt={pet.nombre}
             ></img>
-            
+              
             </Link>
             </div>
+           
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };

@@ -121,7 +121,7 @@ const Inicio = () => {
         
             <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="info-columna card">
-                <div className="card  h-100  desva ">
+                <div className="card  h-100  desvanecer ">
                 <figure>
                     {/* <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
                     <video className="videotargeta" src="../assets/img/media/cats.mp4" autoPlay loop muted/>
@@ -264,7 +264,57 @@ const Inicio = () => {
            
             
             
+           
+            <section className="about contain row container-fluid">
+                <div className="about-text col-xs-12 col-sm-12 row">
+                    <h2 className="bsubtitulo ">LO QUE HACEMOS</h2>
+                    <br/>
+                   
+                    <p className="about-parrafo1 ">Los animales que llegan a la fundación reciben atención veterinaria completa, incluyendo esterilización, vacunación, desparacitación, identificación con microchip y cualquier tratamiento necesario para garantizar su bienestar hasta que logremos encontrarles un hogar que los cuide de por vida.</p>
+                    
+                    
+                </div>
+                
+                <figure 
+                className="about-img wrap col-xs-12 col-sm-12">
+                    <div className="targeta-wrap">
+                        <div className="targeta">
+                            <div className="adelante ">
+                            <img src="assets/img/slider/family-dog.jpg" className="about-picture "></img> 
+                            </div>
+                            <div className="atras">
+                            <img src="assets/img/slider/adoptar-un-perro.jpg" className="about-picture "></img>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure className="about-img wrap col-xs-12 col-sm-12">
+                    <div className="targeta-wrap">
+                        <div className="targeta">
+                            <div className="adelante">
+                                <img src="assets/img/slider/masco.jpg" className="about-picture "></img>
+                            </div>
+                            <div className="atras ">
+                            <img src="assets/img/slider/perro1.jpg" className="about-picture "></img>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                
+                <div className="about-text col-sm-12">
+                    <h2 className="bsubtitulo2 ">LO QUE QUEREMOS</h2>
+                    <br/>
+                    <p className="about-parrafo2 col-xs-6">Promover la sensibilización colectiva fomentando la esterilización, el respeto a la vida, el NO al maltrato animal y la adopción responsable y soñamos con convertirnos en una organización líder en la protección y preservación de los animales que son víctimas del maltrato y la indiferencia.</p>
+                    
+                 
+                </div>
             </section>
+            </section>
+
+
+            
          
 
         </div>

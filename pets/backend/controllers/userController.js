@@ -43,14 +43,20 @@ userController.insertar = async(request, response) => {
       
 }};
 
-userController.credenciales = async (req, res) => {
-  // console.log(req.params);
-  console.log(req.body);
-  let data = await serverData.findData ("users",{
-    email: req.body.email,
-    password: req.body.password
-  });
-  res.send(data);
+userController.credenciales = async (request, response) => {
+  
+  const userDataBase = await user.findOne({ email: request.body.email });
+
+    var passwordIsValid = await userDataBase.matchPassword(request.body.password);
+    response.json(passwordIsValid)
+
+
+  // console.log(req.body);
+  // let data = await serverData.findData ("users",{
+  //   email: req.body.email,
+  //   password: req.body.password
+  // });
+  // res.send(data);
 };
 
 module.exports = userController;

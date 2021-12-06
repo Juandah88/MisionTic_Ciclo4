@@ -24,7 +24,7 @@ class Login extends Component {
     //     alert('estos es una funcion')
     //   }
     async pressClick(){
-       let response = await axios.post('http://localhost:3000/api/usuarios/credenciales',this.state);
+       let response = await axios.post(Api+'/usuarios/credenciales',this.state);
        if(response.data === true){
            //Actualizacion del estado componente App
            this.changeStateApp(true);
@@ -47,7 +47,7 @@ class Login extends Component {
            password: e.target.value,
           });
       }
-      console.log(this.state);
+
       }
 
     render() {

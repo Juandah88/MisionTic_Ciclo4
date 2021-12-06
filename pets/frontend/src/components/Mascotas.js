@@ -218,6 +218,8 @@ export default class Admin extends Component {
 
   cerrarSesion(){
     localStorage.clear();
+   
+
   }
 
   render() {

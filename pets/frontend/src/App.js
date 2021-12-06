@@ -33,12 +33,7 @@ export default class App extends React.Component {
 
   }
 
-  // useEffect(()=>{
-  //   const userlogged = localStorage.getItem('LoggedApp')
-  //   if (userlogged) {
-  //     updateState(userlogged[0],userlogged[1]);
-  //   }
-  // },[]) 
+ 
 
   async updateState(logged,username){
     
@@ -86,6 +81,7 @@ export default class App extends React.Component {
                   <li className="nav-item">
                     <Link className="navbar-brand nav-links-btn" to="/Adoptar">Adoptar</Link>
                   </li>
+
                 </ul>
               </div>
             </div>

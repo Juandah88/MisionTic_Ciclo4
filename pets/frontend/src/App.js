@@ -26,7 +26,7 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      logged: false,
+      logged: true,
       username: "",
     };
     this.updateState = this.updateState.bind(this);
@@ -100,7 +100,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/AdoptarMascota:id" element={<DetallesMascotas/>}/>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}/>
    
         <Route path="*" element={<PageNotFound/>}/>
         <Route path="/Login" element={<Login/>}/>

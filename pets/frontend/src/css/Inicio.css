@@ -7,11 +7,7 @@
    ;
 }
 .bod{
-<<<<<<< HEAD
   background-image: url("./img/fondo-pta.jpg");
-=======
-  background-image: url(../media/fondo-pta.jpg) ;
->>>>>>> 2eff60bd78f2cc55006f7c517f5b549f09b309b9
   margin-top:-24px;
   border-radius: 5px; 
   

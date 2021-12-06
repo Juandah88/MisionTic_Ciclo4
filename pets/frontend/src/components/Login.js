@@ -1,4 +1,4 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { Form, Container } from "react-bootstrap";
 import axios from 'axios';
 import Api from '../helpers/Conector';
@@ -24,10 +24,10 @@ class Login extends Component {
     //     alert('estos es una funcion')
     //   }
     async pressClick(){
-       let response = await axios.post(Api + '/usuarios/credenciales',this.state);
-       if(response.data.length == 1){
+       let response = await axios.post('http://localhost:3000/api/usuarios/credenciales',this.state);
+       if(response.data === true){
            //Actualizacion del estado componente App
-           this.changeStateApp(true,response.data[0].email);
+           this.changeStateApp(true);
        }else{
         swal({
             title: "Contraseña Incorrecta!",

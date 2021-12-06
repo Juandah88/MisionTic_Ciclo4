@@ -1,5 +1,5 @@
 import './css/Navbar.css'
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Inicio from './components/Inicio';
 import Mascotas from './components/Mascotas';
@@ -26,7 +26,7 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      logged: true,
+      logged: false,
       username: "",
     };
     this.updateState = this.updateState.bind(this);
@@ -86,7 +86,6 @@ export default class App extends React.Component {
                   <li className="nav-item">
                     <Link className="navbar-brand nav-links-btn" to="/Adoptar">Adoptar</Link>
                   </li>
-
                 </ul>
               </div>
             </div>

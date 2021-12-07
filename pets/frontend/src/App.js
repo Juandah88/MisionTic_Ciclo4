@@ -99,7 +99,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/AdoptarMascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}></Route>
        
 
       </Routes>

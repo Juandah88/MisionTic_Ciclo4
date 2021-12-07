@@ -5,6 +5,7 @@ import Api from "../helpers/Conector.js";
 import "../css/GuardarRegistro.css";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import {animateScroll as scroll} from 'react-scroll'
  
 export default class Admin extends Component {
   constructor(props) {
@@ -55,16 +56,20 @@ export default class Admin extends Component {
       .then(() => {
         //Cuando termina de hacer la insercción se carga nuevamente el listado de mascotas
         this.get();
+     
         swal({
           title: "Una mascota a llegado la familia!",
           icon: "success",
           button: "Aceptar!",
+          
         });
+        
       })
       .catch((error) => {
         console.log(error);
       });
     this.limpiarCampos();
+    scroll.scrollToBottom();
   };
   //Fin funcón agregar mascotas
 
@@ -86,6 +91,7 @@ export default class Admin extends Component {
       });
 
     this.limpiarCampos();
+    scroll.scrollToBottom();
   };
   // Fin Función para Editar mascotas
 
@@ -189,6 +195,7 @@ export default class Admin extends Component {
       ocultarMostrarBtCancelar: true,
 
     });
+    scroll.scrollToTop();
   };
   //Fin Función para mostrar los campos de editar mascotas
 
@@ -238,9 +245,9 @@ export default class Admin extends Component {
         <br/>
           <h1 className="text-center text-white bg-dark container-lg ">Ingresa los datos de tu mascota</h1>
             <Container className="my-auto table-hover bg-dark">
-            <Link to={'/'}>
+            <Link to={'/Login'}>
             <Button 
-                  className="btn btn-secondary m-1"
+                  className="btn btn-secondary m-1 w-100"
                   onClick={this.cerrarSesion}>Cerrar Sesión
             </Button>
             </Link>
@@ -327,11 +334,13 @@ export default class Admin extends Component {
                   onChange={this.onInputChange}
                 />
               </Form.Group>
+            
               {
                 this.state.ocultarMostrarBtAgregar?
-                  ( <Button variant="primary" type="submit"> Agregar Mascotas</Button>)
+                 (<Button variant="primary" type="submit">    Agregar Mascotas</Button>)
                   : (<Button variant="primary" type="submit"> Actualizar</Button>)
               }
+         
               {this.state.ocultarMostrarBtCancelar?
                 <Button
                   className="btn btn-danger m-1"
@@ -368,9 +377,9 @@ export default class Admin extends Component {
                         Editar
                       </button>
 
-                      <button
+                      <button id="abajo"
                         type="button"
-                        className="btn btn-danger m-1"
+                        className="btn btn-danger col-xxl-3 m-1"
                         onClick={() => {
                           this.delete(pet); this.get();
                         }}

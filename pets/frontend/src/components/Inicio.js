@@ -97,7 +97,7 @@ const Inicio = () => {
                 <
                     /div> 
             </div> */}
-            <div class="about-container">
+            <div className="about-container">
                 <div className="about-desc">
                     <div className="adoptarcan">
                         
@@ -123,7 +123,7 @@ const Inicio = () => {
             <div className="info-columna card">
                 <div className="card  h-100  desvanecer ">
                 <figure>
-                    {/* <img src="assets/img/slider/masco.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
+                    {/* <img src="assets/img/slider/masco.jpg" className="img-fluid rounded-start desvanecer" alt="..."/> */}
                     <video className="videotargeta" src="../assets/img/media/cats.mp4" autoPlay loop muted/>
                    <div className="capa">
                     <h3 className="tituloborder ">Adoptame</h3>
@@ -213,7 +213,7 @@ const Inicio = () => {
             <div  className="col info-columna card">
                 <div  className="card h-100  desva">
                     <figure>
-                        {/* <img src="assets/img/slider/family-dog.jpg" class="img-fluid rounded-start desvanecer" alt="..."/> */}
+                        {/* <img src="assets/img/slider/family-dog.jpg" className="img-fluid rounded-start desvanecer" alt="..."/> */}
                         <video className="videotargeta" src="../assets/img/media/perrosaltando.mp4" autoPlay loop muted/>
                         <div className="capa">
                             <h3 className="tituloborder">Cuida a tu mascota</h3>
@@ -280,10 +280,10 @@ const Inicio = () => {
                     <div className="targeta-wrap">
                         <div className="targeta">
                             <div className="adelante ">
-                            <img src="assets/img/slider/family-dog.jpg" className="about-picture "></img> 
+                            <img src="assets/img/slider/family-dog.jpg" className="about-picture " alt="family dog"></img> 
                             </div>
                             <div className="atras">
-                            <img src="assets/img/slider/adoptar-un-perro.jpg" className="about-picture "></img>
+                            <img src="assets/img/slider/adoptar-un-perro.jpg" className="about-picture " alt="adoptar un perro"></img>
                             </div>
                         </div>
                     </div>
@@ -294,10 +294,10 @@ const Inicio = () => {
                     <div className="targeta-wrap">
                         <div className="targeta">
                             <div className="adelante">
-                                <img src="assets/img/slider/masco.jpg" className="about-picture "></img>
+                                <img src="assets/img/slider/masco.jpg" className="about-picture " alt="mascota"></img>
                             </div>
                             <div className="atras ">
-                            <img src="assets/img/slider/perro1.jpg" className="about-picture "></img>
+                            <img src="assets/img/slider/perro1.jpg" className="about-picture " alt="perro"></img>
                             </div>
                         </div>
                     </div>

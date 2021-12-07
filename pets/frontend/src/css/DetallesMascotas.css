@@ -50,15 +50,17 @@ img{
 
 .CenterNombre{
     text-align: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
+    border-style: inherit;
     font-family: cursive;
     text-shadow: 1px 3px 30px rgb(0, 0, 0), 0 0 22px rgb(0, 149, 255);
     margin-top: 60px;
     font-size: 40px;
     padding: 1px;
-    border: 4px solid rgb(255, 255, 255);  
+    border: 2px solid rgba(255, 255, 255, 0.432);  
     border-radius: 4px;
-    
+    background-color: rgba(10, 10, 10, 0.199);
+    padding: 10px;
 
    
     background: clip;
@@ -212,46 +214,28 @@ input:hover{
 
 /************************************* botnes **************************/
 .btns{
-    width: 40%;
+    width: 100%;
     border: 2px solid rgb(5, 182, 226);
     background-color: transparent;
     color: #fff;
+    font-size: 23px;
   
     
 }
 .btns:hover{
-    width: 40%;
+    width: 100%;
     border: 2px solid #fff;
-    background-color: rgb(0, 174, 255);
+    background-color:rgb(5, 182, 226);
 }
 
-.btnes{
-    width: 350px;
-    border: 2px solid rgb(255, 252, 252);
-    background-color: #0b0b0c;
-    color: #fff;
-  
-    
-}
-.btnes:hover{
-    width: 200px;
-    color: #fff;
-    border: 2px solid #fff;
-    background-color: transparent;  
-}
+
 
 .codigo{
    display: none;
 }
 
 
-@media screen and (max-width: 1064px){
-    .formAdoptar{
-        margin-top: -30px;
-    }
-    
 
-}
 @media screen and (max-width: 594px){
     
     .contenedora figure{
@@ -304,18 +288,7 @@ input:hover{
 }
 
 
-@media screen and (max-width: 594px)and(max-width: 588px){
-    input{
-        margin-left: -23px;
-       width: 500px;
-    }
-    .texts{
-     margin-left: -23px;
-     width: 500px;
-    }
-    
-    
-}
+
 
 
 .HideInputId{
@@ -323,8 +296,10 @@ input:hover{
 }
 
 .card-targeta{
-    margin-top: -50%;
+    border: 4px solid white;
+    margin-top: -70%; 
     max-width: 60%;
+    min-width: 250px;
 
 }
 .titless{
@@ -343,6 +318,52 @@ input:hover{
 
 }
 .fondo-targeta{
-    background-color:rgba(184, 184, 184, 0.671) ;
+    background-color:rgba(184, 184, 184, 0.425) ;
 
+}
+
+@media screen and (max-width: 317px){
+    .card-targeta{
+        margin-top: -500px;
+       width: 600px
+    }
+   
+   
+    
+    
+}
+@media screen and (min-width: 317px){
+    .card-targeta{
+        margin-top: -400px;
+       width: 600px
+    }
+    .CenterNombre{
+        font-size: 20px;
+    }
+   
+    .tes-respon{
+        margin-left: 6px;
+    }
+
+}
+
+@media screen and (min-width: 375px){
+    .card-targeta{
+        margin-top: -400px;
+       width: 600px
+    }
+   
+   
+    
+    
+}
+@media screen and (max-width: 1371px){
+    .card-targeta{
+        margin-top: -600px;
+       width: 600px
+    }
+   
+   
+    
+    
 }

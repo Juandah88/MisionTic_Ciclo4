@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: cursive;
 }
 .abajo{
     color: #fff;
@@ -29,13 +30,13 @@
 }
 .tuitulovideo{
     margin-top: -430px;
-    font-family: sans-serif;
+    font-family: cursive;
     font-size: 4em;
     color: white;
     text-shadow: 1px 1px 10px rgb(89, 174, 196), 0 0 22px rgb(52, 105, 143);
 }
 .parrafovideo{
-    font-size: 23px;
+    font-size: 33px;
     color: azure;
     width: 80%;
     text-align: justify;

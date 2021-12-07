@@ -62,33 +62,43 @@ export function DetallesMascotas() {
     
       <div className="ContainerMain ContainerMascotas">
         <p className="CenterNombre ">Adpota a tu merjor Amigo </p>
-          <div className="Mascotadiv contenedora"> 
+        <div className="Mascotadiv contenedora"> 
         
             
-          </div>
-        <div class="card mb-3 card-targeta">
-          <div class="row g-0 fondo-targeta">
-            <div class="col-md-8">
-              <img src={ state.foto} class="img-fluid AdotarImg rounded-start" alt={state.nombre}/>
-            </div>
-            <div class="col-md-4">
-              <div class="card-body titless">
-                <h5 class="card-title1 ">{state.nombre}</h5>
-                <p class="card-text">Raza: {state.raza}</p>
-                <p class="card-text">Edad: {state.edad}</p>
-                <p class="card-text"><small class="text-muted">Perfil: {state.perfil}</small></p>
-                <button type="button" class="btn btns" onClick={onClickAdoptar}>Adoptar</button>
-              </div>
-            </div>
-          </div>
         </div>
-      
+        <div className="card mb-3 card-targeta">
+          <div className="row g-0 fondo-targeta">
+            {/* <figure> */}
+              <div className="col-md-8 capas">
+                <img src={ state.foto} class="img-fluid AdotarImg rounded-start" alt={state.nombre}/>
+                {/* <h1>Busca un hogar</h1>
+                <p>Mucho Amor</p>
+                <p>morditas Tiernas</p>
+                <p>Uno que otro lenguetazo</p> */}
+
+              </div>
+              <div className="col-md-4">
+                <div className="card-body titless">
+                  <h5 className="card-title1 ">{state.nombre}</h5>
+                  <br/>
+                  
+                  <p className="card-text">Raza: {state.raza}</p>
+                  <p className="card-text">Edad: {state.edad}</p>
+                  <p className="card-text">Perfil: {state.perfil}</p>
+                  <button type="button" class="btn btns" onClick={onClickAdoptar}>Adoptar</button>
+                </div>
+              </div>
+            {/* </figure> */}
+          </div>
+       
+        </div>
          
           <div className={style.flex__container}>
 
           
             <form className= {style.from} onSubmit={onsSubmitsend}>
-              <div className={style.fromm__section}>
+            <div className="tes-respon">
+              <div className={style.fromm__section} >
                   <input
                     type="text" name="name"
                     className={style.from__input}
@@ -96,6 +106,8 @@ export function DetallesMascotas() {
                     required
                   />
               </div>
+            </div>
+            <div className="tes-respon">
               <div className={style.fromm__section}>
                     <input
                       type="email"
@@ -105,7 +117,9 @@ export function DetallesMascotas() {
                       required
                     />
                   </div>
-                  <div className={style.fromm__section}>
+              </div>
+            <div className="tes-respon">
+                <div className={style.fromm__section}>
                     <textarea
                       className={style.from__input}
                       name="message"
@@ -114,14 +128,20 @@ export function DetallesMascotas() {
                       
                     ></textarea>
                   </div>
-                  <div id="bt2">
+                </div>
+            <div id="bt2">
                   
-                    <input className={style.bto} type="submit" 
-                    id="" />
-                    {/* <button type="submit"  class="btn btnes">Enviar</button> */}
+                    {/* <input className={style.bto} type="submit" 
+                    id="" /> */}
+                 
+                  {/* <button type="submit"  class="btn btnes">Enviar</button> */}
+                  <div className="">
                     <button type="submit" className={style.bto}>Enviar</button>
+                   
                    <button type="button"  className={style.bto} onClick={onclickCancelar}>Cancelar</button>
+                   </div>
                   </div>
+
                 </form>
                 
                 <div className="abajo">

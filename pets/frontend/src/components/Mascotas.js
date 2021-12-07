@@ -360,7 +360,7 @@ export default class Admin extends Component {
 
                       <button
                         type="button"
-                        className="btn btn-danger m-1"
+                        className="btn btn-danger col-xxl-3 m-1"
                         onClick={() => {
                           this.delete(pet); this.get();
                         }}

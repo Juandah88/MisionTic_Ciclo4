@@ -77,6 +77,7 @@ export function DetallesMascotas() {
                 <p class="card-text">Raza: {state.raza}</p>
                 <p class="card-text">Edad: {state.edad}</p>
                 <p class="card-text"><small class="text-muted">Perfil: {state.perfil}</small></p>
+                <button type="button" class="btn btns" onClick={onClickAdoptar}>Adoptar</button>
               </div>
             </div>
           </div>

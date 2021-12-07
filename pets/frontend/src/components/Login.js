@@ -53,17 +53,19 @@ class Login extends Component {
 
     render() {
         return (
-    <div className="ContainerMain">
+    <div className="ContainerMain fondo-login">
     <br/>
     <br/>
     <br/>
-        <div className="content tenido">
+    <br/>
         <br/>
         <br/>
         <br/>
-        <br/>
-            <h1 className="text-center text-white mt-3"> Login </h1>
-        <Container className="my-auto">
+        <div className="row ">
+        
+       
+        <Container className="my-auto fondo-ta col-4">
+        <h1 className="text-center text-white mt-3">Bienvenido</h1>
           <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
           <Form.Group className="mb-3">
             <Form.Label>Email de Usuario</Form.Label>

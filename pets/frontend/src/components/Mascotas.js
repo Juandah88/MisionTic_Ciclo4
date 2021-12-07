@@ -324,12 +324,12 @@ export default class Admin extends Component {
               }
               {this.state._id ?
                 <Button
-                  className="btn btn-danger m-1"
+                  className="btn btn-danger m-1 col-xxl my-2"
                   onClick={this.botonCancelar}> Cancelar</Button>
                 : null}
             </Form>
             <hr />
-            <table className="table table-dark table-hover  table-responsive ">
+            <table className="table table-dark table-hover  table-responsive display ">
               <thead>
                 <tr >
                   <th scope="col">Nombre</th>

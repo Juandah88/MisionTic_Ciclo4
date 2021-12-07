@@ -25,7 +25,7 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      logged: true,
+      logged: false,
       username: "",
     };
     this.updateState = this.updateState.bind(this);

@@ -6,11 +6,11 @@ import { useState, useEffect } from "react";
 import '../../src/css/DetallesMascotas.css'
 import emailjs from "emailjs-com";
 import swal from "sweetalert";
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDog, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {faMobile} from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import style from "../css/Contacto.module.css";
 
 export function DetallesMascotas() {
   let { id } = useParams();
@@ -61,54 +61,98 @@ export function DetallesMascotas() {
     <div className="fondo-img">
     
       <div className="ContainerMain ContainerMascotas">
-      <p className="CenterNombre ">{state.nombre}</p>
-        <div className="Mascotadiv contenedora">
+        <p className="CenterNombre ">Adpota a tu merjor Amigo </p>
+          <div className="Mascotadiv contenedora"> 
         
-        <figure>
-          <img className="AdotarImg"
             
-            src={ state.foto}
-            alt={state.nombre}
-          ></img>
-        
-        
-      
-        <div className="DetalleMascota capas">
-          <h3>Raza: {state.raza}</h3>
-          <h3>Edad: {state.edad}</h3>
-          <h3>Perfil: {state.perfil}</h3>
-          <button type="button" class="btn btns" onClick={onClickAdoptar}>Adoptar</button>
-    
-    
-        
+          </div>
+        <div class="card mb-3 card-targeta">
+          <div class="row g-0 fondo-targeta">
+            <div class="col-md-8">
+              <img src={ state.foto} class="img-fluid AdotarImg rounded-start" alt={state.nombre}/>
+            </div>
+            <div class="col-md-4">
+              <div class="card-body titless">
+                <h5 class="card-title1 ">{state.nombre}</h5>
+                <p class="card-text">Raza: {state.raza}</p>
+                <p class="card-text">Edad: {state.edad}</p>
+                <p class="card-text"><small class="text-muted">Perfil: {state.perfil}</small></p>
+              </div>
+            </div>
+          </div>
         </div>
-        </figure>  
-          
-        </div>{
-          
-
       
-        form?
+         
+          <div className={style.flex__container}>
 
-      
-        <form className="formAdoptar" onSubmit={onsSubmitsend}>
-            <h2 className="h2Adoptar">Adoptar la Mascota</h2>
-            <input className="codigo"  type="text" name="id" value={state._id}/>
-            <input type="text" name="name" placeholder="Tú nombre" required/>
-            <input type="email" name="email" placeholder="ejemplo@gmail.com" required/>
-            <textarea className="texts" name="message"placeholder="¿Porque quieres adoptar?" required /><br/>
-            <button type="submit"  class="btn btnes">Enviar</button>
-            <button type="button"  class="btn btnes" onClick={onclickCancelar}>Cancelar</button>
-          </form>
-          :null
-        }
+          
+            <form className= {style.from} onSubmit={onsSubmitsend}>
+              <div className={style.fromm__section}>
+                  <input
+                    type="text" name="name"
+                    className={style.from__input}
+                    placeholder="Nombre"
+                    required
+                  />
+              </div>
+              <div className={style.fromm__section}>
+                    <input
+                      type="email"
+                      name="email"
+                      className={style.from__input}
+                      placeholder="email"
+                      required
+                    />
+                  </div>
+                  <div className={style.fromm__section}>
+                    <textarea
+                      className={style.from__input}
+                      name="message"
+                      placeholder="¿Porque quieres adoptar?"
+                      required
+                      
+                    ></textarea>
+                  </div>
+                  <div id="bt2">
+                  
+                    <input className={style.bto} type="submit" 
+                    id="" />
+                    {/* <button type="submit"  class="btn btnes">Enviar</button> */}
+                    <button type="submit" className={style.bto}>Enviar</button>
+                   <button type="button"  className={style.bto} onClick={onclickCancelar}>Cancelar</button>
+                  </div>
+                </form>
+                
+                <div className="abajo">
+                  <div className={style.imagen2}>
+                    <div className={style.imagen}>
+                      <section className="contact-info">
+                      <span><FontAwesomeIcon className="logopata" icon={faDog}/></span>
+                        <br/>
+                        <h2>INFORMACION<br/>DE CONTACTO</h2>
+
+                      </section>
+                      <section className="info-items"> 
+                          <p><span className=""><FontAwesomeIcon icon={faEnvelope}/></span>mascotas@gmail.com</p>
+                          <p><span className=""> <FontAwesomeIcon icon={faMobile}/></span>+57 31425033</p>
+                          <p><span className=""> <FontAwesomeIcon icon={faMapMarkerAlt}/></span>BOGOTA-CUNDINAMARCA</p>
+
+
+                      </section>
+
+                      
+                      <div className="imagenformulario">
+                        <img src="/assets/img/slider/oficina2.jpg " className="imagenformulario" alt=".imagen." />
+                      </div>
+                  
+
+                    </div>
+                  </div>
+                </div>
+              </div>
         
-          
       </div>
-      
-
     </div> 
-
     
   );
 }

@@ -20,10 +20,11 @@
 .videos{
     object-fit: cover;
     width: 100%;
-    height: 700px;
+    height: 900px;
     z-index: -1000;
     position: relative;   
     max-width: 100%;
+    margin-top:-300px
     
 }
 .tuitulovideo{
@@ -52,7 +53,7 @@
 }
 
 .abajo{
-    background-color: #0077ff4b;
+    background-color: #0077ff63;
     width: 50%;
     height: 500px;
     border-radius: 14px;
@@ -111,11 +112,14 @@
 .body{
     
     background-image: url(../media/fondo-pta.jpg);
-    margin-top: -80px;
+    margin-top: -70px;
     z-index: -1000;
 }
 
 /****************fin ***************************/
+
+
+
 
 
 @media screen and (min-width: 1075px) {
@@ -124,13 +128,16 @@
         width: 80%;
     }
     .videos{
-        margin-top: -390px;
+        margin-top: -450px;
         z-index: -1000;
+    }
+    .body{
+        margin-top: 0px;
     }
 }
 @media screen and (max-width: 1075px) {
     .tuitulovideo{
-       margin-top: -440px;
+       margin-top: -600px;
         z-index: -1000; 
     } 
     .parrafovideo{
@@ -138,8 +145,9 @@
         width: 90%;
     }
     .videos{
-        margin-top: -260px;
+        margin-top: -440px;
         z-index: -1000;
+        height: 900px;
     }
     
    
@@ -180,6 +188,7 @@
      } 
     
 }
+
 @media screen and (max-width: 914px) {
     .parrafovideo{
         font-size: 16px;
@@ -192,10 +201,13 @@
     }
     .tuitulovideo{
        
-        margin-top: -500px;
+        margin-top: -600px ;
         z-index: -1000; 
         
      } 
+     .body{
+         margin-top: 56px;
+     }
 }
  
 @media screen and (max-width: 689px){
@@ -244,7 +256,7 @@
 
 @media screen and (max-width: 277px){
     .tuitulovideo{
-        margin-top: -570px;
+        margin-top: -670px;
         z-index: -1;
     }
     .parrafovideo{

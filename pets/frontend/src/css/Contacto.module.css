@@ -8,7 +8,7 @@
   align-content: center;
   border-radius: 20px;
   margin:  auto;
-  margin-top: -92px;
+  
   background-color: #fffcfc;
   border:3px solid rgb(238, 237, 237);
 }
@@ -93,7 +93,7 @@ input:hover{
   border-radius: 12px;
   width:100%;
   height: 510px;
-  margin-top: -440px;
+  margin-top: -445px;
   opacity: 0.12;
 
 }
@@ -117,8 +117,8 @@ input:hover{
   background:#3d4b8a;
   border: 0;
   border:2px solid white;
-}
-
+} 
+ 
 @media(min-width: 1024px){
   .from{
       display:flex;
@@ -143,18 +143,12 @@ input:hover{
       
   }
 }
-@media screen and (min-width: 479px) {
-  .flex__container{
-    margin-top: -120px;
-    z-index: -1000;
-  }
+
+
   
-}
+
 @media screen and (max-width: 375px) {
-  .flex__container{
-    margin-top: -155px;
-    z-index: -1000;
-  }
+ 
   .from__input, .from__input:hover{
     width: 263px;
   }
@@ -175,10 +169,7 @@ input:hover{
 
 }
 @media screen and (max-width: 323px) {
-  .flex__container{
-    margin-top: -155px;
-    z-index: -1000;
-  }
+  
   .from__input, .from__input:hover{
     width: 205px;
   }
@@ -200,17 +191,16 @@ input:hover{
   
 
 }
-@media screen and (max-width: 706px) {
-  .flex__container{
-    margin-top: -140px;
-    z-index: -1000;
-  }
-}
-@media screen and (min-width: 360px) {
-  .flex__container{
-    margin-top: -100px;
-    z-index: -1000;
-  }
-  
-}
 
+
+
+@media screen and (max-width: 774px){
+  .abajo{
+     
+      width: 100%;
+      height: 100%;
+      
+     
+      min-width: 100%;
+  }
+}

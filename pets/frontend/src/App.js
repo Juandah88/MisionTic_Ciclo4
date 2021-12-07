@@ -25,7 +25,7 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      logged: false,
+      logged: true,
       username: "",
     };
     this.updateState = this.updateState.bind(this);
@@ -56,7 +56,7 @@ export default class App extends React.Component {
     return (
       // <Login />
       <Router>
-      
+      <Fragment>
       <div>
         <header>
           <nav id="menu" className="navbar navbar-expand-md nav__color ">
@@ -92,9 +92,13 @@ export default class App extends React.Component {
               </div>
             </div>
           </nav>
+           
+   
          
         </header>
       </div>
+      
+     
       <Routes>
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/admin" element={<Login onTryLogin = {this.updateState} />} />
@@ -105,6 +109,8 @@ export default class App extends React.Component {
        
 
       </Routes>
+       </Fragment>
+       <ScrollButton />
     </Router>
     );
   }

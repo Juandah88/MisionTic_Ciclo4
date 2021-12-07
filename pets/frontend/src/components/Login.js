@@ -3,6 +3,7 @@ import { Form, Container } from "react-bootstrap";
 import axios from 'axios';
 import Api from '../helpers/Conector';
 import swal from "sweetalert";
+import '../css/Login.css';
 
 
 class Login extends Component {
@@ -53,8 +54,15 @@ class Login extends Component {
     render() {
         return (
     <div className="ContainerMain">
-        <div className="content">
-            <h1 className="text-center mt-3"> Login </h1>
+    <br/>
+    <br/>
+    <br/>
+        <div className="content tenido">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+            <h1 className="text-center text-white mt-3"> Login </h1>
         <Container className="my-auto">
           <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
           <Form.Group className="mb-3">

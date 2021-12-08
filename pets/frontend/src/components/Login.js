@@ -1,4 +1,4 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { Form, Container } from "react-bootstrap";
 import axios from 'axios';
 import Api from '../helpers/Conector';
@@ -25,10 +25,10 @@ class Login extends Component {
     //     alert('estos es una funcion')
     //   }
     async pressClick(){
-       let response = await axios.post(Api + '/usuarios/credenciales',this.state);
-       if(response.data.length == 1){
+       let response = await axios.post(Api+'/usuarios/credenciales',this.state);
+       if(response.data === true){
            //Actualizacion del estado componente App
-           this.changeStateApp(true,response.data[0].email);
+           this.changeStateApp(true);
        }else{
         swal({
             title: "Contraseña Incorrecta!",
@@ -48,53 +48,53 @@ class Login extends Component {
            password: e.target.value,
           });
       }
-      console.log(this.state);
+
       }
 
     render() {
         return (
-    <div className="ContainerMain fondo-login">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-        <br/>
-        <br/>
-        <br/>
-        <div className="row ">
-        
-       
-        <Container className="my-auto fondo-ta col-4">
-        <h1 className="text-center text-white mt-3">Bienvenido</h1>
-          <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
-          <Form.Group className="mb-3">
-            <Form.Label>Email de Usuario</Form.Label>
-            <Form.Control
-                    required
-                    name="email"
-                    onChange={this.pressChange}
-                  />
-            </Form.Group>
-            <Form.Group className="mb-3">
-            <Form.Label>Contraseña</Form.Label>
-            <Form.Control
-                    required
-                    name="password"
-                    type='password'
-                    onChange={this.pressChange}
-                  />
-            </Form.Group>
-            <Form.Control
-                    type="button"
-                     value="Login"
-                     className="btn btn-success m-1"
-                    onClick={this.pressClick}
-                  />
-            
-            </Form>
-                </Container>
-            </div>
-        </div>
+            <div className="ContainerMain fondo-login">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div className="row ">
+                
+               
+                <Container className="my-auto fondo-ta col-4">
+                <h1 className="text-center text-white mt-3">Bienvenido</h1>
+                  <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
+                  <Form.Group className="mb-3">
+                    <Form.Label>Email de Usuario</Form.Label>
+                    <Form.Control
+                            required
+                            name="email"
+                            onChange={this.pressChange}
+                          />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                    <Form.Label>Contraseña</Form.Label>
+                    <Form.Control
+                            required
+                            name="password"
+                            type='password'
+                            onChange={this.pressChange}
+                          />
+                    </Form.Group>
+                    <Form.Control
+                            type="button"
+                             value="Login"
+                             className="btn btn-success m-1"
+                            onClick={this.pressClick}
+                          />
+                    
+                    </Form>
+                        </Container>
+                    </div>
+                </div>
         );
     }
 }

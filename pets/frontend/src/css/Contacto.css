@@ -112,8 +112,8 @@
 }
 .body{
     
-    background-image: url(../media/fondo-pta.jpg);
-    margin-top: -70px;
+    background-image: url("./img/fondo-pta.jpg");
+    margin-top: -80px;
     z-index: -1000;
 }
 

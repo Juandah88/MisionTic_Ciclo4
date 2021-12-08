@@ -1,4 +1,4 @@
-let Api ="https://backendmascota.herokuapp.com/api"
+let Api ="https://backendmascotasmintic.azurewebsites.net/api"
 
 module.exports = Api;
 

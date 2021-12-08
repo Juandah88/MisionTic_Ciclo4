@@ -9,7 +9,7 @@
 
   }
 .fondo-formulario{
-  background-image: url(../media/fondo-pta.jpg);
+  background-image: url("./img/fondo-pta.jpg");
   margin-top:-97px;
   z-index: -1000;
 }

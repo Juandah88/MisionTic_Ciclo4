@@ -49,7 +49,7 @@ userController.credenciales = async (request, response) => {
 
     var passwordIsValid = await userDataBase.matchPassword(request.body.password);
     response.json(passwordIsValid)
-
+  
 
   // console.log(req.body);
   // let data = await serverData.findData ("users",{

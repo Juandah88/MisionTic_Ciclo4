@@ -1,5 +1,5 @@
 import './css/Navbar.css'
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Inicio from './components/Inicio';
 import Mascotas from './components/Mascotas';
@@ -7,6 +7,7 @@ import Contacto from './components/Contacto';
 import Nosotros from './components/Nosotros';
 import Adoptar from './components/Adoptar';
 import Login from './components/Login';
+import {PageNotFound} from './components/PageNotFound'
 import {DetallesMascotas} from './components/DetallesMascotas'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -32,12 +33,7 @@ export default class App extends React.Component {
 
   }
 
-  // useEffect(()=>{
-  //   const userlogged = localStorage.getItem('LoggedApp')
-  //   if (userlogged) {
-  //     updateState(userlogged[0],userlogged[1]);
-  //   }
-  // },[]) 
+ 
 
   async updateState(logged,username){
     
@@ -85,9 +81,7 @@ export default class App extends React.Component {
                   <li className="nav-item">
                     <Link className="navbar-brand nav-links-btn" to="/Adoptar">Adoptar</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="navbar-brand" to="/Login">Login</Link>
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -105,7 +99,7 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/AdoptarMascota:id" element={<DetallesMascotas/>}></Route>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}></Route>
        
 
       </Routes>
@@ -148,9 +142,7 @@ export default class App extends React.Component {
                   <li className="nav-item">
                     <Link className="navbar-brand nav-links-btn" to="/Adoptar">Adoptar</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="navbar-brand" to="/Login">Login</Link>
-                  </li>
+             
                 </ul>
               </div>
             </div>
@@ -164,9 +156,12 @@ export default class App extends React.Component {
         <Route path="/" element={<Inicio />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Adoptar" element={<Adoptar />} />
-        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}>
+        <Route path="/AdoptarMascota/:id" element={<DetallesMascotas/>}/>
+        <Route path="*" exact={true} element={<PageNotFound/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        
 
-      </Route>
+    
        
 
       </Routes>

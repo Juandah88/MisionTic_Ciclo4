@@ -11,6 +11,7 @@ import {faDog, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {faMobile} from '@fortawesome/free-solid-svg-icons';
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import style from "../css/Contacto.module.css";
+import {animateScroll as scroll} from 'react-scroll'
 
 export function DetallesMascotas() {
   let { id } = useParams();
@@ -19,9 +20,11 @@ export function DetallesMascotas() {
   const [form, setForm] = useState(false);
   const onClickAdoptar = () =>{
     setForm(true);
+    scroll.scrollMore(500);
   }
   const onclickCancelar = () =>{
     setForm(false);
+    scroll.scrollMore(-500);
   }
   const onsSubmitsend = (e) =>{
 
@@ -62,19 +65,16 @@ export function DetallesMascotas() {
     
       <div className="ContainerMain ContainerMascotas">
         <p className="CenterNombre ">Adpota a tu merjor Amigo </p>
-        <div className="Mascotadiv contenedora"> 
+        <div className="contenedora"> 
         
             
         </div>
         <div className="card mb-3 card-targeta">
           <div className="row g-0 fondo-targeta">
-            {/* <figure> */}
+          
               <div className="col-md-8 capas">
-                <img src={ state.foto} class="img-fluid AdotarImg rounded-start" alt={state.nombre}/>
-                {/* <h1>Busca un hogar</h1>
-                <p>Mucho Amor</p>
-                <p>morditas Tiernas</p>
-                <p>Uno que otro lenguetazo</p> */}
+                <img src={ state.foto} className="img-fluid AdotarImg rounded-start" alt={state.nombre}/>
+    
 
               </div>
               <div className="col-md-4">
@@ -85,20 +85,26 @@ export function DetallesMascotas() {
                   <p className="card-text">Raza: {state.raza}</p>
                   <p className="card-text">Edad: {state.edad}</p>
                   <p className="card-text">Perfil: {state.perfil}</p>
-                  <button type="button" class="btn btns" onClick={onClickAdoptar}>Adoptar</button>
+                 <button type="button" className="btn btns" onClick={onClickAdoptar}>Adoptar</button>
+                  
                 </div>
               </div>
             {/* </figure> */}
           </div>
        
         </div>
-         
-          <div className={style.flex__container}>
+        {
 
-          
+
+
+form ?
+          <div className={style.flex__container} id="adoptar">
+
+       
             <form className= {style.from} onSubmit={onsSubmitsend}>
             <div className="tes-respon">
               <div className={style.fromm__section} >
+                <input type="text" className="HideInputId" name="id" value={state._id}/>
                   <input
                     type="text" name="name"
                     className={style.from__input}
@@ -107,7 +113,7 @@ export function DetallesMascotas() {
                   />
               </div>
             </div>
-            <div className="tes-respon">
+            <div className="tes-respon" >
               <div className={style.fromm__section}>
                     <input
                       type="email"
@@ -134,8 +140,8 @@ export function DetallesMascotas() {
                     {/* <input className={style.bto} type="submit" 
                     id="" /> */}
                  
-                  {/* <button type="submit"  class="btn btnes">Enviar</button> */}
-                  <div className="">
+                  {/* <button type="submit"  className="btn btnes">Enviar</button> */}
+                  <div className="" >
                     <button type="submit" className={style.bto}>Enviar</button>
                    
                    <button type="button"  className={style.bto} onClick={onclickCancelar}>Cancelar</button>
@@ -143,7 +149,7 @@ export function DetallesMascotas() {
                   </div>
 
                 </form>
-                
+
                 <div className="abajo">
                   <div className={style.imagen2}>
                     <div className={style.imagen}>
@@ -166,13 +172,15 @@ export function DetallesMascotas() {
                         <img src="/assets/img/slider/oficina2.jpg " className="imagenformulario" alt=".imagen." />
                       </div>
                   
-
+        
                     </div>
+                    
                   </div>
                 </div>
               </div>
-        
+        :null}
       </div>
+                  
     </div> 
     
   );

@@ -101,7 +101,7 @@ const Contacto = () => {
                         <p><span className=""><FontAwesomeIcon icon={faEnvelope}/></span>mascotas@gmail.com</p>
                         <p><span className=""> <FontAwesomeIcon icon={faMobile}/></span>+57 31425033</p>
                         <p><span className=""> <FontAwesomeIcon icon={faMapMarkerAlt}/></span>BOGOTA-CUNDINAMARCA</p>
-
+                    
 
                     </section>
 

@@ -4,7 +4,9 @@ import axios from 'axios';
 import Api from '../helpers/Conector';
 import swal from "sweetalert";
 import '../css/Login.css';
-
+import { FaGithub, FaGithubSquare } from 'react-icons/fa';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import '../css/Login.css';
 
 class Login extends Component {
 
@@ -65,7 +67,7 @@ class Login extends Component {
                 
                
                 <Container className="my-auto fondo-ta col-4">
-                <h1 className="text-center text-white mt-3">Bienvenido</h1>
+                <h1 className="text-center k text-black mt-3">Bienvenido</h1>
                   <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
                   <Form.Group className="mb-3">
                     <Form.Label>Email de Usuario</Form.Label>
@@ -86,15 +88,25 @@ class Login extends Component {
                     </Form.Group>
                     <Form.Control
                             type="button"
-                             value="Login"
-                             className="btn btn-success m-1"
+                             value="iniciar seccion"
+                             className="btn btns2 m-1"
                             onClick={this.pressClick}
                           />
                     
                     </Form>
-                        </Container>
+                    <br/>
+                   
+          
+                    <div className='row'>
+                    <a className="info-itemss my-auto col-xxl-12" target="_selft" href="https://www.ciudaddemascotas.com/perros">Si quieres iniciar seccion as click para mas infomacion </a>
                     </div>
+                </Container>
                 </div>
+             
+           
+                    
+                </div>
+             
         );
     }
 }

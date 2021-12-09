@@ -4,6 +4,8 @@
     background-repeat:no-repeat ;
     margin-top: -100px;
     z-index: -1000;
+    background-attachment: fixed;
+    background-position: center center;
    
     
 }
@@ -12,6 +14,68 @@
     padding: 25px;
     border-radius: 23px;
     border: 3px solid white;
+    min-width: 200px;
+}
+.icoms{
+    color:black;
+    font-size: 30px;
 }
 
 
+.k{
+    
+    text-shadow: 1px 3px 30px rgb(128, 116, 116), 0 0 22px rgb(14, 239, 255);
+}
+.btns2{
+    background-color: aqua;
+    border-radius: 3px solid white;
+   
+}
+.btns2:hover{
+    background-color: transparent;
+    border: 2px solid rgb(3, 218, 247);
+    color: rgb(0, 0, 0);
+    color: black;
+}
+.info-itemss:hover{
+    background-color: rgb(255, 255, 255);
+}
+.info-itemss{
+    margin-right: 2px;
+    text-decoration:none;
+ 
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    background-color: rgb(168, 162, 162);
+    padding: 5px;
+    border: 2px solid white;
+    width: 90%;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23px;
+
+    text-align: center;
+
+}
+.github{
+    margin-top: 20px;
+    width: 70px;
+    margin-left: 500px;
+    cursor: pointer;
+    background-color: aliceblue;
+    
+   
+   
+  
+}
+@media (max-width:1081px)and(min-width:1216px) { 
+    .info-itemss{
+        font-size: 10px;
+        justify-content: center;
+        width: 70%;
+        
+    }
+
+    
+}

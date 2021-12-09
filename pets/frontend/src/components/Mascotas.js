@@ -239,11 +239,14 @@ export default class Admin extends Component {
         
         <div className="fondo-formulario ">
         <br/>
+        <br/>
         <div className="content  text-white">
         <br/>
         <br/>
         <br/>
+
           <h1 className="text-center text-white bg-dark container-lg ">Ingresa los datos de tu mascota</h1>
+          <br/> 
             <Container className="my-auto table-hover bg-dark">
             <Link to={'/Login'}>
             <Button 

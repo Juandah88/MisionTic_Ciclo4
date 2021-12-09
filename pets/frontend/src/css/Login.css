@@ -1,5 +1,5 @@
 .fondo-login{
-    background-image: url(../media/fundacion.jpg);
+    background-image: url(./img/fundacion.jpg); 
     background-size: cover;
     background-repeat:no-repeat ;
     margin-top: -100px;

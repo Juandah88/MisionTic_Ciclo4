@@ -80,23 +80,8 @@ const Inicio = () => {
                 <Link className="link-index btn BotonColor botonincio " to="/Adoptar">¡Aqui esta tu proximo amigo!</Link>
             </section>
             <section className="inicio container-fluid bod">
-            <div style={{ backgroundImage: `url(require("../assets/img/slider/family-dog.jpg"))` }}>
-            </div>
-        
-            {/* <h1 className="titulo-principal container-xxl "><p className="tituloborder"> Adopta con responsabilidad</p>  </h1> */}
-
+          
             
-        
-            
-            {/* <div className="row">
-                <div className="text  titulopeluno ">
-                    <h2><strong className="listo">¿Estás list@?</strong></h2>
-                    <h2><strong>Antes de aplicar</strong></h2>
-                    <p className="fs-5 ">Si estas interesado en adoptar a alguno de nuestros peludos leer con detenimiento cada
-                     una de las siguientes preguntas</p>
-                <
-                    /div> 
-            </div> */}
             <div className="about-container">
                 <div className="about-desc">
                     <div className="adoptarcan">
@@ -177,7 +162,7 @@ const Inicio = () => {
                         </div>
                     </figure>
 
-            <div  className="card-body  bg-targeta">
+                <div  className="card-body  bg-targeta">
                
                     <div className="accordion-item bg-dark">
                         <h2 className="accordion-header" id="headingTwo">

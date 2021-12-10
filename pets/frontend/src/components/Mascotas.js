@@ -245,12 +245,13 @@ export default class Admin extends Component {
         <br/>
         <br/>
 
-          <Container className="my-auto border-radius-5 table-hover container-tabla bg-white">
-            <h1 className="text-center text-dark bg-white container-lg ">Ingresa los datos de tu mascota</h1>
+          <Container className="my-auto border-radius-5 table-hover-primary container-tabla bg-white">
+            <h1 className="text-center text-dark  container-fluid info   ">Ingresa los datos de tu mascota</h1>
             <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
-              <Form.Group className="mb-3">
+              <Form.Group className="mb-3 ">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control
+                  className="table-texto "
                   required
                   placeholder="Ingrese el nombre de la mascota"
                   name="nombre"
@@ -259,10 +260,11 @@ export default class Admin extends Component {
                 />
               </Form.Group>
 
-              <Row className="mb-3">
+              <Row className="mb-3 ">
                 <Form.Group as={Col}>
                   <Form.Label>Edad</Form.Label>
                   <Form.Control
+                   className="table-texto "
                    type="number"
                     required
                     name="edad"
@@ -270,9 +272,10 @@ export default class Admin extends Component {
                     onChange={this.onInputChange}
                   />
                 </Form.Group>
-                <Form.Group as={Col}>
+                <Form.Group  as={Col}>
                   <Form.Label>Raza</Form.Label>
                   <Form.Control
+                     className=" table-texto "
                     required
                     name="raza"
                     value={this.state.raza}
@@ -280,9 +283,10 @@ export default class Admin extends Component {
                   />
                 </Form.Group>
 
-                <Form.Group as={Col}>
+                <Form.Group   as={Col}>
                   <Form.Label>Genero</Form.Label>
                   <Form.Select
+                    className=" table-texto "
                     required
                     name="genero"
                     value={this.state.genero}
@@ -297,6 +301,7 @@ export default class Admin extends Component {
                 <Form.Group as={Col}>
                   <Form.Label>Tipo</Form.Label>
                   <Form.Select
+                    className=" table-texto " 
                     required
                     name="tipo"
                     value={this.state.tipo}
@@ -309,11 +314,11 @@ export default class Admin extends Component {
                 </Form.Group>
               </Row>
 
-              <Form.Group className="mb-3">
+              <Form.Group className="mb-3 ">
                 <Form.Label>Foto de la mascota</Form.Label>
-                <input
+                <input 
                   type="file"
-                  className="form-control"
+                  className="form-control table-texto "
                   onChange={this.onFileChange}
                 />
               </Form.Group>
@@ -321,7 +326,7 @@ export default class Admin extends Component {
               <Form.Group
                 className="mb-3">
                 <Form.Label>Perfil de la mascota</Form.Label>
-                <Form.Control
+                <Form.Control  className="table-texto "
                   required
                   as="textarea"
                   rows={3}
@@ -333,7 +338,7 @@ export default class Admin extends Component {
             
               {
                 this.state.ocultarMostrarBtAgregar?
-                 (<Button variant="primary" type="submit">    Agregar Mascotas</Button>)
+                 (<Button className="botones-seccion " variant="primary" type="submit">    Agregar Mascotas</Button>)
                   : (<Button variant="primary" type="submit"> Actualizar</Button>)
               }
          
@@ -346,9 +351,9 @@ export default class Admin extends Component {
             <hr />
               <div className="table-responsive">
               <table className="table-reposive-sm table table-condensed table-bordered table-white table-hover  table-responsive display ">
-                <thead className="">
+                <thead >
                   <tr className="info " >
-                    <th scope="row-col-lg-9 ">Nombre</th>
+                    <th scope="col  ">Nombre</th>
                     <th scope="col">Edad (años)</th>
                     <th scope="col">Genero</th>
                     <th scope="col">Perfil</th>
@@ -358,7 +363,7 @@ export default class Admin extends Component {
                 </thead>
                 <tbody>
                   {this.state.pets.map((pet) => (
-                    <tr key={pet._id}>
+                    <tr className="hover-targeta table-textos" key={pet._id}>
                       <td className="HideiTdId">{pet._id}</td>
                       <td>{pet.nombre}</td>
                       <td>{pet.edad}</td>
@@ -369,7 +374,7 @@ export default class Admin extends Component {
                       <div className="btn-group">
                         <button
                           type="button"
-                          className="btn row  btn-outline-info col-12 m-1"
+                          className="btn row  btn-outline-info col-md-12 m-1"
                           onClick={() => {
                             this.seleccionarMascota(pet);
                           }}>
@@ -378,7 +383,7 @@ export default class Admin extends Component {
                         </button>
                         <button id="abajo"
                           type="button"
-                          className="btn row btn btn-outline-danger col-12  m-1"
+                          className="btn row btn-outline-danger col-lg-12  m-1"
                           onClick={() => {
                             this.delete(pet); this.get();
                           }}
@@ -395,13 +400,16 @@ export default class Admin extends Component {
             </div>
             <Link to={'/Login'}>
             <Button 
-                  className="btn btn-primary -1 w-100"
+                  className="btn botones-seccion -1 w-100"
                   onClick={this.cerrarSesion}>Cerrar Sesión
             </Button>
             </Link>
+            <br/>
+            <br/>
+            
           </Container>
         </div>
-        <br />
+        <br/>
         </div>
       </div>
     );

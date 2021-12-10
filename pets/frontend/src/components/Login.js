@@ -4,8 +4,7 @@ import axios from 'axios';
 import Api from '../helpers/Conector';
 import swal from "sweetalert";
 import '../css/Login.css';
-import { FaGithub, FaGithubSquare } from 'react-icons/fa';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 import '../css/Login.css';
 
 class Login extends Component {
@@ -98,7 +97,7 @@ class Login extends Component {
                    
           
                     <div className='row'>
-                    <a className="info-itemss my-auto col-xxl-12" target="_selft" href="https://www.ciudaddemascotas.com/perros">Si quieres iniciar seccion as click para mas infomacion </a>
+                    <a className="info-itemss my-auto col-xxl-12" target="_selft" href="https://github.com/Juandah88/MisionTic_Ciclo4/blob/santiago/pets/frontend/README.md">Si quieres iniciar seccion as click para mas infomacion </a>
                     </div>
                 </Container>
                 </div>

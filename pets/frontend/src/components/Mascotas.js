@@ -240,20 +240,13 @@ export default class Admin extends Component {
         <div className="fondo-formulario ">
         <br/>
         <br/>
-        <div className="content  text-white">
+        <div className="content  text-dark">
         <br/>
         <br/>
         <br/>
 
-          <h1 className="text-center text-white bg-dark container-lg ">Ingresa los datos de tu mascota</h1>
-          <br/> 
-            <Container className="my-auto table-hover bg-dark">
-            <Link to={'/Login'}>
-            <Button 
-                  className="btn btn-secondary m-1 w-100"
-                  onClick={this.cerrarSesion}>Cerrar Sesión
-            </Button>
-            </Link>
+          <Container className="my-auto border-radius-5 table-hover container-tabla bg-white">
+            <h1 className="text-center text-dark bg-white container-lg ">Ingresa los datos de tu mascota</h1>
             <Form onSubmit={this.onSubmit} enctype="multipart/form-data">
               <Form.Group className="mb-3">
                 <Form.Label>Nombre</Form.Label>
@@ -351,49 +344,61 @@ export default class Admin extends Component {
                 : null}
             </Form>
             <hr />
-            <table className="table table-dark table-hover  table-responsive display ">
-              <thead>
-                <tr >
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Edad (años)</th>
-                  <th scope="col">Genero</th>
-                  <th scope="col">Perfil</th>
-                  <th scope="col">Tipo</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.pets.map((pet) => (
-                  <tr key={pet._id}>
-                    <td className="HideiTdId">{pet._id}</td>
-                    <td>{pet.nombre}</td>
-                    <td>{pet.edad}</td>
-                    <td>{pet.genero !== 1 ? 'Macho' : 'Hembra'}</td>
-                    <td>{pet.perfil}</td>
-                    <td>{pet.tipo !== 0 ? 'Canino' : 'Felino'}</td>
-                    <td>
-                      <button
-                        type="button"
-                        className="btn btn-primary m-1"
-                        onClick={() => {
-                          this.seleccionarMascota(pet);
-                        }}>
-                        Editar
-                      </button>
-
-                      <button id="abajo"
-                        type="button"
-                        className="btn btn-danger col-xxl-3 m-1"
-                        onClick={() => {
-                          this.delete(pet); this.get();
-                        }}
-                      >
-                        Eliminar
-                      </button>
-                    </td>
+              <div className="table-responsive">
+              <table className="table-reposive-sm table table-condensed table-bordered table-white table-hover  table-responsive display ">
+                <thead className="">
+                  <tr className="info " >
+                    <th scope="row-col-lg-9 ">Nombre</th>
+                    <th scope="col">Edad (años)</th>
+                    <th scope="col">Genero</th>
+                    <th scope="col">Perfil</th>
+                    <th scope="co">Tipo</th>
+                    <th scope="col">Acciones</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {this.state.pets.map((pet) => (
+                    <tr key={pet._id}>
+                      <td className="HideiTdId">{pet._id}</td>
+                      <td>{pet.nombre}</td>
+                      <td>{pet.edad}</td>
+                      <td>{pet.genero !== 1 ? 'Macho' : 'Hembra'}</td>
+                      <td>{pet.perfil}</td>
+                      <td>{pet.tipo !== 0 ? 'Canino' : 'Felino'}</td>
+                      <td>
+                      <div className="btn-group">
+                        <button
+                          type="button"
+                          className="btn row  btn-outline-info col-12 m-1"
+                          onClick={() => {
+                            this.seleccionarMascota(pet);
+                          }}>
+                          Editar
+                        
+                        </button>
+                        <button id="abajo"
+                          type="button"
+                          className="btn row btn btn-outline-danger col-12  m-1"
+                          onClick={() => {
+                            this.delete(pet); this.get();
+                          }}
+                        >
+                          Eliminar
+                        </button>
+                      </div>
+                        
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <Link to={'/Login'}>
+            <Button 
+                  className="btn btn-primary -1 w-100"
+                  onClick={this.cerrarSesion}>Cerrar Sesión
+            </Button>
+            </Link>
           </Container>
         </div>
         <br />

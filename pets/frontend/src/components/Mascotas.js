@@ -358,7 +358,8 @@ export default class Admin extends Component {
                     <th scope="col">Genero</th>
                     <th scope="col">Perfil</th>
                     <th scope="co">Tipo</th>
-                    <th scope="col">Acciones</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -371,8 +372,7 @@ export default class Admin extends Component {
                       <td>{pet.perfil}</td>
                       <td>{pet.tipo !== 0 ? 'Canino' : 'Felino'}</td>
                       <td>
-                      <div className="btn-group">
-                        <button
+                      <button
                           type="button"
                           className="btn row  btn-outline-info col-md-12 m-1"
                           onClick={() => {
@@ -381,6 +381,12 @@ export default class Admin extends Component {
                           Editar
                         
                         </button>
+
+                      </td>
+                      <td>
+                     
+                      <div className="btn-group">
+                        
                         <button id="abajo"
                           type="button"
                           className="btn row btn-outline-danger col-lg-12  m-1"

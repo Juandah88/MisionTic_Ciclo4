@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Nosotros.css'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 const Nosotros = () => {
     return (
       
